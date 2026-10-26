@@ -105,11 +105,11 @@ the same behaviour from pixels, which is what a real robot would have.
 ## The 16-D latent
 
 ```text
-head RGB 96×96 ×2 frames  ─▶ depthwise CNN + spatial softmax ─┐
-                                                              ├─▶ z ∈ ℝ¹⁶ ─▶ gate + 4 experts ─▶ action chunk (K=4)
-wrist RGB 64×64 ×2 frames ─▶ depthwise CNN + spatial softmax ─┘       │        ▲                 base v · gripper v · grip
-                                                                     ▼        │
-                                                    phase head    joints · gripper width · base velocity · skill command
+head  RGB 96×96 ×2 ─▶ CNN + keypoints ─┐
+                                       ├─▶ z ∈ ℝ¹⁶ ─┬─▶ gate + 4 experts ─▶ next 4 actions
+wrist RGB 64×64 ×2 ─▶ CNN + keypoints ─┘            │           ▲          base v · gripper v · grip
+                                                    │    joints · gripper · skill
+                                                    └─▶ phase head: approach … lift … done
 ```
 
 - **255,249 parameters**, two-thirds in the experts. A CUDA graph brings a decision for six
