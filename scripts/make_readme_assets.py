@@ -1,5 +1,8 @@
 """Generate the README's light/dark SVG pairs (pale-on-obsidian, matching HertaSDK) from the result files.
 
+Backgrounds are transparent and box fills are a faint tint of the text colour, so the
+assets sit cleanly on GitHub's light, dark, dimmed, high-contrast and colour-blind themes.
+
   python scripts/make_readme_assets.py
 """
 
@@ -21,7 +24,6 @@ def svg(w, h, title, desc, body, t, ident):
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" '
             f'aria-labelledby="{ident}-title {ident}-desc">\n'
             f'  <title id="{ident}-title">{title}</title>\n  <desc id="{ident}-desc">{desc}</desc>\n'
-            f'  <rect width="{w}" height="{h}" fill="{t["bg"]}"/>\n'
             f'  <defs><marker id="{ident}-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" '
             f'orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="{t["line"]}"/></marker></defs>\n'
             f'  <g font-family="{FONT}">\n{body}  </g>\n</svg>\n')
@@ -29,7 +31,8 @@ def svg(w, h, title, desc, body, t, ident):
 
 def box(x, y, w, h, t, rx=9, sw=1.6, fill=None, dash=None):
     d = f' stroke-dasharray="{dash}"' if dash else ""
-    return f'    <rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{rx}" fill="{fill or t["box"]}" stroke="{t["fg"]}" stroke-width="{sw}"{d}/>\n'
+    f = f'fill="{fill}"' if fill else f'fill="{t["fg"]}" fill-opacity="0.05"'
+    return f'    <rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{rx}" {f} stroke="{t["fg"]}" stroke-width="{sw}"{d}/>\n'
 
 
 def text(x, y, s, t, size=15, weight=400, color="fg", anchor="middle", family=None):
