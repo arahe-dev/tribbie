@@ -1,0 +1,306 @@
+[
+  {
+    "episode": 0,
+    "seed": 820000,
+    "mode": "student",
+    "deliveries_ok": 0,
+    "deliveries": 2,
+    "outcome": {
+      "green": "table",
+      "blue": "floor"
+    },
+    "intended": {
+      "green": "teal",
+      "blue": "gold"
+    },
+    "skills": [
+      {
+        "skill": "pick(green)",
+        "seconds": 20.07,
+        "result": "timeout"
+      },
+      {
+        "skill": "face(east)",
+        "seconds": 2.27,
+        "result": "ok"
+      },
+      {
+        "skill": "goto(teal)",
+        "seconds": 10.53,
+        "result": "done"
+      },
+      {
+        "skill": "drop()",
+        "seconds": 0.53,
+        "result": "done"
+      },
+      {
+        "skill": "face(west)",
+        "seconds": 4.0,
+        "result": "ok"
+      },
+      {
+        "skill": "goto(table)",
+        "seconds": 10.53,
+        "result": "done"
+      },
+      {
+        "skill": "face(north)",
+        "seconds": 2.27,
+        "result": "ok"
+      },
+      {
+        "skill": "pick(blue)",
+        "seconds": 3.0,
+        "result": "done"
+      },
+      {
+        "skill": "face(east)",
+        "seconds": 2.27,
+        "result": "ok"
+      },
+      {
+        "skill": "goto(gold)",
+        "seconds": 10.53,
+        "result": "done"
+      },
+      {
+        "skill": "drop()",
+        "seconds": 0.53,
+        "result": "done"
+      }
+    ],
+    "sim_seconds": 66.5,
+    "wall_seconds": 69.0,
+    "flat_retries": 752,
+    "policy_ms_mean": 20.420713813908563
+  },
+  {
+    "episode": 1,
+    "seed": 820001,
+    "mode": "student",
+    "deliveries_ok": 1,
+    "deliveries": 2,
+    "outcome": {
+      "red": "floor",
+      "green": "teal"
+    },
+    "intended": {
+      "red": "gold",
+      "green": "teal"
+    },
+    "skills": [
+      {
+        "skill": "pick(red)",
+        "seconds": 3.07,
+        "result": "done"
+      },
+      {
+        "skill": "face(east)",
+        "seconds": 2.27,
+        "result": "ok"
+      },
+      {
+        "skill": "goto(gold)",
+        "seconds": 10.6,
+        "result": "done"
+      },
+      {
+        "skill": "drop()",
+        "seconds": 2.2,
+        "result": "done"
+      },
+      {
+        "skill": "face(west)",
+        "seconds": 4.0,
+        "result": "ok"
+      },
+      {
+        "skill": "goto(table)",
+        "seconds": 10.53,
+        "result": "done"
+      },
+      {
+        "skill": "face(north)",
+        "seconds": 2.27,
+        "result": "ok"
+      },
+      {
+        "skill": "pick(green)",
+        "seconds": 4.67,
+        "result": "done"
+      },
+      {
+        "skill": "face(east)",
+        "seconds": 2.27,
+        "result": "ok"
+      },
+      {
+        "skill": "goto(teal)",
+        "seconds": 10.4,
+        "result": "done"
+      },
+      {
+        "skill": "drop()",
+        "seconds": 2.2,
+        "result": "done"
+      }
+    ],
+    "sim_seconds": 54.5,
+    "wall_seconds": 63.8,
+    "flat_retries": 1549,
+    "policy_ms_mean": 30.38933406747714
+  },
+  {
+    "episode": 2,
+    "seed": 820002,
+    "mode": "student",
+    "deliveries_ok": 1,
+    "deliveries": 2,
+    "outcome": {
+      "blue": "magenta",
+      "red": "floor"
+    },
+    "intended": {
+      "blue": "magenta",
+      "red": "gold"
+    },
+    "skills": [
+      {
+        "skill": "pick(blue)",
+        "seconds": 2.93,
+        "result": "done"
+      },
+      {
+        "skill": "face(east)",
+        "seconds": 2.27,
+        "result": "ok"
+      },
+      {
+        "skill": "goto(magenta)",
+        "seconds": 9.87,
+        "result": "done"
+      },
+      {
+        "skill": "drop()",
+        "seconds": 2.27,
+        "result": "done"
+      },
+      {
+        "skill": "face(west)",
+        "seconds": 4.0,
+        "result": "ok"
+      },
+      {
+        "skill": "goto(table)",
+        "seconds": 9.8,
+        "result": "done"
+      },
+      {
+        "skill": "face(north)",
+        "seconds": 2.27,
+        "result": "ok"
+      },
+      {
+        "skill": "pick(red)",
+        "seconds": 3.13,
+        "result": "done"
+      },
+      {
+        "skill": "face(east)",
+        "seconds": 2.27,
+        "result": "ok"
+      },
+      {
+        "skill": "goto(gold)",
+        "seconds": 10.53,
+        "result": "done"
+      },
+      {
+        "skill": "drop()",
+        "seconds": 2.67,
+        "result": "done"
+      }
+    ],
+    "sim_seconds": 52.0,
+    "wall_seconds": 66.0,
+    "flat_retries": 2369,
+    "policy_ms_mean": 30.79769090523548
+  },
+  {
+    "episode": 3,
+    "seed": 820003,
+    "mode": "student",
+    "deliveries_ok": 1,
+    "deliveries": 2,
+    "outcome": {
+      "blue": "floor",
+      "red": "magenta"
+    },
+    "intended": {
+      "blue": "teal",
+      "red": "magenta"
+    },
+    "skills": [
+      {
+        "skill": "pick(blue)",
+        "seconds": 2.93,
+        "result": "done"
+      },
+      {
+        "skill": "face(east)",
+        "seconds": 2.27,
+        "result": "ok"
+      },
+      {
+        "skill": "goto(teal)",
+        "seconds": 10.53,
+        "result": "done"
+      },
+      {
+        "skill": "drop()",
+        "seconds": 0.53,
+        "result": "done"
+      },
+      {
+        "skill": "face(west)",
+        "seconds": 4.0,
+        "result": "ok"
+      },
+      {
+        "skill": "goto(table)",
+        "seconds": 10.53,
+        "result": "done"
+      },
+      {
+        "skill": "face(north)",
+        "seconds": 2.27,
+        "result": "ok"
+      },
+      {
+        "skill": "pick(red)",
+        "seconds": 3.2,
+        "result": "done"
+      },
+      {
+        "skill": "face(east)",
+        "seconds": 2.27,
+        "result": "ok"
+      },
+      {
+        "skill": "goto(magenta)",
+        "seconds": 9.8,
+        "result": "done"
+      },
+      {
+        "skill": "drop()",
+        "seconds": 2.27,
+        "result": "done"
+      }
+    ],
+    "sim_seconds": 50.6,
+    "wall_seconds": 54.8,
+    "flat_retries": 2896,
+    "policy_ms_mean": 29.946523133852978
+  }
+]

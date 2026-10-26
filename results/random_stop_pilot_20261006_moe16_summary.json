@@ -1,0 +1,18 @@
+{
+  "policy": "moe16",
+  "episodes": 1,
+  "randomized_events": 3,
+  "event_responses": 3,
+  "immediate_responses_250ms": 1,
+  "immediate_response_rate": 0.3333333333333333,
+  "safe_stop_successes": 1,
+  "safe_stop_success_rate": 0.3333333333333333,
+  "collision_proxy_hits": 0,
+  "median_reaction_sim_s": 0.61667,
+  "p95_reaction_sim_s": 1.216664,
+  "false_stop_predictions": 8,
+  "false_stop_time_s": 0.3667,
+  "decisions": 295,
+  "median_request_latency_ms": 4.8888,
+  "p95_request_latency_ms": 5.27726
+}

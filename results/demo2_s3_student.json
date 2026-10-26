@@ -1,0 +1,76 @@
+[
+  {
+    "episode": 0,
+    "seed": 995000,
+    "mode": "student",
+    "success": false,
+    "landed_bin": null,
+    "target_bin": "magenta",
+    "target_object": "green puck",
+    "frames": [
+      0,
+      675
+    ],
+    "objects": 3,
+    "start_bin": null,
+    "prefill": 0,
+    "obstacles": 2,
+    "collision_steps": 0,
+    "sim_seconds": 45.0,
+    "wall_seconds": 73.8,
+    "phase_hist": {
+      "approach": 675,
+      "descend": 0,
+      "close": 0,
+      "lift": 0,
+      "stow": 0,
+      "drive": 0,
+      "extend": 0,
+      "release": 0,
+      "done": 0,
+      "return": 0,
+      "retreat": 0,
+      "fail": 0
+    },
+    "head_flat_frac": 0.13,
+    "policy_ms_mean": 22.045265628300882,
+    "policy_ms_p95": 94.78646002244204
+  },
+  {
+    "episode": 1,
+    "seed": 995001,
+    "mode": "student",
+    "success": false,
+    "landed_bin": null,
+    "target_bin": "teal",
+    "target_object": "blue ball",
+    "frames": [
+      675,
+      1350
+    ],
+    "objects": 3,
+    "start_bin": null,
+    "prefill": 0,
+    "obstacles": 2,
+    "collision_steps": 0,
+    "sim_seconds": 45.0,
+    "wall_seconds": 74.6,
+    "phase_hist": {
+      "approach": 675,
+      "descend": 0,
+      "close": 0,
+      "lift": 0,
+      "stow": 0,
+      "drive": 0,
+      "extend": 0,
+      "release": 0,
+      "done": 0,
+      "return": 0,
+      "retreat": 0,
+      "fail": 0
+    },
+    "head_flat_frac": 0.129,
+    "policy_ms_mean": 23.61781703773886,
+    "policy_ms_p95": 98.72010999824852
+  }
+]

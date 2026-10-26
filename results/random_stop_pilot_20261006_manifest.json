@@ -1,0 +1,61 @@
+{
+  "benchmark": "randomized reactive emergency stops",
+  "seed": 42,
+  "episodes": [
+    {
+      "episode_id": "ep01",
+      "seed": 42,
+      "initial_yaw_rad": 0.06574945165343121,
+      "events": [
+        {
+          "event_id": "ep01_event_001",
+          "episode_id": "ep01",
+          "index": 1,
+          "scheduled_onset_sim_s": 1.4389,
+          "duration_s": 1.9727,
+          "distance_m": 1.2128,
+          "bearing_rad": 0.0801,
+          "target_color_rgb": [
+            0.9636841634871237,
+            0.043946848049326706,
+            0.07353734109820535
+          ],
+          "dome_intensity": 902.5
+        },
+        {
+          "event_id": "ep01_event_002",
+          "episode_id": "ep01",
+          "index": 2,
+          "scheduled_onset_sim_s": 6.0574,
+          "duration_s": 1.5337,
+          "distance_m": 0.9904,
+          "bearing_rad": -0.07637,
+          "target_color_rgb": [
+            0.9912117986618322,
+            0.09616718640766314,
+            0.06436569679624979
+          ],
+          "dome_intensity": 1243.7
+        },
+        {
+          "event_id": "ep01_event_003",
+          "episode_id": "ep01",
+          "index": 3,
+          "scheduled_onset_sim_s": 9.4252,
+          "duration_s": 1.9449,
+          "distance_m": 1.3595,
+          "bearing_rad": 0.11007,
+          "target_color_rgb": [
+            0.9557997278946477,
+            0.10701833530811052,
+            0.0362715580877921
+          ],
+          "dome_intensity": 1422.7
+        }
+      ]
+    }
+  ],
+  "policy_observation": "RGB camera only; event timing/pose schedule withheld from worker",
+  "simulator_randomization": "event onset, duration, distance, bearing, red hue, dome intensity, and episode yaw",
+  "paired_comparison": "same episode seeds and event schedule for both policies"
+}

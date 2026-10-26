@@ -1,0 +1,202 @@
+[
+  {
+    "episode": 0,
+    "seed": 44000,
+    "mode": "dagger",
+    "sim_seconds": 90.0,
+    "wall_seconds": 306.0,
+    "objects": [
+      "cube",
+      "tall cylinder",
+      "ball",
+      "capsule"
+    ],
+    "colors": {
+      "0": "yellow",
+      "1": "blue",
+      "2": "cyan",
+      "5": "red"
+    },
+    "transfers": 2,
+    "drops": 0,
+    "ik_failures": 0,
+    "phase_hist": {
+      "home": 6558,
+      "approach": 549,
+      "descend": 75,
+      "close": 4,
+      "lift": 38,
+      "carry": 96,
+      "wait": 0,
+      "place": 27,
+      "release": 0,
+      "retreat": 753
+    },
+    "transfer_log": [
+      {
+        "object": "ball",
+        "from": 1,
+        "to": 2,
+        "t": 8.93
+      },
+      {
+        "object": "ball",
+        "from": 2,
+        "to": 3,
+        "t": 18.87
+      }
+    ],
+    "policy_ms_mean": 144.68580022307665,
+    "policy_ms_p95": 179.98811501311138
+  },
+  {
+    "episode": 1,
+    "seed": 44001,
+    "mode": "dagger",
+    "sim_seconds": 90.0,
+    "wall_seconds": 300.7,
+    "objects": [
+      "cube",
+      "ball",
+      "bar",
+      "puck"
+    ],
+    "colors": {
+      "0": "orange",
+      "2": "green",
+      "3": "yellow",
+      "4": "purple"
+    },
+    "transfers": 3,
+    "drops": 0,
+    "ik_failures": 0,
+    "phase_hist": {
+      "home": 6142,
+      "approach": 1264,
+      "descend": 320,
+      "close": 8,
+      "lift": 85,
+      "carry": 132,
+      "wait": 0,
+      "place": 34,
+      "release": 0,
+      "retreat": 115
+    },
+    "transfer_log": [
+      {
+        "object": "cube",
+        "from": 3,
+        "to": 4,
+        "t": 11.47
+      },
+      {
+        "object": "bar",
+        "from": 2,
+        "to": 3,
+        "t": 28.87
+      },
+      {
+        "object": "puck",
+        "from": 1,
+        "to": 2,
+        "t": 33.93
+      }
+    ],
+    "policy_ms_mean": 136.87705311087754,
+    "policy_ms_p95": 193.44874499947764
+  },
+  {
+    "episode": 2,
+    "seed": 44002,
+    "mode": "dagger",
+    "sim_seconds": 90.0,
+    "wall_seconds": 298.8,
+    "objects": [
+      "cube",
+      "tall cylinder",
+      "bar",
+      "capsule"
+    ],
+    "colors": {
+      "0": "green",
+      "1": "blue",
+      "3": "yellow",
+      "5": "red"
+    },
+    "transfers": 1,
+    "drops": 0,
+    "ik_failures": 0,
+    "phase_hist": {
+      "home": 6569,
+      "approach": 1121,
+      "descend": 256,
+      "close": 1,
+      "lift": 32,
+      "carry": 47,
+      "wait": 0,
+      "place": 6,
+      "release": 0,
+      "retreat": 68
+    },
+    "transfer_log": [
+      {
+        "object": "bar",
+        "from": 0,
+        "to": 1,
+        "t": 11.47
+      }
+    ],
+    "policy_ms_mean": 132.01557348098572,
+    "policy_ms_p95": 142.9038300004322
+  },
+  {
+    "episode": 3,
+    "seed": 44003,
+    "mode": "dagger",
+    "sim_seconds": 90.0,
+    "wall_seconds": 309.2,
+    "objects": [
+      "cube",
+      "tall cylinder",
+      "ball",
+      "bar"
+    ],
+    "colors": {
+      "0": "blue",
+      "1": "yellow",
+      "2": "purple",
+      "3": "white"
+    },
+    "transfers": 2,
+    "drops": 0,
+    "ik_failures": 0,
+    "phase_hist": {
+      "home": 5279,
+      "approach": 2348,
+      "descend": 238,
+      "close": 6,
+      "lift": 82,
+      "carry": 68,
+      "wait": 0,
+      "place": 19,
+      "release": 1,
+      "retreat": 59
+    },
+    "transfer_log": [
+      {
+        "object": "cube",
+        "from": 4,
+        "to": 5,
+        "t": 10.6
+      },
+      {
+        "object": "bar",
+        "from": 1,
+        "to": 2,
+        "t": 19.07
+      }
+    ],
+    "policy_ms_mean": 140.04704296351755,
+    "policy_ms_p95": 147.9183449933771
+  }
+]

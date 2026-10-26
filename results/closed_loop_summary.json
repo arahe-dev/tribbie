@@ -1,0 +1,23 @@
+{
+  "episodes": 5,
+  "successes": 4,
+  "failures": 1,
+  "success_percent": 80.0,
+  "mean_completion_time_sim_s": 7.710000000000001,
+  "mean_decisions": 51.4,
+  "mean_decision_latency_ms": 5.8886724526438465,
+  "median_final_distance_m": 1.4844348014967943,
+  "label_source": "model predictions only for control; simulator pose used for evaluation",
+  "policy": "moe16",
+  "dataset_version": "visible-stop-v2",
+  "seed": 62024,
+  "smoothing_window": 3,
+  "control_hz_nominal": 6.666666666666667,
+  "stop_confirmation_count": 2,
+  "success_distance_band_m": [
+    1.2,
+    1.65
+  ],
+  "success_bearing_tolerance_rad": 0.18,
+  "collision_metric": "geometry proxy: any robot-target center distance below 0.30 m"
+}

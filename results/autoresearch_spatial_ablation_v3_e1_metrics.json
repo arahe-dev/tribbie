@@ -1,0 +1,225 @@
+{
+  "model": "Compact image encoder -> learned 16-D latent -> 4-expert gated action mixture",
+  "task": "supervised four-action prediction; geometric simulator labels; pixels-only policy input",
+  "architecture": {
+    "input_shape": [
+      3,
+      64,
+      64
+    ],
+    "latent_dim": 16,
+    "num_experts": 1,
+    "num_classes": 4,
+    "parameters": 11653,
+    "spatial_pool": 2,
+    "checkpoint": "models/autoresearch_spatial_ablation_v3_e1.pt"
+  },
+  "selection": {
+    "criterion": "highest validation macro F1; then accuracy; then lower validation loss",
+    "selected_seed": 101,
+    "selected_epoch": 32,
+    "selected_validation": {
+      "accuracy": 0.9948665297741273,
+      "macro_f1": 0.9699230480480481,
+      "loss": 0.02564557082951069
+    },
+    "seeds": [
+      {
+        "seed": 101,
+        "best_epoch": 32,
+        "accuracy": 0.9948665297741273,
+        "macro_f1": 0.9699230480480481,
+        "loss": 0.02564557082951069
+      },
+      {
+        "seed": 42,
+        "best_epoch": 62,
+        "accuracy": 0.9938398357289527,
+        "macro_f1": 0.9638731948376619,
+        "loss": 0.03112122416496277
+      },
+      {
+        "seed": 23,
+        "best_epoch": 37,
+        "accuracy": 0.9938398357289527,
+        "macro_f1": 0.963400504377617,
+        "loss": 0.033232275396585464
+      },
+      {
+        "seed": 17,
+        "best_epoch": 73,
+        "accuracy": 0.9938398357289527,
+        "macro_f1": 0.963400504377617,
+        "loss": 0.04687399044632912
+      },
+      {
+        "seed": 73,
+        "best_epoch": 59,
+        "accuracy": 0.9897330595482546,
+        "macro_f1": 0.9439509765596722,
+        "loss": 0.04636284336447716
+      }
+    ],
+    "hyperparameters": {
+      "seeds": "17,23,42,73,101",
+      "epochs": 250,
+      "patience": 35,
+      "batch_size": 32,
+      "latent_dim": 16,
+      "experts": 1,
+      "spatial_pool": 2,
+      "dropout": 0.1,
+      "learning_rate": 0.0015,
+      "weight_decay": 0.003,
+      "balance_weight": 0.015,
+      "class_weight_power": 0.5,
+      "metadata_path": "data\\moe_rollout_v2\\metadata.csv",
+      "model_name": "autoresearch_spatial_ablation_v3"
+    },
+    "train_class_counts": {
+      "LEFT": 110,
+      "FORWARD": 2642,
+      "RIGHT": 101,
+      "STOP": 54
+    },
+    "train_class_weights": {
+      "LEFT": 1.0884653329849243,
+      "FORWARD": 0.2220979481935501,
+      "RIGHT": 1.135926604270935,
+      "STOP": 1.553510069847107
+    },
+    "metadata_path": "data/moe_rollout_v2/metadata.csv"
+  },
+  "split": {
+    "train_episodes": [
+      "ep01",
+      "ep02",
+      "ep03",
+      "ep04",
+      "ep05",
+      "ep06",
+      "ep07",
+      "ep08",
+      "ep09",
+      "ep10",
+      "ep11",
+      "ep12",
+      "ep13",
+      "ep14",
+      "ep15",
+      "ep16",
+      "ep17",
+      "ep18"
+    ],
+    "validation_episodes": [
+      "ep19",
+      "ep20",
+      "ep21",
+      "ep22",
+      "ep23",
+      "ep24"
+    ],
+    "test_episodes": [
+      "ep25",
+      "ep26",
+      "ep27",
+      "ep28",
+      "ep29",
+      "ep30"
+    ],
+    "samples": {
+      "train": 2907,
+      "validation": 974,
+      "test": 907
+    }
+  },
+  "test": {
+    "accuracy": 0.9878721058434399,
+    "macro_f1": 0.9424424042712634,
+    "per_class": {
+      "LEFT": {
+        "precision": 1.0,
+        "recall": 0.8857142857142857,
+        "f1": 0.9393939393939394,
+        "support": 35
+      },
+      "FORWARD": {
+        "precision": 0.9926829268292683,
+        "recall": 0.9938949938949939,
+        "f1": 0.9932885906040269,
+        "support": 819
+      },
+      "RIGHT": {
+        "precision": 0.9459459459459459,
+        "recall": 1.0,
+        "f1": 0.9722222222222222,
+        "support": 35
+      },
+      "STOP": {
+        "precision": 0.8421052631578947,
+        "recall": 0.8888888888888888,
+        "f1": 0.8648648648648649,
+        "support": 18
+      }
+    },
+    "confusion_matrix": [
+      [
+        31,
+        4,
+        0,
+        0
+      ],
+      [
+        0,
+        814,
+        2,
+        3
+      ],
+      [
+        0,
+        0,
+        35,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        16
+      ]
+    ],
+    "mean_confidence": 0.9872823357582092
+  },
+  "test_expert_usage_mean": [
+    1.0
+  ],
+  "test_gate_entropy_mean": 0.0,
+  "test_mean_gate_usage_by_true_class": {
+    "LEFT": [
+      1.0
+    ],
+    "FORWARD": [
+      1.0
+    ],
+    "RIGHT": [
+      1.0
+    ],
+    "STOP": [
+      1.0
+    ]
+  },
+  "pca16_knn_reference_same_test": null,
+  "latency": {
+    "scope": "MoE model forward on preloaded 64x64 RGB tensor; excludes capture, image resize, and IPC",
+    "iterations": 500,
+    "median_ms": 0.62105,
+    "p95_ms": 0.7160149999999996,
+    "device": "cuda"
+  },
+  "training_seconds": 192.875,
+  "limitations": [
+    "small single-simulator dataset and only two held-out collection episodes",
+    "test metrics are preliminary and do not establish physical-robot or scene generalization",
+    "timing is model-forward only, not camera-to-actuator latency"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "task": "six-arm circular throw/catch relay",
+  "requested_transfers": 18,
+  "completed_simulated_transfers": 18,
+  "complete_circuits": 3.0,
+  "policy_throw_signals": 15,
+  "policy_catch_signals": 31,
+  "policy_hold_signals": 34,
+  "throw_fallbacks": 3,
+  "catch_fallbacks": 2,
+  "policy_action_counts": {
+    "THROW": 33,
+    "CATCH": 73,
+    "WAIT": 95,
+    "HOLD": 55
+  },
+  "mean_inference_round_trip_ms": 9.991405078125,
+  "p95_inference_round_trip_ms": 17.454050000000002,
+  "frame_count": 1357,
+  "video_fps": 30,
+  "video_path": "artifacts/demo_throw_catch_6arm.mp4",
+  "model_checkpoint": "models/throw_catch_moe16.pt",
+  "controller_input": "rendered 720x720 RGB resized to checkpoint-configured 224x224",
+  "limitations": [
+    "Arm links are stylized kinematic USD geometry, not articulated robot actuators.",
+    "Ball flight is a scripted arc; the model selects relay actions but does not predict ball physics.",
+    "A simulator endpoint catch completes safely if the visual policy emits no CATCH cue; see catch_fallbacks."
+  ],
+  "median_inference_round_trip_ms": 8.07535,
+  "mean_after_first_inference_ms": 9.342350588235293,
+  "median_after_first_inference_ms": 8.0741,
+  "model_triggered_throw_transfers": 15,
+  "model_triggered_catch_transfers": 16,
+  "video_duration_seconds": 45.233333333333334
+}

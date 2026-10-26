@@ -1,0 +1,12 @@
+{
+  "episodes": 5,
+  "successes": 0,
+  "failures": 5,
+  "success_percent": 0.0,
+  "label_source": "model predictions only for control; simulator pose used only for evaluation",
+  "collision_metric": "geometry proxy: any robot-target center distance below 0.30 m",
+  "control_hz_nominal": 6.666666666666667,
+  "smoothing_window": 3,
+  "policy": "pca16",
+  "seed": 62024
+}

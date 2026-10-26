@@ -1,0 +1,10 @@
+{
+  "path": "artifacts/demo.mp4",
+  "codec": "h264",
+  "frames": 312,
+  "decision_frames": 39,
+  "fps": 12,
+  "duration_seconds": 26.0,
+  "size_bytes": 764689,
+  "h264_validation": true
+}

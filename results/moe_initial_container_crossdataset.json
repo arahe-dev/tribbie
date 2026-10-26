@@ -1,0 +1,82 @@
+{
+  "scope": "local Jetbot red-pole task only; not HM3D-OVON",
+  "evaluation": {
+    "dataset_csv": "/workspace/latent_robot_demo/data/labels.csv",
+    "split": "episode-held-out test split (ep09, ep10)",
+    "samples": 104,
+    "episodes": [
+      "ep09",
+      "ep10"
+    ],
+    "class_order": [
+      "LEFT",
+      "FORWARD",
+      "RIGHT",
+      "STOP"
+    ],
+    "class_support": {
+      "LEFT": 26,
+      "FORWARD": 26,
+      "RIGHT": 26,
+      "STOP": 26
+    },
+    "accuracy": 0.875,
+    "macro_f1": 0.8723822862478324,
+    "confusion_matrix_rows_true_cols_pred": [
+      [
+        20,
+        0,
+        4,
+        2
+      ],
+      [
+        0,
+        25,
+        1,
+        0
+      ],
+      [
+        3,
+        3,
+        20,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        26
+      ]
+    ]
+  },
+  "model": {
+    "checkpoint": "/workspace/latent_robot_demo/models/moe_latent16.pt",
+    "sha256": "9c238d5a9bc968fe42e11ea191037f3290d89ea6eac5886c099e22de144444e1",
+    "latent_dim": 16,
+    "experts": 4,
+    "spatial_pool": 1,
+    "parameters": 8620
+  },
+  "runtime": {
+    "torch": "2.11.0+cu128",
+    "cuda": "12.8",
+    "device": "NVIDIA RTX A2000 12GB",
+    "latency_iterations": 300,
+    "model_forward_gpu_resident": {
+      "median_ms": 1.5402855,
+      "p95_ms": 1.6366506500000002,
+      "mean_ms": 1.2875794833333336
+    },
+    "resize_transfer_model_output_in_process": {
+      "median_ms": 2.0076035,
+      "p95_ms": 2.1044826,
+      "mean_ms": 1.7880742100000002
+    },
+    "excluded_from_request_timing": [
+      "disk I/O",
+      "socket IPC",
+      "Isaac rendering/physics",
+      "actuation"
+    ]
+  }
+}

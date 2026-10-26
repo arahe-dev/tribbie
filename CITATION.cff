@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Tribbie: compact latent visual skills as a fast control layer for a vision-language operator"
+authors:
+  - name: "arahe-dev"
+repository-code: "https://github.com/arahe-dev/tribbie"
+license: Apache-2.0
+date-released: 2026-10-26
+keywords:
+  - robot learning
+  - latent policy
+  - imitation learning
+  - DAgger
+  - vision-language models
+  - Isaac Sim

@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Project Report: Compact Latent Visual Policies</title>
+<style>
+  @page { size: A4; margin: 20mm 20mm 20mm 20mm; }
+  body { font-family: Calibri, "Segoe UI", Arial, sans-serif; font-size: 10.5pt; line-height: 1.45; color: #1b1f24; margin: 0; }
+  h1 { font-family: Cambria, Georgia, serif; font-size: 22pt; margin: 0 0 4pt; }
+  .sub { color: #555; margin-bottom: 18pt; }
+  h2 { font-family: Cambria, Georgia, serif; font-size: 14pt; margin: 18pt 0 6pt; break-after: avoid; }
+  h3 { font-size: 11pt; margin: 12pt 0 4pt; break-after: avoid; }
+  p { margin: 0 0 7pt; }
+  ul, ol { margin: 0 0 8pt 1.2em; padding: 0; }
+  li { margin-bottom: 3pt; }
+  table { border-collapse: collapse; width: 100%; margin: 6pt 0 10pt; font-size: 9.8pt; break-inside: avoid; }
+  th, td { text-align: left; padding: 3pt 6pt; vertical-align: top; }
+  thead tr { border-bottom: 1pt solid #1b1f24; border-top: 1.2pt solid #1b1f24; }
+  tbody tr:last-child { border-bottom: 1.2pt solid #1b1f24; }
+  tbody tr:nth-child(even) { background: #f4f6f8; }
+  code { font-family: Consolas, "Courier New", monospace; font-size: 9.2pt; }
+  pre { font-family: Consolas, "Courier New", monospace; font-size: 8.8pt; background: #f4f6f8; padding: 8pt 10pt; white-space: pre-wrap; margin: 4pt 0 10pt; break-inside: avoid; }
+  figure { margin: 8pt 0 12pt; break-inside: avoid; }
+  figure img { width: 100%; }
+  figcaption { font-size: 9pt; color: #444; margin-top: 3pt; }
+  .two { display: flex; gap: 12pt; }
+  .two figure { flex: 1; }
+</style>
+</head>
+<body>
+
+<h1>Project Report</h1>
+<div class="sub">Compact latent visual policies and a vision-language programmer for camera-only mobile manipulation<br>
+Author Name &nbsp;·&nbsp; Machine Vision &nbsp;·&nbsp; Deliverables: paper, presentation, demo reel, this report</div>
+
+<h2>1. Goal</h2>
+<p>The assignment asked for a machine-vision research project with a paper, a presentation and a demo. The project asks how
+small a robot's visual representation can be: a policy sees the world only through two low-resolution RGB cameras, compresses
+what it sees into 16 numbers, and must turn those numbers into motor commands. A second question is whether a large
+vision-language model (Claude Opus 5.5) can sit on top of such a policy and program it from camera images.</p>
+<p>Everything runs in NVIDIA Isaac Sim 5.1 on one workstation (RTX A2000, 12&nbsp;GB). Physics is PhysX; grasps are friction
+only. All success numbers in this report are measured from simulator object poses, not from what the policy reports about itself.</p>
+
+<h2>2. What was built</h2>
+<table>
+<thead><tr><th style="width:24%">Component</th><th>What it is</th><th style="width:22%">Where</th></tr></thead>
+<tbody>
+<tr><td>Mobile manipulation cell</td><td>Ridgeback base + Franka arm, pick table with a lip, two obstacles, three bins, three objects (cube, ball, puck); head and wrist cameras</td><td><code>src/course/scene.py</code></td></tr>
+<tr><td>Six-arm relay cell</td><td>Six Franka arms passing four different shapes around a ring of trays at the same time</td><td><code>src/relay/</code></td></tr>
+<tr><td>Privileged teachers</td><td>Scripted controllers that read true poses; used only to label training data</td><td><code>src/course/skills.py</code>, <code>src/relay/expert.py</code></td></tr>
+<tr><td>Latent MoE policy</td><td>255k-parameter network: two image streams &rarr; spatial-softmax keypoints &rarr; 16-D latent &rarr; four gated experts &rarr; action chunks; phase head</td><td><code>src/lm/policy.py</code></td></tr>
+<tr><td>Training pipeline</td><td>Behaviour cloning, DART noise injection, DAgger rounds, frame-quality filtering</td><td><code>src/lm/train_bc.py</code>, <code>scripts/</code></td></tr>
+<tr><td>In-simulator inference</td><td>CUDA-graph runtime with temporal ensembling of action chunks</td><td><code>src/lm/runtime.py</code></td></tr>
+<tr><td>Opus programmer</td><td>Claude Opus 5.5 through <code>claude -p</code>: reads cameras and an execution log, writes and revises programs of <code>face/goto/pick/drop</code></td><td><code>src/course/opus_programmer.py</code>, <code>run_opus_skills.py</code></td></tr>
+<tr><td>Analysis</td><td>Latent t-SNE, keypoint overlays, gate usage, ablations, VLM verification test</td><td><code>src/analysis/</code></td></tr>
+</tbody>
+</table>
+
+<figure><img src="../paper/figures/scene.png">
+<figcaption>The cell. The policy only receives the two small images at the bottom right.</figcaption></figure>
+
+<h3>Three roles</h3>
+<p>The system has three separate roles, and it is easy to blur them:</p>
+<ul>
+<li><b>Teacher</b> (scripted controller). Reads exact object poses from the simulator, demonstrates each task and labels the
+student's mistakes during DAgger. It only produces training data and never acts in a reported run.</li>
+<li><b>Student</b> (the 16-D latent policy). Learns to copy the teacher from the two camera images alone, without the poses.
+The trained student becomes the <code>pick</code> and <code>drop</code> skills.</li>
+<li><b>Operator</b> (Claude Opus through <code>claude -p</code>). Calls the trained skills, looks at the cameras, checks
+outcomes and retries. It never sees the teacher or the training data.</li>
+</ul>
+<p>Teacher to student is imitation learning; student to operator is a function call. A fourth role sits outside the running
+system: the teacher, simulator and training code were written by the author with Claude Opus as a coding assistant. That is the
+same model as the operator, in a different job; see Section&nbsp;8 for why that matters.</p>
+
+<h2>3. How the project developed</h2>
+<p>The final design is the result of several failed versions. The failures explain the design, so they are listed in order.</p>
+<ol>
+<li><b>End-to-end joint-space policy (failed).</b> One policy for the whole pick-drive-drop task, predicting joint-angle changes.
+It learned the task structure but never completed a delivery on its own.</li>
+<li><b>Camera near-clip bug.</b> Isaac cameras default to a near clipping plane of about one metre. The head camera could not see
+anything directly in front of the robot. Fixed by setting the clipping range on every camera.</li>
+<li><b>Brittle teacher labels.</b> A 6&nbsp;cm drift of the base made the teacher switch from "grasp" to "drive back to the table",
+so DAgger labels contradicted each other. The teacher was restructured so base correction and arm motion are labelled separately.</li>
+<li><b>Hovering above objects.</b> The teacher demanded 1&nbsp;cm alignment before descending; the student never achieved it and
+hovered. A descent funnel (allowed height shrinks with alignment error) fixed it.</li>
+<li><b>Action space.</b> In joint space, the millimetre corrections needed for grasping are about as small as the network's own error.
+Switching to gripper velocity in the arm frame (with a fixed IK step) made them learnable.</li>
+<li><b>Corrupted images.</b> Two simulator instances on one GPU return unfinished, sky-only frames (100&nbsp;% and 54&nbsp;% in a
+controlled test; 47&nbsp;% in one DAgger round). Most early evaluations had silently fed the student blank images. Fixed by
+running one simulator at a time, re-rendering flat frames and filtering them from training.</li>
+<li><b>Rotation removed from the policy.</b> The policy wandered and spun the base. Base heading and wrist angle became fixed
+controllers; the policy only translates.</li>
+<li><b>Skills and a VLM programmer.</b> The task was split into <code>goto</code>, <code>pick</code> and <code>drop</code>,
+and Opus writes programs of them. Pick- and drive-focused DAgger rounds produced specialist checkpoints.</li>
+<li><b>Planner for driving.</b> Learned <code>goto</code> worked with 20&nbsp;% teacher help (34/36) but not alone (1/10), so the
+demos use a grid planner for driving, labelled on screen as not learned.</li>
+</ol>
+
+<h2>4. Results</h2>
+<h3>4.1 Closed-loop control (simulator ground truth)</h3>
+<table>
+<thead><tr><th>Test</th><th>Result</th></tr></thead>
+<tbody>
+<tr><td>Teacher, random layouts, with action noise</td><td>67/70 deliveries</td></tr>
+<tr><td>Monolithic policy, student executes 70 % / 88 % / 100 % of steps</td><td>13/20 &nbsp;·&nbsp; 7/24 &nbsp;·&nbsp; 0/8</td></tr>
+<tr><td>Learned pick, student executes 75 % / 90 % / 100 % of steps</td><td>57/80 &nbsp;·&nbsp; 60/80 &nbsp;·&nbsp; <b>14/20</b></td></tr>
+<tr><td>Learned drop (during DAgger)</td><td>28/28</td></tr>
+<tr><td>Learned goto, 80 % / 100 % student</td><td>34/36 &nbsp;·&nbsp; 1/10</td></tr>
+<tr><td>Full deliveries: learned pick + drop, planner goto (4 episodes &times; 2)</td><td><b>4/8</b> (best episode 2/2)</td></tr>
+<tr><td>Six-arm relay, teacher (demo footage)</td><td>12 hand-offs in 60 s, 0 drops</td></tr>
+</tbody>
+</table>
+
+<h3>4.2 What the latent encodes</h3>
+<div class="two">
+<figure><img src="../paper/figures/latent_tsne.png"><figcaption>t-SNE of the 16-D latent: driving and the stages of manipulation separate.</figcaption></figure>
+<figure><img src="../paper/figures/gate_usage.png"><figcaption>Gate weight per skill: experts specialise without supervision (62 % of pick on expert 1, 66 % of drop on expert 3).</figcaption></figure>
+</div>
+<p>A linear head on the latent recovers the teacher's task phase on 92.5&nbsp;% of held-out frames (mean of three seeds). Keypoints
+from the spatial-softmax layer fall on the target object, the fingertips and the table edge.</p>
+<p>The latent is not a PCA of the pixels. PCA keeps the directions in which the images vary most, whatever causes them, such as
+lighting or background. The encoder here is trained jointly with the action and phase outputs, so its 16 numbers keep what is
+needed to act (where the object is relative to the fingers, whether it is held, which stage the task is in) and drop the rest.</p>
+
+<h3>4.3 Ablations (offline, held-out episodes, three seeds)</h3>
+<table>
+<thead><tr><th>Variant</th><th>Phase accuracy</th><th>Action error</th></tr></thead>
+<tbody>ABLATION_ROWS_REPORT</tbody>
+</table>
+<p>The wrist camera carries most of the information; a 4-D latent is too small; 64-D helps slightly. These are offline numbers and
+were not repeated in closed loop.</p>
+
+<h3>4.4 Opus as verifier</h3>
+<p>Opus was asked where each of three objects was in 24 rendered scenes (72 objects). With table, bin and overview views it was
+right <b>83&nbsp;%</b> of the time; with the overview alone, 53&nbsp;%. Nearly all errors were "not visible" answers for objects
+hidden by bin walls; only one answer named a wrong location. In the recorded programmer run Opus delivered the blue ball, retried
+the red cube, then stopped with a wrong conclusion; afterwards it turned out that its dedicated table and bin cameras had rendered
+black in that run. Note what Opus was <i>not</i> asked to discover: the prompt states where the table and bins are and gives
+the recipe <code>pick &rarr; face &rarr; goto &rarr; drop</code>. Opus chooses the objects, the order, when to check and when to
+retry. The robot also holds still while each call runs, which is why a two-object run takes minutes.</p>
+
+<h3>4.5 Latency</h3>
+<p>0.6&nbsp;ms per forward pass and 1.5&nbsp;ms per decision for six arms on an idle GPU; 6&ndash;15&nbsp;ms inside the running
+simulator; about 10&nbsp;s per Opus call.</p>
+
+<h3>4.6 Deployment test: Opus alone vs Opus with the 16-D skill</h3>
+<p>The questions above test pieces in isolation. A deployment asks something simpler: given a robot, cameras and an instruction,
+does the object get picked up, and how long does it take? We ran the same instruction (&ldquo;pick up the &lt;colour&gt; object&rdquo;,
+colour cycled over red, green and blue, object positions jittered by a seeded random generator) under two conditions that share
+everything else: the robot, the side camera and wrist camera images, the Opus model and the per-call time limit.</p>
+<ul>
+<li><b>Opus alone.</b> Each call returns a gripper displacement of at most 8&nbsp;cm per axis plus open/close; a fixed IK layer executes
+it. This is the common &ldquo;LLM as controller&rdquo; setup with no learned low-level policy.</li>
+<li><b>Opus + 16-D skill.</b> Each call returns <code>pick(colour)</code> or <code>done</code>; the latent policy runs the grasp
+from pixels at 15&nbsp;Hz (up to 20&nbsp;s per attempt, three attempts).</li>
+</ul>
+<p>Success is read from PhysX: the commanded object is between the fingers and at least 5&nbsp;cm above the table. Times are
+wall-clock and include Opus thinking; the robot holds still during a call.</p>
+<table>
+<thead><tr><th>Condition</th><th>Successful picks</th><th>Mean time if successful</th><th>Opus calls per attempt</th></tr></thead>
+<tbody>H2H_ROWS</tbody>
+</table>
+<p>H2H_TEXT</p>
+
+<h2>5. Deliverables</h2>
+<table>
+<thead><tr><th style="width:36%">File</th><th>Content</th></tr></thead>
+<tbody>
+<tr><td><code>paper/latent_vision_paper.pdf</code></td><td>Six-page two-column paper</td></tr>
+<tr><td><code>slides/latent_vision_presentation.pptx</code></td><td>19 slides with figures, native charts and two embedded demo clips; speaker notes on the title slide</td></tr>
+<tr><td><code>deliverables/claude_vs_claude_plus_16d.mp4</code></td><td>Under one minute, 30 fps: the deployment test side by side, real time then a labelled speed-up, ending on the measured results</td></tr>
+<tr><td><code>demo/demo_reel_30fps.mp4</code></td><td>3 min 36 s at 30 fps, real-time speed (motion-interpolated from the 15 Hz simulation): Opus programming run, best learned delivery run, six-arm teacher relay</td></tr>
+<tr><td><code>artifacts/*.mp4</code></td><td>Individual full-length recordings, including all four unedited delivery episodes</td></tr>
+<tr><td><code>results/</code>, <code>logs/</code></td><td>Raw JSON results and logs behind every number</td></tr>
+</tbody>
+</table>
+
+<h2>6. Live demo script</h2>
+<p>A live run is possible but should be introduced honestly: the learned pick succeeds about 70&nbsp;% of the time, and an Opus call
+takes about ten seconds. Close every other GPU program first and do not start a second simulator.</p>
+<pre>cd C:\Users\mirai\latent_robot_demo
+C:\isaacsim\python.bat src\course\run_opus_skills.py --goto-planner ^
+    --checkpoint models\skills_s2.pt --checkpoint-pick models\skills_p3.pt ^
+    --instruction "Put the blue ball in the teal bin." --frames artifacts\live_frames
+.venv\Scripts\python.exe src\tools\encode_video.py artifacts\live_frames artifacts\live_run.mp4</pre>
+<p>The run is headless (Isaac renders off-screen); the encoded video is ready about a minute after the run ends. The pre-recorded
+reel is the safe fallback.</p>
+
+<h2>7. Honest limitations</h2>
+<ul>
+<li>Simulation only, with Isaac's holonomic base model rather than wheel friction.</li>
+<li>Narrow distribution: one arena, three objects in nearly fixed slots.</li>
+<li>Small evaluation sets (8&ndash;20 trials per closed-loop condition).</li>
+<li>Driving in the final demos is a planner, not the learned policy.</li>
+<li>The six-arm relay footage shows the scripted teacher; its learned policy was never retrained after the camera fixes.</li>
+<li>Ablations are offline only.</li>
+<li>The deployment test has six trials per condition, one task (single pick) and one simulator; it shows the size of the gap, not a precise rate.</li>
+<li>Opus's prompt for the programmer gives the arena layout and the skill recipe; it does not discover them.</li>
+</ul>
+
+<h2>8. Scope and next step</h2>
+<p><b>Where this fits now.</b> Fixed, structured settings such as factory stations, warehouses and lab automation: one
+cell, known parts, stable lighting. A new skill costs a few hours, almost all of it simulator time for demonstrations and DAgger
+rounds; fitting the network itself takes minutes. Decisions take 1.5&nbsp;ms on a GPU and 7.5&nbsp;ms on a CPU.</p>
+<p><b>What the open world needs.</b> Much more varied scenes and objects; learned navigation (the learned driving skill
+succeeded 1/10 times alone here); memory or a world model, since the policy only sees the current frame; transfer from
+simulation to real cameras and friction; and probably a larger latent (64-D already beat 16-D offline). The split between a slow
+reasoning layer and a fast learned layer should carry over; the lower layer grows.</p>
+<p><b>One Opus instead of two.</b> Today the engineer (Opus as a coding assistant, writing the teacher with the author) and the
+operator (Opus calling skills) are separate. Merging them gives a loop in which the model is told a new task in plain language,
+writes a privileged teacher for it in simulation, collects demonstrations, trains a 16-D student, checks it against physics
+ground truth and adds it to its own toolbox before operating with it. This project has every stage of that loop except the
+automatic one: writing working teachers took several iterations and human corrections, and three camera faults were only found
+by inspecting raw frames, so a merged system would need those checks built in and a human approving each new skill.</p>
+
+<h2>9. Reflection</h2>
+<p>The single most useful lesson was that the vision pipeline needs testing before the model does. Three different rendering
+problems (a clipping default, unfinished frames from concurrent renderers, and black cameras) each silently corrupted
+training or evaluation data, and each looked like a modelling failure until the raw frames were inspected. The second lesson is
+about scale: a 16-number policy can perform a reactive skill from pixels but cannot chain a long task on its own with this much
+data; splitting the work between a fast learned layer and a slow reasoning layer is what made complete deliveries possible.</p>
+
+<h2>10. Reproduction</h2>
+<pre># teacher data, training and DAgger for the skills (one simulator at a time)
+C:\isaacsim\python.bat src\course\run_skills.py --mode expert --noise 0.3 --episodes 40 --save-data data\skills\expert
+.venv\Scripts\python.exe src\lm\train_bc.py --task skills --data data\skills\expert --out models\skills_s1.pt
+C:\isaacsim\python.bat src\course\run_skills.py --mode dagger --beta 0.3 --checkpoint models\skills_s1.pt --save-data data\skills\dagger1
+# evaluation (student only, planner goto)
+C:\isaacsim\python.bat src\course\run_skills.py --mode student --goto-planner --checkpoint models\skills_s2.pt ^
+    --checkpoint-pick models\skills_p3.pt --episodes 4 --deliveries 2 --start-bin-prob 0
+# figures, ablations, VLM test, paper
+.venv\Scripts\python.exe src\analysis\vision_figures.py
+.venv\Scripts\python.exe src\analysis\result_figures.py
+bash scripts\ablations.sh && bash scripts\ablations_seeds.sh
+C:\isaacsim\python.bat src\analysis\vlm_states.py 24 && .venv\Scripts\python.exe src\analysis\vlm_verify.py
+.venv\Scripts\python.exe paper\build_paper.py</pre>
+
+</body>
+</html>

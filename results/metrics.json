@@ -1,0 +1,237 @@
+{
+  "evaluation": "held-out episodes only",
+  "class_order": [
+    "LEFT",
+    "FORWARD",
+    "RIGHT",
+    "STOP"
+  ],
+  "split": {
+    "train_episodes": [
+      "ep01",
+      "ep02",
+      "ep03",
+      "ep04",
+      "ep05",
+      "ep06"
+    ],
+    "val_episodes": [
+      "ep07",
+      "ep08"
+    ],
+    "test_episodes": [
+      "ep09",
+      "ep10"
+    ]
+  },
+  "label_distribution": {
+    "train": {
+      "LEFT": 78,
+      "FORWARD": 78,
+      "RIGHT": 78,
+      "STOP": 78
+    },
+    "val": {
+      "LEFT": 26,
+      "FORWARD": 26,
+      "RIGHT": 26,
+      "STOP": 26
+    },
+    "test": {
+      "LEFT": 26,
+      "FORWARD": 26,
+      "RIGHT": 26,
+      "STOP": 26
+    }
+  },
+  "feature_shape": [
+    520,
+    512
+  ],
+  "methods": {
+    "Raw RGB + kNN": {
+      "dimension": 12288,
+      "accuracy": 0.9807692307692307,
+      "macro_f1": 0.9807621161672215,
+      "per_class": {
+        "LEFT": {
+          "precision": 0.9629629629629629,
+          "recall": 1.0,
+          "f1": 0.9811320754716981,
+          "support": 26.0
+        },
+        "FORWARD": {
+          "precision": 1.0,
+          "recall": 0.9615384615384616,
+          "f1": 0.9803921568627451,
+          "support": 26.0
+        },
+        "RIGHT": {
+          "precision": 1.0,
+          "recall": 0.9615384615384616,
+          "f1": 0.9803921568627451,
+          "support": 26.0
+        },
+        "STOP": {
+          "precision": 0.9629629629629629,
+          "recall": 1.0,
+          "f1": 0.9811320754716981,
+          "support": 26.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          26,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          25,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          25,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          26
+        ]
+      ],
+      "predict_batch_ms": 252.6412,
+      "test_samples": 104
+    },
+    "ResNet + kNN": {
+      "dimension": 512,
+      "accuracy": 0.7596153846153846,
+      "macro_f1": 0.7579458012713282,
+      "per_class": {
+        "LEFT": {
+          "precision": 0.7391304347826086,
+          "recall": 0.6538461538461539,
+          "f1": 0.6938775510204082,
+          "support": 26.0
+        },
+        "FORWARD": {
+          "precision": 0.8695652173913043,
+          "recall": 0.7692307692307693,
+          "f1": 0.8163265306122449,
+          "support": 26.0
+        },
+        "RIGHT": {
+          "precision": 0.782608695652174,
+          "recall": 0.6923076923076923,
+          "f1": 0.7346938775510204,
+          "support": 26.0
+        },
+        "STOP": {
+          "precision": 0.6857142857142857,
+          "recall": 0.9230769230769231,
+          "f1": 0.7868852459016393,
+          "support": 26.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          17,
+          1,
+          4,
+          4
+        ],
+        [
+          0,
+          20,
+          1,
+          5
+        ],
+        [
+          5,
+          1,
+          18,
+          2
+        ],
+        [
+          1,
+          1,
+          0,
+          24
+        ]
+      ],
+      "predict_batch_ms": 19.4357,
+      "test_samples": 104
+    },
+    "ResNet + PCA-16 + kNN": {
+      "dimension": 16,
+      "accuracy": 0.6730769230769231,
+      "macro_f1": 0.6658202716823407,
+      "per_class": {
+        "LEFT": {
+          "precision": 0.6206896551724138,
+          "recall": 0.6923076923076923,
+          "f1": 0.6545454545454545,
+          "support": 26.0
+        },
+        "FORWARD": {
+          "precision": 0.7894736842105263,
+          "recall": 0.5769230769230769,
+          "f1": 0.6666666666666666,
+          "support": 26.0
+        },
+        "RIGHT": {
+          "precision": 0.5,
+          "recall": 0.46153846153846156,
+          "f1": 0.48,
+          "support": 26.0
+        },
+        "STOP": {
+          "precision": 0.78125,
+          "recall": 0.9615384615384616,
+          "f1": 0.8620689655172413,
+          "support": 26.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          18,
+          1,
+          7,
+          0
+        ],
+        [
+          0,
+          15,
+          5,
+          6
+        ],
+        [
+          11,
+          2,
+          12,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          25
+        ]
+      ],
+      "predict_batch_ms": 7.2292,
+      "test_samples": 104
+    }
+  },
+  "pca_explained_variance": {
+    "2": 0.41169631481170654,
+    "8": 0.6588688492774963,
+    "16": 0.7760854959487915,
+    "32": 0.8721464276313782,
+    "64": 0.9420238733291626
+  }
+}

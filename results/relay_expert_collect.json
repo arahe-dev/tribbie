@@ -1,0 +1,3176 @@
+[
+  {
+    "episode": 0,
+    "seed": 1000,
+    "mode": "expert",
+    "sim_seconds": 90.0,
+    "wall_seconds": 277.5,
+    "objects": [
+      "cube",
+      "ball",
+      "bar",
+      "puck"
+    ],
+    "colors": {
+      "0": "purple",
+      "2": "yellow",
+      "3": "green",
+      "4": "orange"
+    },
+    "transfers": 26,
+    "drops": 0,
+    "ik_failures": 0,
+    "phase_hist": {
+      "home": 3784,
+      "approach": 1125,
+      "descend": 338,
+      "close": 49,
+      "lift": 509,
+      "carry": 1491,
+      "wait": 0,
+      "place": 557,
+      "release": 26,
+      "retreat": 221
+    },
+    "transfer_log": [
+      {
+        "object": "puck",
+        "from": 0,
+        "to": 1,
+        "t": 10.4
+      },
+      {
+        "object": "cube",
+        "from": 5,
+        "to": 0,
+        "t": 15.33
+      },
+      {
+        "object": "bar",
+        "from": 4,
+        "to": 5,
+        "t": 21.87
+      },
+      {
+        "object": "puck",
+        "from": 1,
+        "to": 2,
+        "t": 22.07
+      },
+      {
+        "object": "ball",
+        "from": 3,
+        "to": 4,
+        "t": 25.93
+      },
+      {
+        "object": "cube",
+        "from": 0,
+        "to": 1,
+        "t": 26.93
+      },
+      {
+        "object": "bar",
+        "from": 5,
+        "to": 0,
+        "t": 33.73
+      },
+      {
+        "object": "puck",
+        "from": 2,
+        "to": 3,
+        "t": 33.87
+      },
+      {
+        "object": "ball",
+        "from": 4,
+        "to": 5,
+        "t": 38.53
+      },
+      {
+        "object": "cube",
+        "from": 1,
+        "to": 2,
+        "t": 38.73
+      },
+      {
+        "object": "puck",
+        "from": 3,
+        "to": 4,
+        "t": 45.4
+      },
+      {
+        "object": "bar",
+        "from": 0,
+        "to": 1,
+        "t": 45.73
+      },
+      {
+        "object": "ball",
+        "from": 5,
+        "to": 0,
+        "t": 50.4
+      },
+      {
+        "object": "cube",
+        "from": 2,
+        "to": 3,
+        "t": 50.47
+      },
+      {
+        "object": "puck",
+        "from": 4,
+        "to": 5,
+        "t": 56.93
+      },
+      {
+        "object": "bar",
+        "from": 1,
+        "to": 2,
+        "t": 57.6
+      },
+      {
+        "object": "cube",
+        "from": 3,
+        "to": 4,
+        "t": 62.0
+      },
+      {
+        "object": "ball",
+        "from": 0,
+        "to": 1,
+        "t": 62.2
+      },
+      {
+        "object": "puck",
+        "from": 5,
+        "to": 0,
+        "t": 68.4
+      },
+      {
+        "object": "bar",
+        "from": 2,
+        "to": 3,
+        "t": 69.47
+      },
+      {
+        "object": "cube",
+        "from": 4,
+        "to": 5,
+        "t": 73.67
+      },
+      {
+        "object": "ball",
+        "from": 1,
+        "to": 2,
+        "t": 74.07
+      },
+      {
+        "object": "puck",
+        "from": 0,
+        "to": 1,
+        "t": 79.87
+      },
+      {
+        "object": "bar",
+        "from": 3,
+        "to": 4,
+        "t": 81.33
+      },
+      {
+        "object": "cube",
+        "from": 5,
+        "to": 0,
+        "t": 85.13
+      },
+      {
+        "object": "ball",
+        "from": 2,
+        "to": 3,
+        "t": 85.93
+      }
+    ]
+  },
+  {
+    "episode": 1,
+    "seed": 1001,
+    "mode": "expert",
+    "sim_seconds": 90.0,
+    "wall_seconds": 395.7,
+    "objects": [
+      "cube",
+      "ball",
+      "bar",
+      "puck"
+    ],
+    "colors": {
+      "0": "green",
+      "2": "red",
+      "3": "orange",
+      "4": "cyan"
+    },
+    "transfers": 26,
+    "drops": 0,
+    "ik_failures": 0,
+    "phase_hist": {
+      "home": 3821,
+      "approach": 1087,
+      "descend": 336,
+      "close": 49,
+      "lift": 510,
+      "carry": 1491,
+      "wait": 0,
+      "place": 558,
+      "release": 26,
+      "retreat": 222
+    },
+    "transfer_log": [
+      {
+        "object": "puck",
+        "from": 0,
+        "to": 1,
+        "t": 9.73
+      },
+      {
+        "object": "bar",
+        "from": 5,
+        "to": 0,
+        "t": 16.33
+      },
+      {
+        "object": "cube",
+        "from": 4,
+        "to": 5,
+        "t": 20.53
+      },
+      {
+        "object": "puck",
+        "from": 1,
+        "to": 2,
+        "t": 21.53
+      },
+      {
+        "object": "ball",
+        "from": 3,
+        "to": 4,
+        "t": 25.6
+      },
+      {
+        "object": "bar",
+        "from": 0,
+        "to": 1,
+        "t": 28.2
+      },
+      {
+        "object": "cube",
+        "from": 5,
+        "to": 0,
+        "t": 33.13
+      },
+      {
+        "object": "puck",
+        "from": 2,
+        "to": 3,
+        "t": 33.33
+      },
+      {
+        "object": "ball",
+        "from": 4,
+        "to": 5,
+        "t": 38.2
+      },
+      {
+        "object": "bar",
+        "from": 1,
+        "to": 2,
+        "t": 40.27
+      },
+      {
+        "object": "puck",
+        "from": 3,
+        "to": 4,
+        "t": 44.87
+      },
+      {
+        "object": "cube",
+        "from": 0,
+        "to": 1,
+        "t": 45.0
+      },
+      {
+        "object": "ball",
+        "from": 5,
+        "to": 0,
+        "t": 50.27
+      },
+      {
+        "object": "bar",
+        "from": 2,
+        "to": 3,
+        "t": 52.13
+      },
+      {
+        "object": "puck",
+        "from": 4,
+        "to": 5,
+        "t": 56.4
+      },
+      {
+        "object": "cube",
+        "from": 1,
+        "to": 2,
+        "t": 57.0
+      },
+      {
+        "object": "ball",
+        "from": 0,
+        "to": 1,
+        "t": 62.27
+      },
+      {
+        "object": "bar",
+        "from": 3,
+        "to": 4,
+        "t": 64.13
+      },
+      {
+        "object": "puck",
+        "from": 5,
+        "to": 0,
+        "t": 67.87
+      },
+      {
+        "object": "cube",
+        "from": 2,
+        "to": 3,
+        "t": 69.0
+      },
+      {
+        "object": "ball",
+        "from": 1,
+        "to": 2,
+        "t": 74.2
+      },
+      {
+        "object": "bar",
+        "from": 4,
+        "to": 5,
+        "t": 76.0
+      },
+      {
+        "object": "puck",
+        "from": 0,
+        "to": 1,
+        "t": 79.8
+      },
+      {
+        "object": "cube",
+        "from": 3,
+        "to": 4,
+        "t": 80.73
+      },
+      {
+        "object": "ball",
+        "from": 2,
+        "to": 3,
+        "t": 86.0
+      },
+      {
+        "object": "bar",
+        "from": 5,
+        "to": 0,
+        "t": 87.87
+      }
+    ]
+  },
+  {
+    "episode": 2,
+    "seed": 1002,
+    "mode": "expert",
+    "sim_seconds": 90.0,
+    "wall_seconds": 304.2,
+    "objects": [
+      "tall cylinder",
+      "ball",
+      "bar",
+      "puck"
+    ],
+    "colors": {
+      "1": "red",
+      "2": "orange",
+      "3": "cyan",
+      "4": "yellow"
+    },
+    "transfers": 28,
+    "drops": 0,
+    "ik_failures": 0,
+    "phase_hist": {
+      "home": 3701,
+      "approach": 1141,
+      "descend": 361,
+      "close": 54,
+      "lift": 511,
+      "carry": 1535,
+      "wait": 0,
+      "place": 552,
+      "release": 28,
+      "retreat": 217
+    },
+    "transfer_log": [
+      {
+        "object": "tall cylinder",
+        "from": 3,
+        "to": 4,
+        "t": 8.53
+      },
+      {
+        "object": "bar",
+        "from": 0,
+        "to": 1,
+        "t": 11.13
+      },
+      {
+        "object": "ball",
+        "from": 2,
+        "to": 3,
+        "t": 14.2
+      },
+      {
+        "object": "puck",
+        "from": 5,
+        "to": 0,
+        "t": 15.6
+      },
+      {
+        "object": "tall cylinder",
+        "from": 4,
+        "to": 5,
+        "t": 19.53
+      },
+      {
+        "object": "bar",
+        "from": 1,
+        "to": 2,
+        "t": 23.53
+      },
+      {
+        "object": "ball",
+        "from": 3,
+        "to": 4,
+        "t": 25.27
+      },
+      {
+        "object": "puck",
+        "from": 0,
+        "to": 1,
+        "t": 28.27
+      },
+      {
+        "object": "tall cylinder",
+        "from": 5,
+        "to": 0,
+        "t": 32.33
+      },
+      {
+        "object": "bar",
+        "from": 2,
+        "to": 3,
+        "t": 35.2
+      },
+      {
+        "object": "ball",
+        "from": 4,
+        "to": 5,
+        "t": 38.07
+      },
+      {
+        "object": "puck",
+        "from": 1,
+        "to": 2,
+        "t": 40.4
+      },
+      {
+        "object": "tall cylinder",
+        "from": 0,
+        "to": 1,
+        "t": 44.47
+      },
+      {
+        "object": "bar",
+        "from": 3,
+        "to": 4,
+        "t": 47.33
+      },
+      {
+        "object": "ball",
+        "from": 5,
+        "to": 0,
+        "t": 50.33
+      },
+      {
+        "object": "puck",
+        "from": 2,
+        "to": 3,
+        "t": 52.33
+      },
+      {
+        "object": "tall cylinder",
+        "from": 1,
+        "to": 2,
+        "t": 56.47
+      },
+      {
+        "object": "bar",
+        "from": 4,
+        "to": 5,
+        "t": 59.2
+      },
+      {
+        "object": "ball",
+        "from": 0,
+        "to": 1,
+        "t": 62.27
+      },
+      {
+        "object": "puck",
+        "from": 3,
+        "to": 4,
+        "t": 64.13
+      },
+      {
+        "object": "tall cylinder",
+        "from": 2,
+        "to": 3,
+        "t": 68.47
+      },
+      {
+        "object": "bar",
+        "from": 5,
+        "to": 0,
+        "t": 71.07
+      },
+      {
+        "object": "ball",
+        "from": 1,
+        "to": 2,
+        "t": 74.2
+      },
+      {
+        "object": "puck",
+        "from": 4,
+        "to": 5,
+        "t": 76.0
+      },
+      {
+        "object": "tall cylinder",
+        "from": 3,
+        "to": 4,
+        "t": 80.33
+      },
+      {
+        "object": "bar",
+        "from": 0,
+        "to": 1,
+        "t": 82.87
+      },
+      {
+        "object": "ball",
+        "from": 2,
+        "to": 3,
+        "t": 86.13
+      },
+      {
+        "object": "puck",
+        "from": 5,
+        "to": 0,
+        "t": 87.87
+      }
+    ]
+  },
+  {
+    "episode": 3,
+    "seed": 1003,
+    "mode": "expert",
+    "sim_seconds": 90.0,
+    "wall_seconds": 305.3,
+    "objects": [
+      "cube",
+      "tall cylinder",
+      "ball",
+      "bar"
+    ],
+    "colors": {
+      "0": "cyan",
+      "1": "white",
+      "2": "green",
+      "3": "blue"
+    },
+    "transfers": 28,
+    "drops": 0,
+    "ik_failures": 0,
+    "phase_hist": {
+      "home": 3727,
+      "approach": 1137,
+      "descend": 359,
+      "close": 61,
+      "lift": 512,
+      "carry": 1523,
+      "wait": 0,
+      "place": 543,
+      "release": 28,
+      "retreat": 210
+    },
+    "transfer_log": [
+      {
+        "object": "tall cylinder",
+        "from": 5,
+        "to": 0,
+        "t": 8.8
+      },
+      {
+        "object": "bar",
+        "from": 2,
+        "to": 3,
+        "t": 10.8
+      },
+      {
+        "object": "ball",
+        "from": 4,
+        "to": 5,
+        "t": 14.67
+      },
+      {
+        "object": "cube",
+        "from": 1,
+        "to": 2,
+        "t": 15.13
+      },
+      {
+        "object": "tall cylinder",
+        "from": 0,
+        "to": 1,
+        "t": 19.6
+      },
+      {
+        "object": "bar",
+        "from": 3,
+        "to": 4,
+        "t": 23.27
+      },
+      {
+        "object": "ball",
+        "from": 5,
+        "to": 0,
+        "t": 25.67
+      },
+      {
+        "object": "cube",
+        "from": 2,
+        "to": 3,
+        "t": 27.4
+      },
+      {
+        "object": "tall cylinder",
+        "from": 1,
+        "to": 2,
+        "t": 31.73
+      },
+      {
+        "object": "bar",
+        "from": 4,
+        "to": 5,
+        "t": 35.27
+      },
+      {
+        "object": "ball",
+        "from": 0,
+        "to": 1,
+        "t": 37.6
+      },
+      {
+        "object": "cube",
+        "from": 3,
+        "to": 4,
+        "t": 40.07
+      },
+      {
+        "object": "tall cylinder",
+        "from": 2,
+        "to": 3,
+        "t": 44.4
+      },
+      {
+        "object": "bar",
+        "from": 5,
+        "to": 0,
+        "t": 47.13
+      },
+      {
+        "object": "ball",
+        "from": 1,
+        "to": 2,
+        "t": 50.07
+      },
+      {
+        "object": "cube",
+        "from": 4,
+        "to": 5,
+        "t": 52.13
+      },
+      {
+        "object": "tall cylinder",
+        "from": 3,
+        "to": 4,
+        "t": 56.47
+      },
+      {
+        "object": "bar",
+        "from": 0,
+        "to": 1,
+        "t": 59.13
+      },
+      {
+        "object": "ball",
+        "from": 2,
+        "to": 3,
+        "t": 62.27
+      },
+      {
+        "object": "cube",
+        "from": 5,
+        "to": 0,
+        "t": 64.0
+      },
+      {
+        "object": "tall cylinder",
+        "from": 4,
+        "to": 5,
+        "t": 68.53
+      },
+      {
+        "object": "bar",
+        "from": 1,
+        "to": 2,
+        "t": 71.13
+      },
+      {
+        "object": "ball",
+        "from": 3,
+        "to": 4,
+        "t": 74.47
+      },
+      {
+        "object": "cube",
+        "from": 0,
+        "to": 1,
+        "t": 76.0
+      },
+      {
+        "object": "tall cylinder",
+        "from": 5,
+        "to": 0,
+        "t": 80.53
+      },
+      {
+        "object": "bar",
+        "from": 2,
+        "to": 3,
+        "t": 82.87
+      },
+      {
+        "object": "ball",
+        "from": 4,
+        "to": 5,
+        "t": 86.07
+      },
+      {
+        "object": "cube",
+        "from": 1,
+        "to": 2,
+        "t": 87.87
+      }
+    ]
+  },
+  {
+    "episode": 4,
+    "seed": 1004,
+    "mode": "expert",
+    "sim_seconds": 90.0,
+    "wall_seconds": 304.0,
+    "objects": [
+      "cube",
+      "ball",
+      "puck",
+      "capsule"
+    ],
+    "colors": {
+      "0": "cyan",
+      "2": "orange",
+      "4": "yellow",
+      "5": "white"
+    },
+    "transfers": 27,
+    "drops": 0,
+    "ik_failures": 0,
+    "phase_hist": {
+      "home": 3608,
+      "approach": 1181,
+      "descend": 364,
+      "close": 46,
+      "lift": 530,
+      "carry": 1543,
+      "wait": 0,
+      "place": 572,
+      "release": 27,
+      "retreat": 229
+    },
+    "transfer_log": [
+      {
+        "object": "cube",
+        "from": 5,
+        "to": 0,
+        "t": 9.8
+      },
+      {
+        "object": "capsule",
+        "from": 3,
+        "to": 4,
+        "t": 9.8
+      },
+      {
+        "object": "ball",
+        "from": 2,
+        "to": 3,
+        "t": 15.07
+      },
+      {
+        "object": "puck",
+        "from": 1,
+        "to": 2,
+        "t": 21.0
+      },
+      {
+        "object": "capsule",
+        "from": 4,
+        "to": 5,
+        "t": 21.67
+      },
+      {
+        "object": "cube",
+        "from": 0,
+        "to": 1,
+        "t": 26.07
+      },
+      {
+        "object": "ball",
+        "from": 3,
+        "to": 4,
+        "t": 26.6
+      },
+      {
+        "object": "puck",
+        "from": 2,
+        "to": 3,
+        "t": 32.53
+      },
+      {
+        "object": "capsule",
+        "from": 5,
+        "to": 0,
+        "t": 33.13
+      },
+      {
+        "object": "cube",
+        "from": 1,
+        "to": 2,
+        "t": 37.6
+      },
+      {
+        "object": "ball",
+        "from": 4,
+        "to": 5,
+        "t": 38.13
+      },
+      {
+        "object": "puck",
+        "from": 3,
+        "to": 4,
+        "t": 44.07
+      },
+      {
+        "object": "capsule",
+        "from": 0,
+        "to": 1,
+        "t": 44.6
+      },
+      {
+        "object": "cube",
+        "from": 2,
+        "to": 3,
+        "t": 49.27
+      },
+      {
+        "object": "ball",
+        "from": 5,
+        "to": 0,
+        "t": 49.67
+      },
+      {
+        "object": "puck",
+        "from": 4,
+        "to": 5,
+        "t": 55.53
+      },
+      {
+        "object": "capsule",
+        "from": 1,
+        "to": 2,
+        "t": 56.33
+      },
+      {
+        "object": "cube",
+        "from": 3,
+        "to": 4,
+        "t": 60.73
+      },
+      {
+        "object": "ball",
+        "from": 0,
+        "to": 1,
+        "t": 61.53
+      },
+      {
+        "object": "puck",
+        "from": 5,
+        "to": 0,
+        "t": 67.13
+      },
+      {
+        "object": "capsule",
+        "from": 2,
+        "to": 3,
+        "t": 67.87
+      },
+      {
+        "object": "cube",
+        "from": 4,
+        "to": 5,
+        "t": 72.33
+      },
+      {
+        "object": "ball",
+        "from": 1,
+        "to": 2,
+        "t": 73.07
+      },
+      {
+        "object": "puck",
+        "from": 0,
+        "to": 1,
+        "t": 78.73
+      },
+      {
+        "object": "capsule",
+        "from": 3,
+        "to": 4,
+        "t": 79.33
+      },
+      {
+        "object": "cube",
+        "from": 5,
+        "to": 0,
+        "t": 84.0
+      },
+      {
+        "object": "ball",
+        "from": 2,
+        "to": 3,
+        "t": 84.53
+      }
+    ]
+  },
+  {
+    "episode": 5,
+    "seed": 1005,
+    "mode": "expert",
+    "sim_seconds": 90.0,
+    "wall_seconds": 372.6,
+    "objects": [
+      "cube",
+      "tall cylinder",
+      "puck",
+      "capsule"
+    ],
+    "colors": {
+      "0": "purple",
+      "1": "green",
+      "4": "blue",
+      "5": "red"
+    },
+    "transfers": 28,
+    "drops": 0,
+    "ik_failures": 0,
+    "phase_hist": {
+      "home": 3805,
+      "approach": 1132,
+      "descend": 349,
+      "close": 51,
+      "lift": 498,
+      "carry": 1485,
+      "wait": 0,
+      "place": 536,
+      "release": 28,
+      "retreat": 216
+    },
+    "transfer_log": [
+      {
+        "object": "cube",
+        "from": 4,
+        "to": 5,
+        "t": 9.87
+      },
+      {
+        "object": "capsule",
+        "from": 3,
+        "to": 4,
+        "t": 15.27
+      },
+      {
+        "object": "tall cylinder",
+        "from": 2,
+        "to": 3,
+        "t": 19.53
+      },
+      {
+        "object": "cube",
+        "from": 5,
+        "to": 0,
+        "t": 21.27
+      },
+      {
+        "object": "puck",
+        "from": 1,
+        "to": 2,
+        "t": 25.87
+      },
+      {
+        "object": "capsule",
+        "from": 4,
+        "to": 5,
+        "t": 27.07
+      },
+      {
+        "object": "tall cylinder",
+        "from": 3,
+        "to": 4,
+        "t": 31.33
+      },
+      {
+        "object": "cube",
+        "from": 0,
+        "to": 1,
+        "t": 32.6
+      },
+      {
+        "object": "puck",
+        "from": 2,
+        "to": 3,
+        "t": 37.6
+      },
+      {
+        "object": "capsule",
+        "from": 5,
+        "to": 0,
+        "t": 38.6
+      },
+      {
+        "object": "tall cylinder",
+        "from": 4,
+        "to": 5,
+        "t": 42.87
+      },
+      {
+        "object": "cube",
+        "from": 1,
+        "to": 2,
+        "t": 43.8
+      },
+      {
+        "object": "puck",
+        "from": 3,
+        "to": 4,
+        "t": 49.0
+      },
+      {
+        "object": "capsule",
+        "from": 0,
+        "to": 1,
+        "t": 50.07
+      },
+      {
+        "object": "tall cylinder",
+        "from": 5,
+        "to": 0,
+        "t": 54.33
+      },
+      {
+        "object": "cube",
+        "from": 2,
+        "to": 3,
+        "t": 55.07
+      },
+      {
+        "object": "puck",
+        "from": 4,
+        "to": 5,
+        "t": 60.47
+      },
+      {
+        "object": "capsule",
+        "from": 1,
+        "to": 2,
+        "t": 61.8
+      },
+      {
+        "object": "cube",
+        "from": 3,
+        "to": 4,
+        "t": 66.27
+      },
+      {
+        "object": "tall cylinder",
+        "from": 0,
+        "to": 1,
+        "t": 66.33
+      },
+      {
+        "object": "puck",
+        "from": 5,
+        "to": 0,
+        "t": 72.47
+      },
+      {
+        "object": "capsule",
+        "from": 2,
+        "to": 3,
+        "t": 73.27
+      },
+      {
+        "object": "cube",
+        "from": 4,
+        "to": 5,
+        "t": 77.67
+      },
+      {
+        "object": "tall cylinder",
+        "from": 1,
+        "to": 2,
+        "t": 77.93
+      },
+      {
+        "object": "puck",
+        "from": 0,
+        "to": 1,
+        "t": 84.0
+      },
+      {
+        "object": "capsule",
+        "from": 3,
+        "to": 4,
+        "t": 84.73
+      },
+      {
+        "object": "cube",
+        "from": 5,
+        "to": 0,
+        "t": 89.27
+      },
+      {
+        "object": "tall cylinder",
+        "from": 2,
+        "to": 3,
+        "t": 89.33
+      }
+    ]
+  },
+  {
+    "episode": 6,
+    "seed": 1006,
+    "mode": "expert",
+    "sim_seconds": 90.0,
+    "wall_seconds": 477.5,
+    "objects": [
+      "cube",
+      "tall cylinder",
+      "bar",
+      "capsule"
+    ],
+    "colors": {
+      "0": "blue",
+      "1": "orange",
+      "3": "white",
+      "5": "green"
+    },
+    "transfers": 26,
+    "drops": 0,
+    "ik_failures": 0,
+    "phase_hist": {
+      "home": 3957,
+      "approach": 1099,
+      "descend": 338,
+      "close": 64,
+      "lift": 486,
+      "carry": 1427,
+      "wait": 0,
+      "place": 503,
+      "release": 26,
+      "retreat": 200
+    },
+    "transfer_log": [
+      {
+        "object": "bar",
+        "from": 1,
+        "to": 2,
+        "t": 10.8
+      },
+      {
+        "object": "tall cylinder",
+        "from": 0,
+        "to": 1,
+        "t": 14.53
+      },
+      {
+        "object": "capsule",
+        "from": 5,
+        "to": 0,
+        "t": 22.93
+      },
+      {
+        "object": "bar",
+        "from": 2,
+        "to": 3,
+        "t": 23.2
+      },
+      {
+        "object": "tall cylinder",
+        "from": 1,
+        "to": 2,
+        "t": 26.67
+      },
+      {
+        "object": "cube",
+        "from": 4,
+        "to": 5,
+        "t": 27.27
+      },
+      {
+        "object": "capsule",
+        "from": 0,
+        "to": 1,
+        "t": 34.47
+      },
+      {
+        "object": "bar",
+        "from": 3,
+        "to": 4,
+        "t": 35.4
+      },
+      {
+        "object": "tall cylinder",
+        "from": 2,
+        "to": 3,
+        "t": 38.87
+      },
+      {
+        "object": "cube",
+        "from": 5,
+        "to": 0,
+        "t": 39.8
+      },
+      {
+        "object": "capsule",
+        "from": 1,
+        "to": 2,
+        "t": 46.2
+      },
+      {
+        "object": "bar",
+        "from": 4,
+        "to": 5,
+        "t": 47.07
+      },
+      {
+        "object": "tall cylinder",
+        "from": 3,
+        "to": 4,
+        "t": 51.0
+      },
+      {
+        "object": "cube",
+        "from": 0,
+        "to": 1,
+        "t": 51.6
+      },
+      {
+        "object": "capsule",
+        "from": 2,
+        "to": 3,
+        "t": 57.73
+      },
+      {
+        "object": "bar",
+        "from": 5,
+        "to": 0,
+        "t": 59.07
+      },
+      {
+        "object": "tall cylinder",
+        "from": 4,
+        "to": 5,
+        "t": 62.87
+      },
+      {
+        "object": "cube",
+        "from": 1,
+        "to": 2,
+        "t": 63.2
+      },
+      {
+        "object": "capsule",
+        "from": 3,
+        "to": 4,
+        "t": 69.27
+      },
+      {
+        "object": "bar",
+        "from": 0,
+        "to": 1,
+        "t": 70.93
+      },
+      {
+        "object": "cube",
+        "from": 2,
+        "to": 3,
+        "t": 74.6
+      },
+      {
+        "object": "tall cylinder",
+        "from": 5,
+        "to": 0,
+        "t": 74.8
+      },
+      {
+        "object": "capsule",
+        "from": 4,
+        "to": 5,
+        "t": 82.33
+      },
+      {
+        "object": "bar",
+        "from": 1,
+        "to": 2,
+        "t": 82.6
+      },
+      {
+        "object": "tall cylinder",
+        "from": 0,
+        "to": 1,
+        "t": 86.73
+      },
+      {
+        "object": "cube",
+        "from": 3,
+        "to": 4,
+        "t": 88.33
+      }
+    ]
+  },
+  {
+    "episode": 7,
+    "seed": 1007,
+    "mode": "expert",
+    "sim_seconds": 90.0,
+    "wall_seconds": 350.0,
+    "objects": [
+      "cube",
+      "bar",
+      "puck",
+      "capsule"
+    ],
+    "colors": {
+      "0": "yellow",
+      "3": "red",
+      "4": "cyan",
+      "5": "white"
+    },
+    "transfers": 25,
+    "drops": 0,
+    "ik_failures": 0,
+    "phase_hist": {
+      "home": 3800,
+      "approach": 1095,
+      "descend": 342,
+      "close": 57,
+      "lift": 507,
+      "carry": 1486,
+      "wait": 0,
+      "place": 569,
+      "release": 25,
+      "retreat": 219
+    },
+    "transfer_log": [
+      {
+        "object": "capsule",
+        "from": 2,
+        "to": 3,
+        "t": 10.13
+      },
+      {
+        "object": "bar",
+        "from": 1,
+        "to": 2,
+        "t": 16.47
+      },
+      {
+        "object": "cube",
+        "from": 0,
+        "to": 1,
+        "t": 20.87
+      },
+      {
+        "object": "capsule",
+        "from": 3,
+        "to": 4,
+        "t": 22.07
+      },
+      {
+        "object": "puck",
+        "from": 5,
+        "to": 0,
+        "t": 26.47
+      },
+      {
+        "object": "bar",
+        "from": 2,
+        "to": 3,
+        "t": 28.27
+      },
+      {
+        "object": "cube",
+        "from": 1,
+        "to": 2,
+        "t": 33.07
+      },
+      {
+        "object": "capsule",
+        "from": 4,
+        "to": 5,
+        "t": 34.2
+      },
+      {
+        "object": "puck",
+        "from": 0,
+        "to": 1,
+        "t": 38.53
+      },
+      {
+        "object": "bar",
+        "from": 3,
+        "to": 4,
+        "t": 40.27
+      },
+      {
+        "object": "cube",
+        "from": 2,
+        "to": 3,
+        "t": 45.0
+      },
+      {
+        "object": "capsule",
+        "from": 5,
+        "to": 0,
+        "t": 45.67
+      },
+      {
+        "object": "puck",
+        "from": 1,
+        "to": 2,
+        "t": 50.73
+      },
+      {
+        "object": "bar",
+        "from": 4,
+        "to": 5,
+        "t": 52.27
+      },
+      {
+        "object": "capsule",
+        "from": 0,
+        "to": 1,
+        "t": 57.07
+      },
+      {
+        "object": "cube",
+        "from": 3,
+        "to": 4,
+        "t": 57.13
+      },
+      {
+        "object": "puck",
+        "from": 2,
+        "to": 3,
+        "t": 62.6
+      },
+      {
+        "object": "bar",
+        "from": 5,
+        "to": 0,
+        "t": 64.27
+      },
+      {
+        "object": "cube",
+        "from": 4,
+        "to": 5,
+        "t": 69.0
+      },
+      {
+        "object": "capsule",
+        "from": 1,
+        "to": 2,
+        "t": 69.93
+      },
+      {
+        "object": "puck",
+        "from": 3,
+        "to": 4,
+        "t": 74.6
+      },
+      {
+        "object": "bar",
+        "from": 0,
+        "to": 1,
+        "t": 76.6
+      },
+      {
+        "object": "cube",
+        "from": 5,
+        "to": 0,
+        "t": 81.4
+      },
+      {
+        "object": "capsule",
+        "from": 2,
+        "to": 3,
+        "t": 82.13
+      },
+      {
+        "object": "puck",
+        "from": 4,
+        "to": 5,
+        "t": 87.0
+      }
+    ]
+  },
+  {
+    "episode": 8,
+    "seed": 1008,
+    "mode": "expert",
+    "sim_seconds": 90.0,
+    "wall_seconds": 214.0,
+    "objects": [
+      "cube",
+      "tall cylinder",
+      "ball",
+      "puck"
+    ],
+    "colors": {
+      "0": "purple",
+      "1": "cyan",
+      "2": "orange",
+      "4": "white"
+    },
+    "transfers": 28,
+    "drops": 0,
+    "ik_failures": 0,
+    "phase_hist": {
+      "home": 3833,
+      "approach": 1123,
+      "descend": 359,
+      "close": 45,
+      "lift": 493,
+      "carry": 1475,
+      "wait": 0,
+      "place": 531,
+      "release": 28,
+      "retreat": 213
+    },
+    "transfer_log": [
+      {
+        "object": "cube",
+        "from": 1,
+        "to": 2,
+        "t": 9.47
+      },
+      {
+        "object": "puck",
+        "from": 0,
+        "to": 1,
+        "t": 15.4
+      },
+      {
+        "object": "ball",
+        "from": 5,
+        "to": 0,
+        "t": 20.33
+      },
+      {
+        "object": "cube",
+        "from": 2,
+        "to": 3,
+        "t": 20.73
+      },
+      {
+        "object": "tall cylinder",
+        "from": 4,
+        "to": 5,
+        "t": 24.53
+      },
+      {
+        "object": "puck",
+        "from": 1,
+        "to": 2,
+        "t": 26.8
+      },
+      {
+        "object": "ball",
+        "from": 0,
+        "to": 1,
+        "t": 32.0
+      },
+      {
+        "object": "cube",
+        "from": 3,
+        "to": 4,
+        "t": 32.07
+      },
+      {
+        "object": "tall cylinder",
+        "from": 5,
+        "to": 0,
+        "t": 36.33
+      },
+      {
+        "object": "puck",
+        "from": 2,
+        "to": 3,
+        "t": 38.33
+      },
+      {
+        "object": "ball",
+        "from": 1,
+        "to": 2,
+        "t": 43.07
+      },
+      {
+        "object": "cube",
+        "from": 4,
+        "to": 5,
+        "t": 43.27
+      },
+      {
+        "object": "tall cylinder",
+        "from": 0,
+        "to": 1,
+        "t": 47.6
+      },
+      {
+        "object": "puck",
+        "from": 3,
+        "to": 4,
+        "t": 49.87
+      },
+      {
+        "object": "cube",
+        "from": 5,
+        "to": 0,
+        "t": 54.4
+      },
+      {
+        "object": "ball",
+        "from": 2,
+        "to": 3,
+        "t": 54.73
+      },
+      {
+        "object": "tall cylinder",
+        "from": 1,
+        "to": 2,
+        "t": 59.33
+      },
+      {
+        "object": "puck",
+        "from": 4,
+        "to": 5,
+        "t": 61.4
+      },
+      {
+        "object": "cube",
+        "from": 0,
+        "to": 1,
+        "t": 65.67
+      },
+      {
+        "object": "ball",
+        "from": 3,
+        "to": 4,
+        "t": 66.33
+      },
+      {
+        "object": "tall cylinder",
+        "from": 2,
+        "to": 3,
+        "t": 70.87
+      },
+      {
+        "object": "puck",
+        "from": 5,
+        "to": 0,
+        "t": 72.87
+      },
+      {
+        "object": "cube",
+        "from": 1,
+        "to": 2,
+        "t": 76.87
+      },
+      {
+        "object": "ball",
+        "from": 4,
+        "to": 5,
+        "t": 77.93
+      },
+      {
+        "object": "tall cylinder",
+        "from": 3,
+        "to": 4,
+        "t": 82.47
+      },
+      {
+        "object": "puck",
+        "from": 0,
+        "to": 1,
+        "t": 84.33
+      },
+      {
+        "object": "cube",
+        "from": 2,
+        "to": 3,
+        "t": 88.47
+      },
+      {
+        "object": "ball",
+        "from": 5,
+        "to": 0,
+        "t": 89.4
+      }
+    ]
+  },
+  {
+    "episode": 9,
+    "seed": 1009,
+    "mode": "expert",
+    "sim_seconds": 90.0,
+    "wall_seconds": 171.8,
+    "objects": [
+      "cube",
+      "tall cylinder",
+      "ball",
+      "bar"
+    ],
+    "colors": {
+      "0": "orange",
+      "1": "cyan",
+      "2": "white",
+      "3": "blue"
+    },
+    "transfers": 27,
+    "drops": 0,
+    "ik_failures": 0,
+    "phase_hist": {
+      "home": 3893,
+      "approach": 1119,
+      "descend": 350,
+      "close": 57,
+      "lift": 485,
+      "carry": 1467,
+      "wait": 0,
+      "place": 504,
+      "release": 27,
+      "retreat": 198
+    },
+    "transfer_log": [
+      {
+        "object": "tall cylinder",
+        "from": 1,
+        "to": 2,
+        "t": 8.27
+      },
+      {
+        "object": "ball",
+        "from": 0,
+        "to": 1,
+        "t": 14.27
+      },
+      {
+        "object": "tall cylinder",
+        "from": 2,
+        "to": 3,
+        "t": 18.33
+      },
+      {
+        "object": "bar",
+        "from": 5,
+        "to": 0,
+        "t": 20.73
+      },
+      {
+        "object": "ball",
+        "from": 1,
+        "to": 2,
+        "t": 25.4
+      },
+      {
+        "object": "cube",
+        "from": 4,
+        "to": 5,
+        "t": 25.53
+      },
+      {
+        "object": "tall cylinder",
+        "from": 3,
+        "to": 4,
+        "t": 29.53
+      },
+      {
+        "object": "bar",
+        "from": 0,
+        "to": 1,
+        "t": 32.4
+      },
+      {
+        "object": "ball",
+        "from": 2,
+        "to": 3,
+        "t": 36.33
+      },
+      {
+        "object": "cube",
+        "from": 5,
+        "to": 0,
+        "t": 37.33
+      },
+      {
+        "object": "tall cylinder",
+        "from": 4,
+        "to": 5,
+        "t": 41.67
+      },
+      {
+        "object": "bar",
+        "from": 1,
+        "to": 2,
+        "t": 44.53
+      },
+      {
+        "object": "ball",
+        "from": 3,
+        "to": 4,
+        "t": 47.4
+      },
+      {
+        "object": "cube",
+        "from": 0,
+        "to": 1,
+        "t": 49.2
+      },
+      {
+        "object": "tall cylinder",
+        "from": 5,
+        "to": 0,
+        "t": 53.67
+      },
+      {
+        "object": "bar",
+        "from": 2,
+        "to": 3,
+        "t": 56.4
+      },
+      {
+        "object": "ball",
+        "from": 4,
+        "to": 5,
+        "t": 59.47
+      },
+      {
+        "object": "cube",
+        "from": 1,
+        "to": 2,
+        "t": 61.2
+      },
+      {
+        "object": "tall cylinder",
+        "from": 0,
+        "to": 1,
+        "t": 65.73
+      },
+      {
+        "object": "bar",
+        "from": 3,
+        "to": 4,
+        "t": 68.27
+      },
+      {
+        "object": "ball",
+        "from": 5,
+        "to": 0,
+        "t": 71.47
+      },
+      {
+        "object": "cube",
+        "from": 2,
+        "to": 3,
+        "t": 73.13
+      },
+      {
+        "object": "tall cylinder",
+        "from": 1,
+        "to": 2,
+        "t": 77.67
+      },
+      {
+        "object": "bar",
+        "from": 4,
+        "to": 5,
+        "t": 80.13
+      },
+      {
+        "object": "ball",
+        "from": 0,
+        "to": 1,
+        "t": 83.2
+      },
+      {
+        "object": "cube",
+        "from": 3,
+        "to": 4,
+        "t": 84.87
+      },
+      {
+        "object": "tall cylinder",
+        "from": 2,
+        "to": 3,
+        "t": 89.47
+      }
+    ]
+  },
+  {
+    "episode": 10,
+    "seed": 1010,
+    "mode": "expert",
+    "sim_seconds": 90.0,
+    "wall_seconds": 418.8,
+    "objects": [
+      "cube",
+      "ball",
+      "bar",
+      "capsule"
+    ],
+    "colors": {
+      "0": "blue",
+      "2": "cyan",
+      "3": "green",
+      "5": "purple"
+    },
+    "transfers": 27,
+    "drops": 0,
+    "ik_failures": 0,
+    "phase_hist": {
+      "home": 3715,
+      "approach": 1121,
+      "descend": 354,
+      "close": 59,
+      "lift": 515,
+      "carry": 1514,
+      "wait": 0,
+      "place": 565,
+      "release": 27,
+      "retreat": 230
+    },
+    "transfer_log": [
+      {
+        "object": "cube",
+        "from": 4,
+        "to": 5,
+        "t": 9.53
+      },
+      {
+        "object": "bar",
+        "from": 2,
+        "to": 3,
+        "t": 10.33
+      },
+      {
+        "object": "capsule",
+        "from": 1,
+        "to": 2,
+        "t": 15.8
+      },
+      {
+        "object": "ball",
+        "from": 0,
+        "to": 1,
+        "t": 20.47
+      },
+      {
+        "object": "bar",
+        "from": 3,
+        "to": 4,
+        "t": 22.67
+      },
+      {
+        "object": "cube",
+        "from": 5,
+        "to": 0,
+        "t": 26.0
+      },
+      {
+        "object": "capsule",
+        "from": 2,
+        "to": 3,
+        "t": 27.4
+      },
+      {
+        "object": "ball",
+        "from": 1,
+        "to": 2,
+        "t": 32.53
+      },
+      {
+        "object": "bar",
+        "from": 4,
+        "to": 5,
+        "t": 34.6
+      },
+      {
+        "object": "cube",
+        "from": 0,
+        "to": 1,
+        "t": 37.87
+      },
+      {
+        "object": "capsule",
+        "from": 3,
+        "to": 4,
+        "t": 39.53
+      },
+      {
+        "object": "ball",
+        "from": 2,
+        "to": 3,
+        "t": 44.6
+      },
+      {
+        "object": "bar",
+        "from": 5,
+        "to": 0,
+        "t": 46.33
+      },
+      {
+        "object": "cube",
+        "from": 1,
+        "to": 2,
+        "t": 50.13
+      },
+      {
+        "object": "capsule",
+        "from": 4,
+        "to": 5,
+        "t": 52.93
+      },
+      {
+        "object": "bar",
+        "from": 0,
+        "to": 1,
+        "t": 58.33
+      },
+      {
+        "object": "ball",
+        "from": 3,
+        "to": 4,
+        "t": 58.67
+      },
+      {
+        "object": "cube",
+        "from": 2,
+        "to": 3,
+        "t": 64.13
+      },
+      {
+        "object": "capsule",
+        "from": 5,
+        "to": 0,
+        "t": 65.13
+      },
+      {
+        "object": "bar",
+        "from": 1,
+        "to": 2,
+        "t": 70.27
+      },
+      {
+        "object": "ball",
+        "from": 4,
+        "to": 5,
+        "t": 70.73
+      },
+      {
+        "object": "cube",
+        "from": 3,
+        "to": 4,
+        "t": 76.0
+      },
+      {
+        "object": "capsule",
+        "from": 0,
+        "to": 1,
+        "t": 76.67
+      },
+      {
+        "object": "bar",
+        "from": 2,
+        "to": 3,
+        "t": 82.13
+      },
+      {
+        "object": "ball",
+        "from": 5,
+        "to": 0,
+        "t": 82.53
+      },
+      {
+        "object": "capsule",
+        "from": 1,
+        "to": 2,
+        "t": 88.53
+      },
+      {
+        "object": "cube",
+        "from": 4,
+        "to": 5,
+        "t": 88.6
+      }
+    ]
+  },
+  {
+    "episode": 11,
+    "seed": 1011,
+    "mode": "expert",
+    "sim_seconds": 90.0,
+    "wall_seconds": 431.3,
+    "objects": [
+      "cube",
+      "tall cylinder",
+      "bar",
+      "puck"
+    ],
+    "colors": {
+      "0": "purple",
+      "1": "red",
+      "3": "green",
+      "4": "orange"
+    },
+    "transfers": 27,
+    "drops": 0,
+    "ik_failures": 0,
+    "phase_hist": {
+      "home": 3860,
+      "approach": 1101,
+      "descend": 348,
+      "close": 59,
+      "lift": 500,
+      "carry": 1461,
+      "wait": 0,
+      "place": 536,
+      "release": 27,
+      "retreat": 208
+    },
+    "transfer_log": [
+      {
+        "object": "tall cylinder",
+        "from": 5,
+        "to": 0,
+        "t": 8.4
+      },
+      {
+        "object": "bar",
+        "from": 3,
+        "to": 4,
+        "t": 11.73
+      },
+      {
+        "object": "cube",
+        "from": 2,
+        "to": 3,
+        "t": 16.33
+      },
+      {
+        "object": "puck",
+        "from": 1,
+        "to": 2,
+        "t": 22.07
+      },
+      {
+        "object": "bar",
+        "from": 4,
+        "to": 5,
+        "t": 24.0
+      },
+      {
+        "object": "tall cylinder",
+        "from": 0,
+        "to": 1,
+        "t": 26.07
+      },
+      {
+        "object": "cube",
+        "from": 3,
+        "to": 4,
+        "t": 28.53
+      },
+      {
+        "object": "puck",
+        "from": 2,
+        "to": 3,
+        "t": 34.13
+      },
+      {
+        "object": "bar",
+        "from": 5,
+        "to": 0,
+        "t": 36.0
+      },
+      {
+        "object": "tall cylinder",
+        "from": 1,
+        "to": 2,
+        "t": 38.2
+      },
+      {
+        "object": "cube",
+        "from": 4,
+        "to": 5,
+        "t": 40.8
+      },
+      {
+        "object": "puck",
+        "from": 3,
+        "to": 4,
+        "t": 46.4
+      },
+      {
+        "object": "bar",
+        "from": 0,
+        "to": 1,
+        "t": 48.0
+      },
+      {
+        "object": "tall cylinder",
+        "from": 2,
+        "to": 3,
+        "t": 50.6
+      },
+      {
+        "object": "cube",
+        "from": 5,
+        "to": 0,
+        "t": 52.8
+      },
+      {
+        "object": "puck",
+        "from": 4,
+        "to": 5,
+        "t": 58.53
+      },
+      {
+        "object": "bar",
+        "from": 1,
+        "to": 2,
+        "t": 60.0
+      },
+      {
+        "object": "tall cylinder",
+        "from": 3,
+        "to": 4,
+        "t": 62.73
+      },
+      {
+        "object": "cube",
+        "from": 0,
+        "to": 1,
+        "t": 64.87
+      },
+      {
+        "object": "puck",
+        "from": 5,
+        "to": 0,
+        "t": 70.33
+      },
+      {
+        "object": "bar",
+        "from": 2,
+        "to": 3,
+        "t": 71.87
+      },
+      {
+        "object": "tall cylinder",
+        "from": 4,
+        "to": 5,
+        "t": 74.67
+      },
+      {
+        "object": "cube",
+        "from": 1,
+        "to": 2,
+        "t": 76.6
+      },
+      {
+        "object": "puck",
+        "from": 0,
+        "to": 1,
+        "t": 82.2
+      },
+      {
+        "object": "bar",
+        "from": 3,
+        "to": 4,
+        "t": 83.67
+      },
+      {
+        "object": "tall cylinder",
+        "from": 5,
+        "to": 0,
+        "t": 86.6
+      },
+      {
+        "object": "cube",
+        "from": 2,
+        "to": 3,
+        "t": 88.53
+      }
+    ]
+  },
+  {
+    "episode": 12,
+    "seed": 1012,
+    "mode": "expert",
+    "sim_seconds": 90.0,
+    "wall_seconds": 430.5,
+    "objects": [
+      "cube",
+      "tall cylinder",
+      "ball",
+      "puck"
+    ],
+    "colors": {
+      "0": "cyan",
+      "1": "purple",
+      "2": "blue",
+      "4": "green"
+    },
+    "transfers": 29,
+    "drops": 0,
+    "ik_failures": 0,
+    "phase_hist": {
+      "home": 3584,
+      "approach": 1197,
+      "descend": 382,
+      "close": 46,
+      "lift": 519,
+      "carry": 1575,
+      "wait": 0,
+      "place": 557,
+      "release": 29,
+      "retreat": 211
+    },
+    "transfer_log": [
+      {
+        "object": "ball",
+        "from": 3,
+        "to": 4,
+        "t": 9.53
+      },
+      {
+        "object": "puck",
+        "from": 0,
+        "to": 1,
+        "t": 10.07
+      },
+      {
+        "object": "tall cylinder",
+        "from": 2,
+        "to": 3,
+        "t": 13.87
+      },
+      {
+        "object": "cube",
+        "from": 5,
+        "to": 0,
+        "t": 15.13
+      },
+      {
+        "object": "ball",
+        "from": 4,
+        "to": 5,
+        "t": 20.8
+      },
+      {
+        "object": "puck",
+        "from": 1,
+        "to": 2,
+        "t": 21.87
+      },
+      {
+        "object": "tall cylinder",
+        "from": 3,
+        "to": 4,
+        "t": 25.07
+      },
+      {
+        "object": "cube",
+        "from": 0,
+        "to": 1,
+        "t": 26.73
+      },
+      {
+        "object": "ball",
+        "from": 5,
+        "to": 0,
+        "t": 31.8
+      },
+      {
+        "object": "puck",
+        "from": 2,
+        "to": 3,
+        "t": 33.4
+      },
+      {
+        "object": "tall cylinder",
+        "from": 4,
+        "to": 5,
+        "t": 36.27
+      },
+      {
+        "object": "cube",
+        "from": 1,
+        "to": 2,
+        "t": 38.53
+      },
+      {
+        "object": "ball",
+        "from": 0,
+        "to": 1,
+        "t": 43.6
+      },
+      {
+        "object": "puck",
+        "from": 3,
+        "to": 4,
+        "t": 44.93
+      },
+      {
+        "object": "tall cylinder",
+        "from": 5,
+        "to": 0,
+        "t": 48.07
+      },
+      {
+        "object": "cube",
+        "from": 2,
+        "to": 3,
+        "t": 50.13
+      },
+      {
+        "object": "ball",
+        "from": 1,
+        "to": 2,
+        "t": 55.27
+      },
+      {
+        "object": "puck",
+        "from": 4,
+        "to": 5,
+        "t": 56.47
+      },
+      {
+        "object": "tall cylinder",
+        "from": 0,
+        "to": 1,
+        "t": 59.8
+      },
+      {
+        "object": "cube",
+        "from": 3,
+        "to": 4,
+        "t": 61.6
+      },
+      {
+        "object": "ball",
+        "from": 2,
+        "to": 3,
+        "t": 66.87
+      },
+      {
+        "object": "puck",
+        "from": 5,
+        "to": 0,
+        "t": 67.93
+      },
+      {
+        "object": "tall cylinder",
+        "from": 1,
+        "to": 2,
+        "t": 71.4
+      },
+      {
+        "object": "cube",
+        "from": 4,
+        "to": 5,
+        "t": 73.13
+      },
+      {
+        "object": "ball",
+        "from": 3,
+        "to": 4,
+        "t": 78.4
+      },
+      {
+        "object": "puck",
+        "from": 0,
+        "to": 1,
+        "t": 79.4
+      },
+      {
+        "object": "tall cylinder",
+        "from": 2,
+        "to": 3,
+        "t": 82.93
+      },
+      {
+        "object": "cube",
+        "from": 5,
+        "to": 0,
+        "t": 84.67
+      },
+      {
+        "object": "ball",
+        "from": 4,
+        "to": 5,
+        "t": 89.87
+      }
+    ]
+  },
+  {
+    "episode": 13,
+    "seed": 1013,
+    "mode": "expert",
+    "sim_seconds": 90.0,
+    "wall_seconds": 299.3,
+    "objects": [
+      "cube",
+      "ball",
+      "bar",
+      "capsule"
+    ],
+    "colors": {
+      "0": "cyan",
+      "2": "green",
+      "3": "blue",
+      "5": "yellow"
+    },
+    "transfers": 26,
+    "drops": 0,
+    "ik_failures": 0,
+    "phase_hist": {
+      "home": 3844,
+      "approach": 1100,
+      "descend": 336,
+      "close": 57,
+      "lift": 514,
+      "carry": 1459,
+      "wait": 0,
+      "place": 543,
+      "release": 26,
+      "retreat": 221
+    },
+    "transfer_log": [
+      {
+        "object": "bar",
+        "from": 5,
+        "to": 0,
+        "t": 10.73
+      },
+      {
+        "object": "ball",
+        "from": 4,
+        "to": 5,
+        "t": 15.0
+      },
+      {
+        "object": "capsule",
+        "from": 3,
+        "to": 4,
+        "t": 21.33
+      },
+      {
+        "object": "bar",
+        "from": 0,
+        "to": 1,
+        "t": 22.87
+      },
+      {
+        "object": "cube",
+        "from": 2,
+        "to": 3,
+        "t": 26.87
+      },
+      {
+        "object": "ball",
+        "from": 5,
+        "to": 0,
+        "t": 27.07
+      },
+      {
+        "object": "capsule",
+        "from": 4,
+        "to": 5,
+        "t": 33.13
+      },
+      {
+        "object": "bar",
+        "from": 1,
+        "to": 2,
+        "t": 35.07
+      },
+      {
+        "object": "cube",
+        "from": 3,
+        "to": 4,
+        "t": 38.47
+      },
+      {
+        "object": "ball",
+        "from": 0,
+        "to": 1,
+        "t": 39.27
+      },
+      {
+        "object": "capsule",
+        "from": 5,
+        "to": 0,
+        "t": 44.93
+      },
+      {
+        "object": "bar",
+        "from": 2,
+        "to": 3,
+        "t": 46.87
+      },
+      {
+        "object": "cube",
+        "from": 4,
+        "to": 5,
+        "t": 50.27
+      },
+      {
+        "object": "ball",
+        "from": 1,
+        "to": 2,
+        "t": 51.47
+      },
+      {
+        "object": "capsule",
+        "from": 0,
+        "to": 1,
+        "t": 57.13
+      },
+      {
+        "object": "bar",
+        "from": 3,
+        "to": 4,
+        "t": 58.87
+      },
+      {
+        "object": "cube",
+        "from": 5,
+        "to": 0,
+        "t": 62.53
+      },
+      {
+        "object": "ball",
+        "from": 2,
+        "to": 3,
+        "t": 63.47
+      },
+      {
+        "object": "capsule",
+        "from": 1,
+        "to": 2,
+        "t": 69.4
+      },
+      {
+        "object": "bar",
+        "from": 4,
+        "to": 5,
+        "t": 70.67
+      },
+      {
+        "object": "cube",
+        "from": 0,
+        "to": 1,
+        "t": 74.8
+      },
+      {
+        "object": "ball",
+        "from": 3,
+        "to": 4,
+        "t": 75.33
+      },
+      {
+        "object": "capsule",
+        "from": 2,
+        "to": 3,
+        "t": 81.07
+      },
+      {
+        "object": "bar",
+        "from": 5,
+        "to": 0,
+        "t": 82.33
+      },
+      {
+        "object": "cube",
+        "from": 1,
+        "to": 2,
+        "t": 86.47
+      },
+      {
+        "object": "ball",
+        "from": 4,
+        "to": 5,
+        "t": 87.0
+      }
+    ]
+  },
+  {
+    "episode": 14,
+    "seed": 1014,
+    "mode": "expert",
+    "sim_seconds": 90.0,
+    "wall_seconds": 213.8,
+    "objects": [
+      "tall cylinder",
+      "ball",
+      "bar",
+      "capsule"
+    ],
+    "colors": {
+      "1": "green",
+      "2": "orange",
+      "3": "purple",
+      "5": "cyan"
+    },
+    "transfers": 28,
+    "drops": 0,
+    "ik_failures": 0,
+    "phase_hist": {
+      "home": 3677,
+      "approach": 1183,
+      "descend": 369,
+      "close": 60,
+      "lift": 487,
+      "carry": 1537,
+      "wait": 0,
+      "place": 542,
+      "release": 28,
+      "retreat": 217
+    },
+    "transfer_log": [
+      {
+        "object": "tall cylinder",
+        "from": 3,
+        "to": 4,
+        "t": 8.47
+      },
+      {
+        "object": "capsule",
+        "from": 0,
+        "to": 1,
+        "t": 10.13
+      },
+      {
+        "object": "ball",
+        "from": 5,
+        "to": 0,
+        "t": 15.27
+      },
+      {
+        "object": "bar",
+        "from": 2,
+        "to": 3,
+        "t": 16.07
+      },
+      {
+        "object": "tall cylinder",
+        "from": 4,
+        "to": 5,
+        "t": 19.6
+      },
+      {
+        "object": "capsule",
+        "from": 1,
+        "to": 2,
+        "t": 22.13
+      },
+      {
+        "object": "ball",
+        "from": 0,
+        "to": 1,
+        "t": 26.87
+      },
+      {
+        "object": "bar",
+        "from": 3,
+        "to": 4,
+        "t": 28.2
+      },
+      {
+        "object": "tall cylinder",
+        "from": 5,
+        "to": 0,
+        "t": 31.27
+      },
+      {
+        "object": "capsule",
+        "from": 2,
+        "to": 3,
+        "t": 33.6
+      },
+      {
+        "object": "ball",
+        "from": 1,
+        "to": 2,
+        "t": 38.6
+      },
+      {
+        "object": "bar",
+        "from": 4,
+        "to": 5,
+        "t": 40.2
+      },
+      {
+        "object": "tall cylinder",
+        "from": 0,
+        "to": 1,
+        "t": 43.07
+      },
+      {
+        "object": "capsule",
+        "from": 3,
+        "to": 4,
+        "t": 45.2
+      },
+      {
+        "object": "ball",
+        "from": 2,
+        "to": 3,
+        "t": 50.4
+      },
+      {
+        "object": "bar",
+        "from": 5,
+        "to": 0,
+        "t": 52.13
+      },
+      {
+        "object": "tall cylinder",
+        "from": 1,
+        "to": 2,
+        "t": 54.87
+      },
+      {
+        "object": "capsule",
+        "from": 4,
+        "to": 5,
+        "t": 58.8
+      },
+      {
+        "object": "bar",
+        "from": 0,
+        "to": 1,
+        "t": 64.13
+      },
+      {
+        "object": "ball",
+        "from": 3,
+        "to": 4,
+        "t": 64.53
+      },
+      {
+        "object": "tall cylinder",
+        "from": 2,
+        "to": 3,
+        "t": 69.07
+      },
+      {
+        "object": "capsule",
+        "from": 5,
+        "to": 0,
+        "t": 71.0
+      },
+      {
+        "object": "bar",
+        "from": 1,
+        "to": 2,
+        "t": 75.93
+      },
+      {
+        "object": "ball",
+        "from": 4,
+        "to": 5,
+        "t": 76.27
+      },
+      {
+        "object": "tall cylinder",
+        "from": 3,
+        "to": 4,
+        "t": 81.07
+      },
+      {
+        "object": "capsule",
+        "from": 0,
+        "to": 1,
+        "t": 82.47
+      },
+      {
+        "object": "bar",
+        "from": 2,
+        "to": 3,
+        "t": 87.73
+      },
+      {
+        "object": "ball",
+        "from": 5,
+        "to": 0,
+        "t": 88.27
+      }
+    ]
+  },
+  {
+    "episode": 15,
+    "seed": 1015,
+    "mode": "expert",
+    "sim_seconds": 90.0,
+    "wall_seconds": 185.7,
+    "objects": [
+      "tall cylinder",
+      "bar",
+      "puck",
+      "capsule"
+    ],
+    "colors": {
+      "1": "blue",
+      "3": "purple",
+      "4": "white",
+      "5": "red"
+    },
+    "transfers": 27,
+    "drops": 0,
+    "ik_failures": 0,
+    "phase_hist": {
+      "home": 3812,
+      "approach": 1126,
+      "descend": 350,
+      "close": 59,
+      "lift": 501,
+      "carry": 1470,
+      "wait": 0,
+      "place": 540,
+      "release": 27,
+      "retreat": 215
+    },
+    "transfer_log": [
+      {
+        "object": "tall cylinder",
+        "from": 4,
+        "to": 5,
+        "t": 8.53
+      },
+      {
+        "object": "bar",
+        "from": 2,
+        "to": 3,
+        "t": 10.8
+      },
+      {
+        "object": "capsule",
+        "from": 1,
+        "to": 2,
+        "t": 16.47
+      },
+      {
+        "object": "puck",
+        "from": 0,
+        "to": 1,
+        "t": 21.47
+      },
+      {
+        "object": "bar",
+        "from": 3,
+        "to": 4,
+        "t": 23.2
+      },
+      {
+        "object": "tall cylinder",
+        "from": 5,
+        "to": 0,
+        "t": 25.47
+      },
+      {
+        "object": "capsule",
+        "from": 2,
+        "to": 3,
+        "t": 28.0
+      },
+      {
+        "object": "puck",
+        "from": 1,
+        "to": 2,
+        "t": 33.53
+      },
+      {
+        "object": "bar",
+        "from": 4,
+        "to": 5,
+        "t": 35.0
+      },
+      {
+        "object": "tall cylinder",
+        "from": 0,
+        "to": 1,
+        "t": 37.6
+      },
+      {
+        "object": "capsule",
+        "from": 3,
+        "to": 4,
+        "t": 40.0
+      },
+      {
+        "object": "puck",
+        "from": 2,
+        "to": 3,
+        "t": 45.53
+      },
+      {
+        "object": "bar",
+        "from": 5,
+        "to": 0,
+        "t": 47.0
+      },
+      {
+        "object": "tall cylinder",
+        "from": 1,
+        "to": 2,
+        "t": 49.67
+      },
+      {
+        "object": "capsule",
+        "from": 4,
+        "to": 5,
+        "t": 52.27
+      },
+      {
+        "object": "puck",
+        "from": 3,
+        "to": 4,
+        "t": 57.8
+      },
+      {
+        "object": "bar",
+        "from": 0,
+        "to": 1,
+        "t": 59.0
+      },
+      {
+        "object": "tall cylinder",
+        "from": 2,
+        "to": 3,
+        "t": 62.13
+      },
+      {
+        "object": "capsule",
+        "from": 5,
+        "to": 0,
+        "t": 64.0
+      },
+      {
+        "object": "puck",
+        "from": 4,
+        "to": 5,
+        "t": 69.53
+      },
+      {
+        "object": "bar",
+        "from": 1,
+        "to": 2,
+        "t": 70.87
+      },
+      {
+        "object": "tall cylinder",
+        "from": 3,
+        "to": 4,
+        "t": 73.87
+      },
+      {
+        "object": "capsule",
+        "from": 0,
+        "to": 1,
+        "t": 75.8
+      },
+      {
+        "object": "puck",
+        "from": 5,
+        "to": 0,
+        "t": 81.4
+      },
+      {
+        "object": "bar",
+        "from": 2,
+        "to": 3,
+        "t": 82.67
+      },
+      {
+        "object": "tall cylinder",
+        "from": 4,
+        "to": 5,
+        "t": 85.8
+      },
+      {
+        "object": "capsule",
+        "from": 1,
+        "to": 2,
+        "t": 89.07
+      }
+    ]
+  }
+]

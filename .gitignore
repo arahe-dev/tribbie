@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.cache/
+
+# generated data, frames and scratch (regenerable from scripts/)
+data/
+artifacts/
+features/
+logs/
+tmp/
+results/*_frames/
+results/vlm_states/
+
+# documents built from sources
+paper/paper_filled.html
+report/report_filled.html
+slides/node_modules/
+slides/render*/
+
+# large checkpoints beyond the final skills and ablations
+models/*.joblib
+models/*.usd
+models/configuration/

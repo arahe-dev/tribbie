@@ -1,0 +1,12 @@
+{
+  "episodes": 5,
+  "successes": 0,
+  "failures": 5,
+  "success_percent": 0.0,
+  "mean_completion_time_sim_s": 2.22,
+  "mean_decisions": 14.8,
+  "mean_decision_latency_ms": 226.325845982906,
+  "median_final_distance_m": 1.0834913210650636,
+  "label_source": "model predictions only for control; simulator pose used for evaluation",
+  "policy": "raw"
+}

@@ -1,0 +1,15 @@
+{
+  "val": {
+    "act_l1_scaled": 0.037149456569126674,
+    "bin_acc": 0.9928571428571429,
+    "phase_acc": 0.8040816326530612
+  },
+  "epoch": 10,
+  "latent": 16,
+  "zero_scene": false,
+  "zero_hand": true,
+  "samples": {
+    "train": 16431,
+    "val": 980
+  }
+}

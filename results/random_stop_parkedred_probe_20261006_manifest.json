@@ -1,0 +1,27 @@
+{
+  "benchmark": "randomized reactive emergency stops",
+  "seed": 6202617,
+  "seed_source": "user_supplied_replay_seed",
+  "episodes": [
+    {
+      "episode_id": "ep01",
+      "seed": 6202617,
+      "initial_yaw_rad": -0.03582938350803101,
+      "dome_intensity": 1378.1,
+      "events": [
+        {
+          "event_id": "ep01_event_001",
+          "episode_id": "ep01",
+          "index": 1,
+          "scheduled_onset_sim_s": 1.5497,
+          "duration_s": 2.2518,
+          "distance_m": 1.1423,
+          "bearing_rad": -0.04809
+        }
+      ]
+    }
+  ],
+  "policy_observation": "RGB camera only; event timing/pose schedule withheld from worker",
+  "simulator_randomization": "event onset, duration, inter-event gap, distance, bearing, and per-episode lighting/yaw; the run seed is recorded for replay but is not sent to either policy",
+  "paired_comparison": "same episode seeds and event schedule for both policies"
+}

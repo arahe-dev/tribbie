@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>How Small Can a Robot's Eyes Be?</title>
+<style>
+  @page { size: A4; margin: 17mm 15mm 18mm 15mm; }
+  html { font-size: 9.6pt; }
+  body { font-family: "Times New Roman", Times, serif; color: #111; line-height: 1.32; margin: 0; }
+  h1 { font-size: 17pt; text-align: center; margin: 0 0 6pt; line-height: 1.2; font-weight: 700; }
+  .authors { text-align: center; font-size: 10pt; margin-bottom: 2pt; }
+  .affil { text-align: center; font-size: 9pt; color: #333; margin-bottom: 12pt; }
+  .abstract { margin: 0 6mm 10pt; font-size: 9.1pt; text-align: justify; }
+  .abstract b { font-style: normal; }
+  .cols { column-count: 2; column-gap: 7mm; text-align: justify; hyphens: auto; }
+  h2 { font-size: 10.5pt; margin: 9pt 0 3pt; font-variant: small-caps; letter-spacing: 0.02em; break-after: avoid; }
+  h3 { font-size: 9.8pt; margin: 6pt 0 2pt; font-style: italic; font-weight: 600; break-after: avoid; }
+  p { margin: 0 0 4.5pt; text-indent: 1em; }
+  h2 + p, h3 + p, .noind { text-indent: 0; }
+  figure { margin: 6pt 0 8pt; break-inside: avoid; text-align: center; }
+  figure img { max-width: 100%; }
+  figcaption { font-size: 8.3pt; text-align: justify; margin-top: 3pt; line-height: 1.25; }
+  figcaption b { font-weight: 700; }
+  .wide { column-span: all; }
+  table { border-collapse: collapse; width: 100%; font-size: 8.3pt; margin: 4pt 0 2pt; }
+  th, td { padding: 1.6pt 3pt; text-align: center; }
+  thead tr { border-top: 1.2pt solid #000; border-bottom: 0.6pt solid #000; }
+  tbody tr:last-child { border-bottom: 1.2pt solid #000; }
+  td:first-child, th:first-child { text-align: left; }
+  .tcap { font-size: 8.3pt; text-align: justify; margin: 6pt 0 1pt; break-after: avoid; }
+  .tblock { break-inside: avoid; margin-bottom: 8pt; }
+  ul.contrib { margin: 2pt 0 5pt 1.1em; padding: 0; }
+  ul.contrib li { margin-bottom: 2pt; }
+  code { font-family: Consolas, "Courier New", monospace; font-size: 8.4pt; }
+  .refs { font-size: 8.1pt; }
+  .refs p { text-indent: -1.4em; padding-left: 1.4em; margin-bottom: 2.4pt; }
+  .math { font-style: italic; }
+  svg text { font-family: "Segoe UI", Arial, sans-serif; }
+</style>
+</head>
+<body>
+
+<h1>How Small Can a Robot's Eyes Be? Compact Latent Visual Policies and a Vision-Language Programmer for Camera-Only Mobile Manipulation</h1>
+<div class="authors">Author Name</div>
+<div class="affil">Course / Institution &nbsp;·&nbsp; Machine Vision assignment</div>
+
+<div class="abstract"><b>Abstract</b> &mdash; We study how much visual information a robot policy needs when its entire view of the world is
+compressed into a 16-dimensional latent vector. A 255k-parameter network maps two low-resolution RGB streams (a 96&times;96 head camera
+and a 64&times;64 wrist camera) through spatial-softmax keypoints into a 16-D bottleneck, and a gated mixture of four experts
+decodes it into short chunks of end-effector and base velocities. The policy is trained by behaviour cloning and DAgger from a
+privileged teacher in NVIDIA Isaac Sim, on a mobile manipulator that picks objects from a table and drops them into bins.
+On top of the learned skills, Claude Opus 5.5 acts as a vision-language programmer: it reads camera images and writes short
+programs of primitives (<code>face</code>, <code>goto</code>, <code>pick</code>, <code>drop</code>), then revises them from the
+images after each execution. A linear head on the latent recovers the task phase on 92.5&nbsp;% of held-out frames (97&nbsp;% with a 64-D latent),
+its experts specialise per skill without supervision, and one decision for six arms takes 1.5&nbsp;ms. Closed-loop, the camera-only pick skill
+succeeds in 14/20 trials without any teacher help, while a monolithic end-to-end delivery policy never succeeded on its own.
+We also report three vision-pipeline failures that silently corrupted training data (a default 1&nbsp;m near clipping plane,
+unfinished frames from concurrent renderers, and black cameras), and show that the vision-language model locates objects
+correctly in 83&nbsp;% of cases from three views, with almost all errors being abstentions rather than wrong answers.</div>
+
+<div class="cols">
+
+<h2>1. Introduction</h2>
+<p class="noind">Learned visuomotor policies usually map images to actions through large encoders. For fast reactive control
+on cheap hardware the opposite question is interesting: how small can the visual representation be before the robot stops
+working, and which parts of a task survive the compression? We answer this in simulation with a deliberately tiny model whose
+only view of the world is a 16-D latent vector computed from two low-resolution cameras.</p>
+<p>A compact policy cannot carry long-horizon reasoning, so we pair it with a large vision-language model (VLM) that works at a
+completely different time scale. The VLM decides <i>what</i> to do every ten seconds or so; the latent policy decides <i>how</i>
+to move every 67&nbsp;ms. This mirrors recent systems in which a language model writes programs over robot skills [9, 10, 8], but
+here the skills themselves are learned from pixels.</p>
+<p>Our contributions are:</p>
+<ul class="contrib">
+<li>A 255k-parameter, camera-only latent mixture-of-experts policy with spatial-softmax keypoints, trained with behaviour
+cloning, DART noise and DAgger, and executed at 1.5&nbsp;ms per decision through CUDA-graph inference.</li>
+<li>An analysis of what the 16-D latent encodes (phase decoding, t-SNE structure, keypoint attention, expert specialisation)
+and offline ablations of camera streams and latent size.</li>
+<li>A closed-loop comparison of a monolithic delivery policy against a skill decomposition, showing why the decomposition is
+needed at this model size.</li>
+<li>A vision-language programmer built on Claude Opus 5.5, with a measured evaluation of its object-location verification
+from rendered views.</li>
+<li>A documented set of rendering-pipeline failures that silently corrupt vision datasets in simulation, with fixes.</li>
+</ul>
+
+<h2>2. Related Work</h2>
+<p class="noind"><i>Visuomotor learning.</i> End-to-end visuomotor policies [1] introduced the spatial-softmax layer that turns
+convolutional feature maps into expected 2-D keypoints, and deep spatial autoencoders [2] showed that such keypoints form a compact
+state for control. We reuse spatial softmax but add an explicit 16-D bottleneck. Recent imitation learners predict action chunks
+(ACT [5]) or denoise trajectories (Diffusion Policy [6]) with much larger encoders; RT-1 [7] scales tokenised policies to many
+tasks. Our encoder follows MobileNet-style depthwise-separable blocks [13].</p>
+<p><i>Imitation learning.</i> Behaviour cloning suffers from compounding errors because the learner visits states the teacher never
+showed. DAgger [3] fixes this by letting the learner drive and querying the teacher for labels; DART [4] injects noise into
+teacher actions so that recovery behaviour appears in the data. We use both.</p>
+<p><i>Language models over skills.</i> SayCan [8] scores language-specified skills by affordances, Inner Monologue [11] feeds
+execution feedback back to the planner, Code as Policies [9] has a language model write robot code, and Voyager [10] writes and
+refines skill programs in Minecraft. Our VLM programmer follows the same pattern of write, execute, observe and revise, using
+camera images as its feedback.</p>
+<p><i>Mixtures of experts.</i> A softmax gate over expert networks [12] lets a model allocate capacity per input. We use a dense
+gate with a load-balancing penalty and test whether experts specialise per skill.</p>
+
+<h2>3. System</h2>
+<h3>3.1 Simulation and tasks</h3>
+<p class="noind">All experiments run in NVIDIA Isaac Sim 5.1 with PhysX at 120&nbsp;Hz and a 15&nbsp;Hz control loop on one
+RTX&nbsp;A2000 (12&nbsp;GB). The robot is a Clearpath Ridgeback base with a Franka Panda arm. The base uses Isaac's holonomic
+model (prismatic <i>x</i>, <i>y</i> and revolute yaw joints with position drives) rather than simulated wheel friction. The arena
+(Fig.&nbsp;1) contains a pick table with a 2.5&nbsp;cm lip, two box obstacles and three open bins (teal, magenta, gold). Objects
+are a red cube (5&nbsp;cm), a blue ball (5.6&nbsp;cm) and a green puck (6.2&nbsp;cm). Grasps are pure friction between the Panda
+fingers and the object; nothing is welded or teleported after a reset. A second scene with six Franka arms passing objects
+around a ring of trays was used to develop the teacher and the end-effector action space.</p>
+
+<figure class="wide">
+<img src="figures/scene.png" style="width:100%">
+<figcaption><b>Fig. 1.</b> The mobile manipulation cell. Left: overview. Top right: table and bin views given to the
+vision-language programmer. Bottom right: the only images the latent policy receives, a 96&times;96 head camera and a 64&times;64
+wrist camera.</figcaption>
+</figure>
+
+<h3>3.2 Privileged teacher</h3>
+<p class="noind">A scripted teacher reads true object and robot poses from the simulator and labels every state. Navigation uses
+Dijkstra on a 5&nbsp;cm occupancy grid inflated by 0.78&nbsp;m. Grasping uses a descent funnel: the allowed height above the
+grasp point is <span class="math">min(h<sub>pre</sub>, 5&middot;(d<sub>xy</sub>&minus;8&nbsp;mm))</span>, so a nearly aligned
+gripper keeps descending while it corrects. An earlier rule that required 1&nbsp;cm alignment before descending left the student
+hovering indefinitely. The teacher's decisions depend only on the current state, which lets it relabel any state the student
+reaches. It never controls the robot in a reported student evaluation.</p>
+
+<h2>4. Method</h2>
+<h3>4.1 Latent mixture-of-experts policy</h3>
+<p class="noind">Each camera stream stacks the current and previous frame (6 channels) and passes through a stride-2
+3&times;3 convolution and three depthwise-separable blocks (32&rarr;48&rarr;64 channels). A spatial softmax converts each of the
+64 feature maps into an expected image coordinate, which is concatenated with global average pooling into 192 features per stream.
+Both streams feed an MLP that ends in a <span class="math">tanh</span> 16-D latent <span class="math">z</span>. Joint angles,
+gripper width, base velocity and a 13-D one-hot skill command pass through a separate 64-unit MLP. A gate computes softmax weights
+over four expert MLPs, each predicting a chunk of <i>K</i>&nbsp;=&nbsp;4 future actions: base <i>x</i>/<i>y</i> velocity, gripper
+<i>x</i>/<i>y</i>/<i>z</i> velocity in the arm frame, and a gripper close logit. A linear head predicts the teacher's phase from
+<span class="math">z</span> alone, which both regularises the latent and gives the policy a readable completion signal.
+The network has 255,249 parameters, two-thirds of them in the experts.</p>
+
+<figure>
+<svg viewBox="0 0 340 170" width="100%">
+  <defs><marker id="ar" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#555"/></marker></defs>
+  <g font-size="7.2" fill="#111">
+  <rect x="4" y="14" width="54" height="26" rx="3" fill="#e8f0fb" stroke="#2f6db5"/><text x="31" y="25" text-anchor="middle">head RGB</text><text x="31" y="34" text-anchor="middle">96&#215;96 &#215;2</text>
+  <rect x="4" y="54" width="54" height="26" rx="3" fill="#e8f0fb" stroke="#2f6db5"/><text x="31" y="65" text-anchor="middle">wrist RGB</text><text x="31" y="74" text-anchor="middle">64&#215;64 &#215;2</text>
+  <rect x="70" y="14" width="60" height="26" rx="3" fill="#f4f4f4" stroke="#777"/><text x="100" y="25" text-anchor="middle">DS-CNN +</text><text x="100" y="34" text-anchor="middle">spatial softmax</text>
+  <rect x="70" y="54" width="60" height="26" rx="3" fill="#f4f4f4" stroke="#777"/><text x="100" y="65" text-anchor="middle">DS-CNN +</text><text x="100" y="74" text-anchor="middle">spatial softmax</text>
+  <rect x="144" y="30" width="44" height="34" rx="3" fill="#fff3e6" stroke="#e07b28" stroke-width="1.3"/><text x="166" y="44" text-anchor="middle" font-weight="700">z &#8712; R&#185;&#8310;</text><text x="166" y="55" text-anchor="middle">latent</text>
+  <rect x="4" y="100" width="126" height="22" rx="3" fill="#f4f4f4" stroke="#777"/><text x="67" y="114" text-anchor="middle">joints, gripper, base vel, skill command</text>
+  <rect x="200" y="20" width="40" height="18" rx="3" fill="#f4f4f4" stroke="#777"/><text x="220" y="32" text-anchor="middle">gate</text>
+  <rect x="200" y="46" width="40" height="44" rx="3" fill="#eaf6ee" stroke="#3a9a5b"/><text x="220" y="62" text-anchor="middle">4 experts</text><text x="220" y="72" text-anchor="middle">(MLP)</text>
+  <rect x="254" y="40" width="82" height="34" rx="3" fill="#f4f4f4" stroke="#777"/><text x="295" y="53" text-anchor="middle">action chunk (K=4)</text><text x="295" y="63" text-anchor="middle">base v, gripper v, grip</text>
+  <rect x="144" y="132" width="88" height="20" rx="3" fill="#f4f4f4" stroke="#777"/><text x="188" y="145" text-anchor="middle">phase head (from z only)</text>
+  </g>
+  <g stroke="#555" fill="none" stroke-width="0.9" marker-end="url(#ar)">
+  <path d="M58,27 L70,27"/><path d="M58,67 L70,67"/><path d="M130,27 L144,40"/><path d="M130,67 L144,55"/>
+  <path d="M130,111 L160,111 L160,66"/><path d="M188,40 L200,30"/><path d="M188,52 L200,64"/><path d="M220,38 L220,46"/>
+  <path d="M240,62 L254,58"/><path d="M166,64 L180,132"/>
+  </g>
+</svg>
+<figcaption><b>Fig. 2.</b> Latent mixture-of-experts policy. Rotation is not an output: base heading and wrist angle are held by
+fixed controllers, and an inverse-kinematics step converts gripper velocity into joint targets.</figcaption>
+</figure>
+
+<h3>4.2 Action space and skills</h3>
+<p class="noind">The first version predicted joint-angle deltas for a single end-to-end delivery policy. Millimetre grasp
+corrections then correspond to joint changes of about 0.005&nbsp;rad, the same size as the network's regression error, and the
+student never learned to close on objects. Predicting gripper velocity in the arm's own frame makes the same correction a signal of
+roughly 0.3 in normalised units. We therefore use an arm-frame end-effector action, followed by a fixed IK step, and remove all
+rotation from the learned outputs. The task is split into skills: <code>goto(target)</code>, <code>pick(color)</code> and
+<code>drop()</code>. A heading primitive <code>face(dir)</code> is executed by a proportional controller. In the final
+system <code>goto</code> is executed by the grid planner (Sec.&nbsp;5.4).</p>
+
+<h3>4.3 Training and inference</h3>
+<p class="noind">The loss is a smooth-L1 on normalised action chunks, binary cross-entropy on the gripper (weight 0.5),
+cross-entropy on the phase (0.1) and a gate load-balancing term (0.01). Training uses AdamW with a one-cycle schedule
+(peak 10<sup>&minus;3</sup>), batch 256, &plusmn;4&nbsp;px random shifts and brightness/contrast jitter. Teacher episodes are
+collected with Gaussian action noise (DART); DAgger rounds then let the student execute each step with probability 1&minus;&beta;
+while the teacher labels every visited state. At run time the four predicted steps of overlapping chunks are blended with
+exponential weights (temporal ensembling [5]). The whole forward pass is captured as one CUDA graph, which cut decision time
+for six arms from 7.2&nbsp;ms to 1.5&nbsp;ms.</p>
+
+<h3>4.4 Vision-language programmer</h3>
+<p class="noind">Claude Opus 5.5 is called through the Claude Code command-line interface with a JSON schema for structured
+output. Each call receives the operator's instruction, up to four camera images and an execution log, and returns an
+observation, an assessment of the previous program, a new program of primitives, and a caption. Learned skills report completion
+through their own phase head; any timeout or failure returns control to the VLM, which must verify the outcome from the images
+before continuing. The robot holds still while the VLM thinks. The prompt states the arena layout (table to the north,
+bins to the east) and the recipe <i>pick, face, goto, drop</i>; the VLM chooses objects, order, verification and retries,
+but does not discover the layout itself.</p>
+
+<h2>5. Experiments</h2>
+<h3>5.1 Data-pipeline integrity</h3>
+<p class="noind">Three rendering problems silently corrupted the training images and dominated early results.
+(i) Isaac cameras default to a near clipping plane of about one metre, so the head camera could not see the table, floor or
+obstacles directly in front of the robot, and the relay station cameras lost most of the arm. (ii) When two simulator instances
+share the GPU, or when one instance is heavily loaded, the camera readback returns unfinished frames that contain only sky
+(Fig.&nbsp;3). In a controlled test with two concurrent jobs, 100&nbsp;% and 54&nbsp;% of head frames were affected; a DAgger
+round collected before the fix contained 47&nbsp;%. (iii) In one 120-episode collection the wrist camera produced only black
+frames; the training filter discarded them, so that data never contributed. We now run one simulator at a time, re-render when
+a frame has a pixel standard deviation below 10, and drop black or flat frames during training.</p>
+
+<figure>
+<img src="figures/frame_integrity.png" style="width:100%">
+<img src="figures/flat_example.png" style="width:62%">
+<figcaption><b>Fig. 3.</b> Share of unusable head-camera frames under different collection conditions (top), and a rendered
+frame next to an unfinished one from the same episode (bottom).</figcaption>
+</figure>
+
+<h3>5.2 What the 16-D latent encodes</h3>
+<p class="noind">Projecting latents with t-SNE [15] (Fig.&nbsp;4) separates driving from manipulation and orders the pick phases
+along a curve from approach through descent and closing to lift. A linear readout of the latent recovers the teacher's phase
+on 95.0&nbsp;% of recorded frames (Fig.&nbsp;5); the largest confusions are between adjacent phases such as approach and
+descend. The spatial-softmax keypoints (Fig.&nbsp;6) concentrate on the target object, the fingertips and the table edge in the
+wrist view; in the head view they track the table's edge and the objects on it.</p>
+
+<figure>
+<img src="figures/latent_tsne.png" style="width:100%">
+<figcaption><b>Fig. 4.</b> t-SNE of 5,000 latents, coloured by the teacher's phase label.</figcaption>
+</figure>
+
+<figure>
+<img src="figures/phase_confusion.png" style="width:92%">
+<figcaption><b>Fig. 5.</b> Phase decoded from the latent versus the teacher's phase (row-normalised).</figcaption>
+</figure>
+
+<figure>
+<img src="figures/keypoints.png" style="width:100%">
+<figcaption><b>Fig. 6.</b> Keypoints of the ten most peaked spatial-softmax channels during a pick, sized by peak probability.</figcaption>
+</figure>
+
+<p><i>Expert specialisation.</i> The gate was never told which skill is active, yet usage separates cleanly (Fig.&nbsp;7):
+expert&nbsp;1 carries 62&nbsp;% of the gate weight during <code>pick</code>, expert&nbsp;3 carries 66&nbsp;% during
+<code>drop</code>, and <code>goto</code> is split between experts 2 and 4 (38&nbsp;% and 43&nbsp;%). The skill command is an input,
+so the gate could route on it directly; the result shows that it does, while the shared latent remains common to all skills.</p>
+
+<figure>
+<img src="figures/gate_usage.png" style="width:88%">
+<figcaption><b>Fig. 7.</b> Mean gate weight of each expert per skill.</figcaption>
+</figure>
+
+<h3>5.3 Ablations</h3>
+<div class="tblock">
+<div class="tcap"><b>Table 1.</b> Offline validation on held-out episodes (teacher data, 10 epochs). Mean &plusmn; std over three
+seeds; each seed also draws a different validation split. Action error is the mean absolute error of normalised actions.</div>
+<table id="abl">
+<thead><tr><th>Variant</th><th>Action error &darr;</th><th>Gripper acc. &uarr;</th><th>Phase acc. &uarr;</th></tr></thead>
+<tbody>
+ABLATION_ROWS
+</tbody>
+</table>
+</div>
+<p class="noind">ABLATION_TEXT</p>
+
+<h3>5.4 Closed-loop control</h3>
+<p class="noind">Closed-loop results are measured from PhysX object poses, not from the policy's own report.
+Figure&nbsp;8 shows success as the share of steps executed by the student grows. The monolithic delivery policy, trained
+end to end on full pick-drive-drop episodes, completed 13/20 deliveries when the teacher executed 30&nbsp;% of the steps,
+7/24 at 12&nbsp;%, and never succeeded alone. Decomposing the task changes the picture for manipulation: after two pick-focused
+DAgger rounds (57/80 and 60/80), the camera-only <code>pick</code> skill succeeded in <b>14/20</b> trials with no teacher at all,
+and <code>drop</code> succeeded in all 28 attempts during DAgger. Learned navigation did not transfer to pure student control:
+<code>goto</code> reached the dock in 34/36 runs with 20&nbsp;% teacher help but in 1/10 alone, overshooting the dock and wedging
+behind an obstacle. For the full system we therefore execute <code>goto</code> with the grid planner. With learned
+<code>pick</code>/<code>drop</code> and planned <code>goto</code>, four episodes of two deliveries each produced <b>4/8</b>
+successful deliveries; when the pick succeeded the delivery succeeded 4 times out of 5.</p>
+
+<figure>
+<img src="figures/dagger_curves.png" style="width:100%">
+<figcaption><b>Fig. 8.</b> Success versus the share of control steps executed by the student, with 95&nbsp;% Wilson intervals.
+Points at 1.0 are pure student control.</figcaption>
+</figure>
+
+<h3>5.5 Vision-language verification</h3>
+<p class="noind">VLM_TEXT</p>
+
+<div class="tblock">
+<div class="tcap"><b>Table 2.</b> Object-location accuracy of Claude Opus 5.5 from rendered images, against PhysX ground truth
+(24 scenes &times; 3 objects).</div>
+<table>
+<thead><tr><th>Views given</th><th>Accuracy</th><th>Table</th><th>In a bin</th><th>Floor</th><th>Time / call</th></tr></thead>
+<tbody>
+VLM_ROWS
+</tbody>
+</table>
+</div>
+
+<p>In the recorded programmer run (instruction: blue ball to teal, red cube to gold), Opus wrote
+<code>pick(blue) face(east) goto(teal) drop()</code>, verified the ball's disappearance from the table, returned the robot with
+<code>face(west) goto(table) face(north)</code>, and retried <code>pick(red)</code> after a timeout. After the second timeout it
+stopped, stating that the cube had left the table, which was false. Post-hoc inspection showed that the dedicated table and bin
+cameras had rendered black in that run, so the model was reasoning from the overview and robot cameras only. The blue ball
+was delivered.</p>
+
+<h3>5.6 Latency</h3>
+<p class="noind">One forward pass takes 0.6&nbsp;ms and a full decision for six arms 1.5&nbsp;ms on an otherwise idle GPU
+(7.5&nbsp;ms on the CPU). Inside the running simulator, where the same GPU renders four cameras, a decision takes 6&ndash;15&nbsp;ms,
+still well below the 67&nbsp;ms control period. A VLM call takes 6&ndash;13&nbsp;s, three orders of magnitude slower
+(Fig.&nbsp;9), which is why it can only act at the level of programs.</p>
+
+<h3>5.7 Deployment test: VLM alone vs VLM + latent skill</h3>
+<p class="noind">H2H_TEXT</p>
+
+<figure>
+<img src="figures/latency.png" style="width:100%">
+<figcaption><b>Fig. 9.</b> Decision latency across the hierarchy (log scale).</figcaption>
+</figure>
+
+<h2>6. Discussion and Limitations</h2>
+<p class="noind">A 16-D latent is enough to represent where the robot is in the task and to drive a reactive pick from two tiny
+images, but not enough, with this amount of data, for a single policy to chain driving, grasping and dropping without help. The
+split into a fast learned skill layer and a slow deliberative layer turned a policy that never finished a delivery into a system
+that finishes half of them. The remaining failures are mostly pick timeouts, in which the gripper hovers above the object without
+committing to the descent.</p>
+<p>The study has clear limits. Everything is simulated, with a holonomic base model and a fixed arena; the objects and their
+start positions are nearly fixed, so the results describe a narrow distribution rather than general grasping. Evaluation sets
+are small (8&ndash;20 closed-loop trials per condition), hence the wide intervals in Fig.&nbsp;8. Navigation in the final system is
+not learned. The ablations are offline and say little about closed-loop behaviour. The VLM programmer was evaluated on one
+recorded task plus the static verification test, not on a broad instruction set.</p>
+<p>Several of our largest effects came from the vision pipeline rather than the model. Before any modelling question, a visual
+policy in simulation should check its cameras' clipping planes, detect unfinished or black frames, and avoid sharing the
+renderer between jobs; otherwise the data, not the network, decides the result.</p>
+
+<h2>7. Conclusion</h2>
+<p class="noind">We built and analysed a camera-only latent policy that compresses two low-resolution views into 16 numbers and
+acts in 1.5&nbsp;ms, and paired it with a vision-language programmer that writes and repairs skill programs from images. The latent
+captures task structure and supports a reactive pick skill without supervision at run time, its experts specialise by skill on
+their own, and a hierarchy is necessary for complete tasks at this model size. Future work: more DAgger rounds for navigation,
+higher wrist resolution for the last centimetres of the grasp, a recurrent encoder for longer visual memory, and transfer to
+a physical robot.</p>
+
+<h2>References</h2>
+<div class="refs">
+<p>[1] S. Levine, C. Finn, T. Darrell, P. Abbeel. End-to-end training of deep visuomotor policies. <i>JMLR</i> 17(39), 2016.</p>
+<p>[2] C. Finn, X. Y. Tan, Y. Duan, T. Darrell, S. Levine, P. Abbeel. Deep spatial autoencoders for visuomotor learning. <i>ICRA</i>, 2016.</p>
+<p>[3] S. Ross, G. Gordon, D. Bagnell. A reduction of imitation learning and structured prediction to no-regret online learning. <i>AISTATS</i>, 2011.</p>
+<p>[4] M. Laskey, J. Lee, R. Fox, A. Dragan, K. Goldberg. DART: Noise injection for robust imitation learning. <i>CoRL</i>, 2017.</p>
+<p>[5] T. Z. Zhao, V. Kumar, S. Levine, C. Finn. Learning fine-grained bimanual manipulation with low-cost hardware. <i>RSS</i>, 2023.</p>
+<p>[6] C. Chi, S. Feng, Y. Du, Z. Xu, E. Cousineau, B. Burchfiel, S. Song. Diffusion Policy: Visuomotor policy learning via action diffusion. <i>RSS</i>, 2023.</p>
+<p>[7] A. Brohan et al. RT-1: Robotics Transformer for real-world control at scale. <i>RSS</i>, 2023.</p>
+<p>[8] M. Ahn et al. Do as I can, not as I say: Grounding language in robotic affordances. <i>CoRL</i>, 2022.</p>
+<p>[9] J. Liang, W. Huang, F. Xia, P. Xu, K. Hausman, B. Ichter, P. Florence, A. Zeng. Code as Policies: Language model programs for embodied control. <i>ICRA</i>, 2023.</p>
+<p>[10] G. Wang, Y. Xie, Y. Jiang, A. Mandlekar, C. Xiao, Y. Zhu, L. Fan, A. Anandkumar. Voyager: An open-ended embodied agent with large language models. <i>TMLR</i>, 2024.</p>
+<p>[11] W. Huang et al. Inner Monologue: Embodied reasoning through planning with language models. <i>CoRL</i>, 2022.</p>
+<p>[12] N. Shazeer, A. Mirhoseini, K. Maziarz, A. Davis, Q. Le, G. Hinton, J. Dean. Outrageously large neural networks: The sparsely-gated mixture-of-experts layer. <i>ICLR</i>, 2017.</p>
+<p>[13] A. G. Howard et al. MobileNets: Efficient convolutional neural networks for mobile vision applications. arXiv:1704.04861, 2017.</p>
+<p>[14] NVIDIA. Isaac Sim 5.1 documentation. 2025.</p>
+<p>[15] L. van der Maaten, G. Hinton. Visualizing data using t-SNE. <i>JMLR</i> 9, 2008.</p>
+</div>
+
+</div>
+</body>
+</html>

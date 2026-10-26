@@ -1,0 +1,195 @@
+{
+  "method": "Frozen ImageNet ResNet-18 + training-fit PCA-16 + class-reweighted distance-weighted k-NN",
+  "purpose": "slower fixed-representation comparator for the randomized stop benchmark",
+  "input_source": "data/moe_rollout_v2/metadata.csv",
+  "shared_split_with": "models/autoresearch_spatial_moe_v3.pt",
+  "encoder": "torchvision ResNet-18 / ImageNet-1K V1, frozen fc=Identity",
+  "encoder_weights": "https://download.pytorch.org/models/resnet18-f37072fd.pth",
+  "device": "cuda",
+  "feature_shape": [
+    512
+  ],
+  "latent_dimension": 16,
+  "pca_fit_split": "train only",
+  "knn_selection": {
+    "candidates": [
+      1,
+      3,
+      5,
+      7,
+      11
+    ],
+    "criterion": "validation macro F1, then validation accuracy, then smaller k; inverse-square-root class factors match the MoE training loss",
+    "class_weight_power": 0.5,
+    "class_factors": {
+      "FORWARD": 0.5244765964531694,
+      "LEFT": 2.5703731600330295,
+      "RIGHT": 2.682451221263016,
+      "STOP": 3.6685601171758564
+    },
+    "selected_k": 1,
+    "validation": {
+      "accuracy": 0.9188911704312115,
+      "macro_f1": 0.6470645213178372,
+      "per_class": {
+        "LEFT": {
+          "precision": 0.8235294117647058,
+          "recall": 0.8235294117647058,
+          "f1": 0.8235294117647058,
+          "support": 34
+        },
+        "FORWARD": {
+          "precision": 0.9719953325554259,
+          "recall": 0.9401805869074492,
+          "f1": 0.9558232931726908,
+          "support": 886
+        },
+        "RIGHT": {
+          "precision": 0.6153846153846154,
+          "recall": 0.8888888888888888,
+          "f1": 0.7272727272727273,
+          "support": 36
+        },
+        "STOP": {
+          "precision": 0.06451612903225806,
+          "recall": 0.1111111111111111,
+          "f1": 0.08163265306122448,
+          "support": 18
+        }
+      },
+      "confusion_matrix": [
+        [
+          28,
+          5,
+          1,
+          0
+        ],
+        [
+          5,
+          833,
+          19,
+          29
+        ],
+        [
+          1,
+          3,
+          32,
+          0
+        ],
+        [
+          0,
+          16,
+          0,
+          2
+        ]
+      ],
+      "mean_confidence": 1.0
+    }
+  },
+  "test": {
+    "accuracy": 0.9283351708930541,
+    "macro_f1": 0.6099019994489049,
+    "per_class": {
+      "LEFT": {
+        "precision": 0.574468085106383,
+        "recall": 0.7714285714285715,
+        "f1": 0.6585365853658537,
+        "support": 35
+      },
+      "FORWARD": {
+        "precision": 0.9728395061728395,
+        "recall": 0.9621489621489622,
+        "f1": 0.9674647022713321,
+        "support": 819
+      },
+      "RIGHT": {
+        "precision": 0.6410256410256411,
+        "recall": 0.7142857142857143,
+        "f1": 0.6756756756756757,
+        "support": 35
+      },
+      "STOP": {
+        "precision": 0.18181818181818182,
+        "recall": 0.1111111111111111,
+        "f1": 0.13793103448275862,
+        "support": 18
+      }
+    },
+    "confusion_matrix": [
+      [
+        27,
+        4,
+        4,
+        0
+      ],
+      [
+        12,
+        788,
+        10,
+        9
+      ],
+      [
+        8,
+        2,
+        25,
+        0
+      ],
+      [
+        0,
+        16,
+        0,
+        2
+      ]
+    ],
+    "mean_confidence": 1.0
+  },
+  "split_episodes": {
+    "train": [
+      "ep01",
+      "ep02",
+      "ep03",
+      "ep04",
+      "ep05",
+      "ep06",
+      "ep07",
+      "ep08",
+      "ep09",
+      "ep10",
+      "ep11",
+      "ep12",
+      "ep13",
+      "ep14",
+      "ep15",
+      "ep16",
+      "ep17",
+      "ep18"
+    ],
+    "val": [
+      "ep19",
+      "ep20",
+      "ep21",
+      "ep22",
+      "ep23",
+      "ep24"
+    ],
+    "test": [
+      "ep25",
+      "ep26",
+      "ep27",
+      "ep28",
+      "ep29",
+      "ep30"
+    ]
+  },
+  "split_samples": {
+    "train": 2907,
+    "val": 974,
+    "test": 907
+  },
+  "pca_explained_variance_ratio_sum": 0.8069794774055481,
+  "feature_extraction_and_fit_seconds": 15.4,
+  "artifacts": {
+    "pca": "models/reactive_pca16/pca_16.joblib",
+    "knn": "models/reactive_pca16/knn_16.joblib"
+  }
+}

@@ -1,0 +1,1565 @@
+{
+  "simulation": {
+    "engine": "NVIDIA PhysX in Isaac Sim",
+    "physics_dt_s": 0.008333333333333333,
+    "render_fps": 30,
+    "robot_model": "Franka Emika Panda, official Isaac Sim USD asset with articulated 7-DoF arm and parallel gripper",
+    "robot_count": 6,
+    "ball_model": {
+      "type": "dynamic rigid-body sphere",
+      "mass_kg": 0.06,
+      "radius_m": 0.033,
+      "ccd": true
+    },
+    "flight": "impulse-equivalent velocity at gripper release, then 120 Hz PhysX gravity and rigid-body contact; no scripted ball path or in-flight pose updates",
+    "catch": "finger contact sensor followed by a fixed grasp constraint; no ball-position snap at catch",
+    "requested_transfers": 18,
+    "completed_contact_grasps": 18,
+    "catch_failures": 0,
+    "throw_fallbacks": 18,
+    "simulation_time_s": 53.74999999999759,
+    "captured_frames": 1559,
+    "camera_angles": [
+      "HERO",
+      "OVERHEAD",
+      "SIDE",
+      "REVERSE"
+    ]
+  },
+  "same_model": {
+    "checkpoint": "C:\\Users\\mirai\\latent_robot_demo\\models\\throw_catch_moe16.pt",
+    "latent_dimension": 16,
+    "experts": 4,
+    "actions": {
+      "CATCH": 72
+    },
+    "mean_latency_ms": 11.696843055555556,
+    "p95_latency_ms": 21.653460000000024
+  },
+  "contact_log": [
+    {
+      "transfer": 1,
+      "source_arm": 1,
+      "receiver_arm": 2,
+      "finger": "left",
+      "force_n": 0.0,
+      "flight_time_s": 0.95,
+      "contact_body0": "/World/Arm_02/panda_leftfinger",
+      "contact_body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 2,
+      "source_arm": 2,
+      "receiver_arm": 3,
+      "finger": "right",
+      "force_n": 2.8495500087738037,
+      "flight_time_s": 0.95,
+      "contact_body0": "/World/Arm_03/panda_rightfinger",
+      "contact_body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 3,
+      "source_arm": 3,
+      "receiver_arm": 4,
+      "finger": "right",
+      "force_n": 2.820552110671997,
+      "flight_time_s": 0.95,
+      "contact_body0": "/World/Arm_04/panda_rightfinger",
+      "contact_body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 4,
+      "source_arm": 4,
+      "receiver_arm": 5,
+      "finger": "right",
+      "force_n": 2.845939874649048,
+      "flight_time_s": 0.95,
+      "contact_body0": "/World/Arm_05/panda_rightfinger",
+      "contact_body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 5,
+      "source_arm": 5,
+      "receiver_arm": 6,
+      "finger": "right",
+      "force_n": 2.83901309967041,
+      "flight_time_s": 0.95,
+      "contact_body0": "/World/Arm_06/panda_rightfinger",
+      "contact_body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 6,
+      "source_arm": 6,
+      "receiver_arm": 1,
+      "finger": "right",
+      "force_n": 2.842101812362671,
+      "flight_time_s": 0.95,
+      "contact_body0": "/World/Arm_01/panda_rightfinger",
+      "contact_body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 7,
+      "source_arm": 1,
+      "receiver_arm": 2,
+      "finger": "right",
+      "force_n": 2.8364970684051514,
+      "flight_time_s": 0.95,
+      "contact_body0": "/World/Arm_02/panda_rightfinger",
+      "contact_body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 8,
+      "source_arm": 2,
+      "receiver_arm": 3,
+      "finger": "right",
+      "force_n": 2.8436310291290283,
+      "flight_time_s": 0.95,
+      "contact_body0": "/World/Arm_03/panda_rightfinger",
+      "contact_body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 9,
+      "source_arm": 3,
+      "receiver_arm": 4,
+      "finger": "right",
+      "force_n": 2.8340563774108887,
+      "flight_time_s": 0.95,
+      "contact_body0": "/World/Arm_04/panda_rightfinger",
+      "contact_body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 10,
+      "source_arm": 4,
+      "receiver_arm": 5,
+      "finger": "right",
+      "force_n": 2.831705331802368,
+      "flight_time_s": 0.95,
+      "contact_body0": "/World/Arm_05/panda_rightfinger",
+      "contact_body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 11,
+      "source_arm": 5,
+      "receiver_arm": 6,
+      "finger": "right",
+      "force_n": 2.837348699569702,
+      "flight_time_s": 0.95,
+      "contact_body0": "/World/Arm_06/panda_rightfinger",
+      "contact_body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 12,
+      "source_arm": 6,
+      "receiver_arm": 1,
+      "finger": "right",
+      "force_n": 2.8339500427246094,
+      "flight_time_s": 0.95,
+      "contact_body0": "/World/Arm_01/panda_rightfinger",
+      "contact_body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 13,
+      "source_arm": 1,
+      "receiver_arm": 2,
+      "finger": "right",
+      "force_n": 2.829310417175293,
+      "flight_time_s": 0.95,
+      "contact_body0": "/World/Arm_02/panda_rightfinger",
+      "contact_body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 14,
+      "source_arm": 2,
+      "receiver_arm": 3,
+      "finger": "right",
+      "force_n": 2.838064670562744,
+      "flight_time_s": 0.95,
+      "contact_body0": "/World/Arm_03/panda_rightfinger",
+      "contact_body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 15,
+      "source_arm": 3,
+      "receiver_arm": 4,
+      "finger": "right",
+      "force_n": 2.8336894512176514,
+      "flight_time_s": 0.95,
+      "contact_body0": "/World/Arm_04/panda_rightfinger",
+      "contact_body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 16,
+      "source_arm": 4,
+      "receiver_arm": 5,
+      "finger": "right",
+      "force_n": 2.8286445140838623,
+      "flight_time_s": 0.95,
+      "contact_body0": "/World/Arm_05/panda_rightfinger",
+      "contact_body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 17,
+      "source_arm": 5,
+      "receiver_arm": 6,
+      "finger": "right",
+      "force_n": 2.8527870178222656,
+      "flight_time_s": 0.95,
+      "contact_body0": "/World/Arm_06/panda_rightfinger",
+      "contact_body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 18,
+      "source_arm": 6,
+      "receiver_arm": 1,
+      "finger": "right",
+      "force_n": 2.852374792098999,
+      "flight_time_s": 0.95,
+      "contact_body0": "/World/Arm_01/panda_rightfinger",
+      "contact_body1": "/World/RelayBall"
+    }
+  ],
+  "ball_contact_events": [
+    {
+      "transfer": 1,
+      "receiver_arm": 2,
+      "contact_arm": null,
+      "finger": null,
+      "time_s": 4.208333333333332,
+      "force_n": 1.5157283544540405,
+      "body0": "/World/Arm_02/panda_leftfinger",
+      "body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 1,
+      "receiver_arm": 2,
+      "contact_arm": null,
+      "finger": null,
+      "time_s": 4.208333333333332,
+      "force_n": 1.5157283544540405,
+      "body0": "/World/Arm_02/panda_rightfinger",
+      "body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 1,
+      "receiver_arm": 2,
+      "contact_arm": 2,
+      "finger": "left",
+      "time_s": 4.208333333333332,
+      "force_n": 0.0,
+      "body0": "/World/Arm_02/panda_leftfinger",
+      "body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 1,
+      "receiver_arm": 2,
+      "contact_arm": 2,
+      "finger": "right",
+      "time_s": 4.208333333333332,
+      "force_n": 1.5157283544540405,
+      "body0": "/World/Arm_02/panda_rightfinger",
+      "body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 2,
+      "receiver_arm": 3,
+      "contact_arm": null,
+      "finger": null,
+      "time_s": 7.066666666666808,
+      "force_n": 2.8495500087738037,
+      "body0": "/World/Arm_03/panda_rightfinger",
+      "body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 2,
+      "receiver_arm": 3,
+      "contact_arm": 3,
+      "finger": "right",
+      "time_s": 7.066666666666808,
+      "force_n": 2.8495500087738037,
+      "body0": "/World/Arm_03/panda_rightfinger",
+      "body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 3,
+      "receiver_arm": 4,
+      "contact_arm": null,
+      "finger": null,
+      "time_s": 9.925000000000077,
+      "force_n": 2.820552110671997,
+      "body0": "/World/Arm_04/panda_rightfinger",
+      "body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 3,
+      "receiver_arm": 4,
+      "contact_arm": 4,
+      "finger": "right",
+      "time_s": 9.925000000000077,
+      "force_n": 2.820552110671997,
+      "body0": "/World/Arm_04/panda_rightfinger",
+      "body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 4,
+      "receiver_arm": 5,
+      "contact_arm": null,
+      "finger": null,
+      "time_s": 12.783333333333248,
+      "force_n": 2.845939874649048,
+      "body0": "/World/Arm_05/panda_rightfinger",
+      "body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 4,
+      "receiver_arm": 5,
+      "contact_arm": 5,
+      "finger": "right",
+      "time_s": 12.783333333333248,
+      "force_n": 2.845939874649048,
+      "body0": "/World/Arm_05/panda_rightfinger",
+      "body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 5,
+      "receiver_arm": 6,
+      "contact_arm": null,
+      "finger": null,
+      "time_s": 15.641666666666419,
+      "force_n": 2.83901309967041,
+      "body0": "/World/Arm_06/panda_rightfinger",
+      "body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 5,
+      "receiver_arm": 6,
+      "contact_arm": 6,
+      "finger": "right",
+      "time_s": 15.641666666666419,
+      "force_n": 2.83901309967041,
+      "body0": "/World/Arm_06/panda_rightfinger",
+      "body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 6,
+      "receiver_arm": 1,
+      "contact_arm": null,
+      "finger": null,
+      "time_s": 18.49999999999959,
+      "force_n": 2.842101812362671,
+      "body0": "/World/Arm_01/panda_rightfinger",
+      "body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 6,
+      "receiver_arm": 1,
+      "contact_arm": 1,
+      "finger": "right",
+      "time_s": 18.49999999999959,
+      "force_n": 2.842101812362671,
+      "body0": "/World/Arm_01/panda_rightfinger",
+      "body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 7,
+      "receiver_arm": 2,
+      "contact_arm": null,
+      "finger": null,
+      "time_s": 21.358333333332762,
+      "force_n": 2.8364970684051514,
+      "body0": "/World/Arm_02/panda_rightfinger",
+      "body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 7,
+      "receiver_arm": 2,
+      "contact_arm": 2,
+      "finger": "right",
+      "time_s": 21.358333333332762,
+      "force_n": 2.8364970684051514,
+      "body0": "/World/Arm_02/panda_rightfinger",
+      "body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 8,
+      "receiver_arm": 3,
+      "contact_arm": null,
+      "finger": null,
+      "time_s": 24.216666666665933,
+      "force_n": 2.8436310291290283,
+      "body0": "/World/Arm_03/panda_rightfinger",
+      "body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 8,
+      "receiver_arm": 3,
+      "contact_arm": 3,
+      "finger": "right",
+      "time_s": 24.216666666665933,
+      "force_n": 2.8436310291290283,
+      "body0": "/World/Arm_03/panda_rightfinger",
+      "body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 9,
+      "receiver_arm": 4,
+      "contact_arm": null,
+      "finger": null,
+      "time_s": 27.074999999999104,
+      "force_n": 2.8340563774108887,
+      "body0": "/World/Arm_04/panda_rightfinger",
+      "body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 9,
+      "receiver_arm": 4,
+      "contact_arm": 4,
+      "finger": "right",
+      "time_s": 27.074999999999104,
+      "force_n": 2.8340563774108887,
+      "body0": "/World/Arm_04/panda_rightfinger",
+      "body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 10,
+      "receiver_arm": 5,
+      "contact_arm": null,
+      "finger": null,
+      "time_s": 29.933333333332275,
+      "force_n": 2.831705331802368,
+      "body0": "/World/Arm_05/panda_rightfinger",
+      "body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 10,
+      "receiver_arm": 5,
+      "contact_arm": 5,
+      "finger": "right",
+      "time_s": 29.933333333332275,
+      "force_n": 2.831705331802368,
+      "body0": "/World/Arm_05/panda_rightfinger",
+      "body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 11,
+      "receiver_arm": 6,
+      "contact_arm": null,
+      "finger": null,
+      "time_s": 32.79166666666545,
+      "force_n": 2.837348699569702,
+      "body0": "/World/Arm_06/panda_rightfinger",
+      "body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 11,
+      "receiver_arm": 6,
+      "contact_arm": 6,
+      "finger": "right",
+      "time_s": 32.79166666666545,
+      "force_n": 2.837348699569702,
+      "body0": "/World/Arm_06/panda_rightfinger",
+      "body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 12,
+      "receiver_arm": 1,
+      "contact_arm": null,
+      "finger": null,
+      "time_s": 35.64999999999862,
+      "force_n": 2.8339500427246094,
+      "body0": "/World/Arm_01/panda_rightfinger",
+      "body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 12,
+      "receiver_arm": 1,
+      "contact_arm": 1,
+      "finger": "right",
+      "time_s": 35.64999999999862,
+      "force_n": 2.8339500427246094,
+      "body0": "/World/Arm_01/panda_rightfinger",
+      "body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 13,
+      "receiver_arm": 2,
+      "contact_arm": null,
+      "finger": null,
+      "time_s": 38.50833333333179,
+      "force_n": 2.829310417175293,
+      "body0": "/World/Arm_02/panda_rightfinger",
+      "body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 13,
+      "receiver_arm": 2,
+      "contact_arm": 2,
+      "finger": "right",
+      "time_s": 38.50833333333179,
+      "force_n": 2.829310417175293,
+      "body0": "/World/Arm_02/panda_rightfinger",
+      "body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 14,
+      "receiver_arm": 3,
+      "contact_arm": null,
+      "finger": null,
+      "time_s": 41.36666666666496,
+      "force_n": 2.838064670562744,
+      "body0": "/World/Arm_03/panda_rightfinger",
+      "body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 14,
+      "receiver_arm": 3,
+      "contact_arm": 3,
+      "finger": "right",
+      "time_s": 41.36666666666496,
+      "force_n": 2.838064670562744,
+      "body0": "/World/Arm_03/panda_rightfinger",
+      "body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 15,
+      "receiver_arm": 4,
+      "contact_arm": null,
+      "finger": null,
+      "time_s": 44.22499999999813,
+      "force_n": 2.8336894512176514,
+      "body0": "/World/Arm_04/panda_rightfinger",
+      "body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 15,
+      "receiver_arm": 4,
+      "contact_arm": 4,
+      "finger": "right",
+      "time_s": 44.22499999999813,
+      "force_n": 2.8336894512176514,
+      "body0": "/World/Arm_04/panda_rightfinger",
+      "body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 16,
+      "receiver_arm": 5,
+      "contact_arm": null,
+      "finger": null,
+      "time_s": 47.0833333333313,
+      "force_n": 2.8286445140838623,
+      "body0": "/World/Arm_05/panda_rightfinger",
+      "body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 16,
+      "receiver_arm": 5,
+      "contact_arm": 5,
+      "finger": "right",
+      "time_s": 47.0833333333313,
+      "force_n": 2.8286445140838623,
+      "body0": "/World/Arm_05/panda_rightfinger",
+      "body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 17,
+      "receiver_arm": 6,
+      "contact_arm": null,
+      "finger": null,
+      "time_s": 49.941666666664474,
+      "force_n": 2.8527870178222656,
+      "body0": "/World/Arm_06/panda_rightfinger",
+      "body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 17,
+      "receiver_arm": 6,
+      "contact_arm": 6,
+      "finger": "right",
+      "time_s": 49.941666666664474,
+      "force_n": 2.8527870178222656,
+      "body0": "/World/Arm_06/panda_rightfinger",
+      "body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 18,
+      "receiver_arm": 1,
+      "contact_arm": null,
+      "finger": null,
+      "time_s": 52.799999999997645,
+      "force_n": 2.852374792098999,
+      "body0": "/World/Arm_01/panda_rightfinger",
+      "body1": "/World/RelayBall"
+    },
+    {
+      "transfer": 18,
+      "receiver_arm": 1,
+      "contact_arm": 1,
+      "finger": "right",
+      "time_s": 52.799999999997645,
+      "force_n": 2.852374792098999,
+      "body0": "/World/Arm_01/panda_rightfinger",
+      "body1": "/World/RelayBall"
+    }
+  ],
+  "events": [
+    {
+      "event": "initial_grasp",
+      "arm": 1,
+      "ball_state": "dynamic_fixed_grasp",
+      "time_s": 1.9499999999999955
+    },
+    {
+      "event": "throw_fallback",
+      "transfer": 1,
+      "reason": "MoE cue was not THROW",
+      "time_s": 2.2666666666666613
+    },
+    {
+      "event": "release_impulse",
+      "transfer": 1,
+      "source_arm": 1,
+      "receiver_arm": 2,
+      "release_position_m": [
+        0.6058102250099182,
+        0.34987178444862366,
+        0.5958941578865051
+      ],
+      "target_velocity_mps": [
+        -0.3144296705722809,
+        0.19384732842445374,
+        4.8542375564575195
+      ],
+      "velocity_before_impulse_mps": [
+        0.002422757912427187,
+        0.0005091173225082457,
+        -0.06450510025024414
+      ],
+      "impulse_n_s": [
+        -0.01901114545762539,
+        0.011600292287766933,
+        0.2951245605945587
+      ],
+      "release_velocity_mps": [
+        -0.3144296705722809,
+        0.19384732842445374,
+        4.8542375564575195
+      ],
+      "model_cue": "CATCH",
+      "model_confidence": 0.9944995641708374,
+      "time_s": 3.2583333333333244
+    },
+    {
+      "event": "physical_contact_grasp",
+      "transfer": 1,
+      "arm": 2,
+      "finger": "left",
+      "force_n": 0.0,
+      "contact_bodies": [
+        "/World/Arm_02/panda_leftfinger",
+        "/World/RelayBall"
+      ],
+      "flight_time_s": 0.95,
+      "time_s": 4.208333333333332
+    },
+    {
+      "event": "throw_fallback",
+      "transfer": 2,
+      "reason": "MoE cue was not THROW",
+      "time_s": 5.125000000000044
+    },
+    {
+      "event": "release_impulse",
+      "transfer": 2,
+      "source_arm": 2,
+      "receiver_arm": 3,
+      "release_position_m": [
+        0.0014758267207071185,
+        0.7030998468399048,
+        0.6268802285194397
+      ],
+      "target_velocity_mps": [
+        -0.32507795095443726,
+        -0.17539376020431519,
+        4.854239463806152
+      ],
+      "velocity_before_impulse_mps": [
+        0.002299725543707609,
+        -0.00923253782093525,
+        -0.06644462794065475
+      ],
+      "impulse_n_s": [
+        -0.01964266039431095,
+        -0.009969673119485378,
+        0.29524102807044983
+      ],
+      "release_velocity_mps": [
+        -0.32507795095443726,
+        -0.17539376020431519,
+        4.854239463806152
+      ],
+      "model_cue": "CATCH",
+      "model_confidence": 0.9941494464874268,
+      "time_s": 6.11666666666676
+    },
+    {
+      "event": "physical_contact_grasp",
+      "transfer": 2,
+      "arm": 3,
+      "finger": "right",
+      "force_n": 2.8495500087738037,
+      "contact_bodies": [
+        "/World/Arm_03/panda_rightfinger",
+        "/World/RelayBall"
+      ],
+      "flight_time_s": 0.95,
+      "time_s": 7.066666666666808
+    },
+    {
+      "event": "throw_fallback",
+      "transfer": 3,
+      "reason": "MoE cue was not THROW",
+      "time_s": 7.98333333333352
+    },
+    {
+      "event": "release_impulse",
+      "transfer": 3,
+      "source_arm": 3,
+      "receiver_arm": 4,
+      "release_position_m": [
+        -0.6077043414115906,
+        0.33949124813079834,
+        0.6171090006828308
+      ],
+      "target_velocity_mps": [
+        -0.010651600547134876,
+        -0.3692261278629303,
+        4.854238510131836
+      ],
+      "velocity_before_impulse_mps": [
+        0.008881249465048313,
+        -0.002576757688075304,
+        -0.06651991605758667
+      ],
+      "impulse_n_s": [
+        -0.0011719709727913141,
+        -0.02199896052479744,
+        0.295245498418808
+      ],
+      "release_velocity_mps": [
+        -0.010651600547134876,
+        -0.3692261278629303,
+        4.854238510131836
+      ],
+      "model_cue": "CATCH",
+      "model_confidence": 0.9925149083137512,
+      "time_s": 8.975000000000131
+    },
+    {
+      "event": "physical_contact_grasp",
+      "transfer": 3,
+      "arm": 4,
+      "finger": "right",
+      "force_n": 2.820552110671997,
+      "contact_bodies": [
+        "/World/Arm_04/panda_rightfinger",
+        "/World/RelayBall"
+      ],
+      "flight_time_s": 0.95,
+      "time_s": 9.925000000000077
+    },
+    {
+      "event": "throw_fallback",
+      "transfer": 4,
+      "reason": "MoE cue was not THROW",
+      "time_s": 10.841666666666692
+    },
+    {
+      "event": "release_impulse",
+      "transfer": 4,
+      "source_arm": 4,
+      "receiver_arm": 5,
+      "release_position_m": [
+        -0.6009323596954346,
+        -0.3544161915779114,
+        0.6211994290351868
+      ],
+      "target_velocity_mps": [
+        0.3144296705722809,
+        -0.19384735822677612,
+        4.8542375564575195
+      ],
+      "velocity_before_impulse_mps": [
+        0.006669945083558559,
+        0.006537389475852251,
+        -0.06651059538125992
+      ],
+      "impulse_n_s": [
+        0.01846558414399624,
+        -0.012023084796965122,
+        0.29524487257003784
+      ],
+      "release_velocity_mps": [
+        0.3144296705722809,
+        -0.19384735822677612,
+        4.8542375564575195
+      ],
+      "model_cue": "CATCH",
+      "model_confidence": 0.9930952191352844,
+      "time_s": 11.833333333333302
+    },
+    {
+      "event": "physical_contact_grasp",
+      "transfer": 4,
+      "arm": 5,
+      "finger": "right",
+      "force_n": 2.845939874649048,
+      "contact_bodies": [
+        "/World/Arm_05/panda_rightfinger",
+        "/World/RelayBall"
+      ],
+      "flight_time_s": 0.95,
+      "time_s": 12.783333333333248
+    },
+    {
+      "event": "throw_fallback",
+      "transfer": 5,
+      "reason": "MoE cue was not THROW",
+      "time_s": 13.699999999999863
+    },
+    {
+      "event": "release_impulse",
+      "transfer": 5,
+      "source_arm": 5,
+      "receiver_arm": 6,
+      "release_position_m": [
+        0.008006498217582703,
+        -0.6968703866004944,
+        0.6193548440933228
+      ],
+      "target_velocity_mps": [
+        0.32507795095443726,
+        0.17539376020431519,
+        4.854239463806152
+      ],
+      "velocity_before_impulse_mps": [
+        -0.00228565139696002,
+        0.00898987427353859,
+        -0.0664944127202034
+      ],
+      "impulse_n_s": [
+        0.01964181661605835,
+        0.009984233416616917,
+        0.295244038105011
+      ],
+      "release_velocity_mps": [
+        0.32507795095443726,
+        0.17539376020431519,
+        4.854239463806152
+      ],
+      "model_cue": "CATCH",
+      "model_confidence": 0.9933251738548279,
+      "time_s": 14.691666666666473
+    },
+    {
+      "event": "physical_contact_grasp",
+      "transfer": 5,
+      "arm": 6,
+      "finger": "right",
+      "force_n": 2.83901309967041,
+      "contact_bodies": [
+        "/World/Arm_06/panda_rightfinger",
+        "/World/RelayBall"
+      ],
+      "flight_time_s": 0.95,
+      "time_s": 15.641666666666419
+    },
+    {
+      "event": "throw_fallback",
+      "transfer": 6,
+      "reason": "MoE cue was not THROW",
+      "time_s": 16.558333333333035
+    },
+    {
+      "event": "release_impulse",
+      "transfer": 6,
+      "source_arm": 6,
+      "receiver_arm": 1,
+      "release_position_m": [
+        0.6074579358100891,
+        -0.34225282073020935,
+        0.6201791763305664
+      ],
+      "target_velocity_mps": [
+        0.010651600547134876,
+        0.3692261278629303,
+        4.854238510131836
+      ],
+      "velocity_before_impulse_mps": [
+        -0.008928749710321426,
+        0.0024747054558247328,
+        -0.0664830431342125
+      ],
+      "impulse_n_s": [
+        0.0011748209362849593,
+        0.02200508490204811,
+        0.2952432930469513
+      ],
+      "release_velocity_mps": [
+        0.010651600547134876,
+        0.3692261278629303,
+        4.854238510131836
+      ],
+      "model_cue": "CATCH",
+      "model_confidence": 0.9942910671234131,
+      "time_s": 17.549999999999645
+    },
+    {
+      "event": "physical_contact_grasp",
+      "transfer": 6,
+      "arm": 1,
+      "finger": "right",
+      "force_n": 2.842101812362671,
+      "contact_bodies": [
+        "/World/Arm_01/panda_rightfinger",
+        "/World/RelayBall"
+      ],
+      "flight_time_s": 0.95,
+      "time_s": 18.49999999999959
+    },
+    {
+      "event": "throw_fallback",
+      "transfer": 7,
+      "reason": "MoE cue was not THROW",
+      "time_s": 19.416666666666206
+    },
+    {
+      "event": "release_impulse",
+      "transfer": 7,
+      "source_arm": 1,
+      "receiver_arm": 2,
+      "release_position_m": [
+        0.599855899810791,
+        0.35512715578079224,
+        0.619810163974762
+      ],
+      "target_velocity_mps": [
+        -0.3144296705722809,
+        0.19384735822677612,
+        4.8542375564575195
+      ],
+      "velocity_before_impulse_mps": [
+        -0.006615692283958197,
+        -0.006467757746577263,
+        -0.06648671627044678
+      ],
+      "impulse_n_s": [
+        -0.018468838185071945,
+        0.012018906883895397,
+        0.29524344205856323
+      ],
+      "release_velocity_mps": [
+        -0.3144296705722809,
+        0.19384735822677612,
+        4.8542375564575195
+      ],
+      "model_cue": "CATCH",
+      "model_confidence": 0.9946309328079224,
+      "time_s": 20.408333333332816
+    },
+    {
+      "event": "physical_contact_grasp",
+      "transfer": 7,
+      "arm": 2,
+      "finger": "right",
+      "force_n": 2.8364970684051514,
+      "contact_bodies": [
+        "/World/Arm_02/panda_rightfinger",
+        "/World/RelayBall"
+      ],
+      "flight_time_s": 0.95,
+      "time_s": 21.358333333332762
+    },
+    {
+      "event": "throw_fallback",
+      "transfer": 8,
+      "reason": "MoE cue was not THROW",
+      "time_s": 22.274999999999377
+    },
+    {
+      "event": "release_impulse",
+      "transfer": 8,
+      "source_arm": 2,
+      "receiver_arm": 3,
+      "release_position_m": [
+        -0.007485841866582632,
+        0.6971216797828674,
+        0.6199514269828796
+      ],
+      "target_velocity_mps": [
+        -0.32507792115211487,
+        -0.17539376020431519,
+        4.854239463806152
+      ],
+      "velocity_before_impulse_mps": [
+        0.002268166048452258,
+        -0.008934532292187214,
+        -0.06648369133472443
+      ],
+      "impulse_n_s": [
+        -0.019640764221549034,
+        -0.00998755358159542,
+        0.29524338245391846
+      ],
+      "release_velocity_mps": [
+        -0.32507792115211487,
+        -0.17539376020431519,
+        4.854239463806152
+      ],
+      "model_cue": "CATCH",
+      "model_confidence": 0.9939319491386414,
+      "time_s": 23.266666666665987
+    },
+    {
+      "event": "physical_contact_grasp",
+      "transfer": 8,
+      "arm": 3,
+      "finger": "right",
+      "force_n": 2.8436310291290283,
+      "contact_bodies": [
+        "/World/Arm_03/panda_rightfinger",
+        "/World/RelayBall"
+      ],
+      "flight_time_s": 0.95,
+      "time_s": 24.216666666665933
+    },
+    {
+      "event": "throw_fallback",
+      "transfer": 9,
+      "reason": "MoE cue was not THROW",
+      "time_s": 25.133333333332548
+    },
+    {
+      "event": "release_impulse",
+      "transfer": 9,
+      "source_arm": 3,
+      "receiver_arm": 4,
+      "release_position_m": [
+        -0.6074774861335754,
+        0.34197667241096497,
+        0.6199448704719543
+      ],
+      "target_velocity_mps": [
+        -0.010651600547134876,
+        -0.3692261278629303,
+        4.854238510131836
+      ],
+      "velocity_before_impulse_mps": [
+        0.008948401547968388,
+        -0.002507096156477928,
+        -0.06651182472705841
+      ],
+      "impulse_n_s": [
+        -0.0011760001070797443,
+        -0.022003142163157463,
+        0.2952449917793274
+      ],
+      "release_velocity_mps": [
+        -0.010651600547134876,
+        -0.3692261278629303,
+        4.854238510131836
+      ],
+      "model_cue": "CATCH",
+      "model_confidence": 0.9928842782974243,
+      "time_s": 26.124999999999158
+    },
+    {
+      "event": "physical_contact_grasp",
+      "transfer": 9,
+      "arm": 4,
+      "finger": "right",
+      "force_n": 2.8340563774108887,
+      "contact_bodies": [
+        "/World/Arm_04/panda_rightfinger",
+        "/World/RelayBall"
+      ],
+      "flight_time_s": 0.95,
+      "time_s": 27.074999999999104
+    },
+    {
+      "event": "throw_fallback",
+      "transfer": 10,
+      "reason": "MoE cue was not THROW",
+      "time_s": 27.99166666666572
+    },
+    {
+      "event": "release_impulse",
+      "transfer": 10,
+      "source_arm": 4,
+      "receiver_arm": 5,
+      "release_position_m": [
+        -0.5999112725257874,
+        -0.35508134961128235,
+        0.6199125051498413
+      ],
+      "target_velocity_mps": [
+        0.3144296705722809,
+        -0.19384732842445374,
+        4.8542375564575195
+      ],
+      "velocity_before_impulse_mps": [
+        0.006590056698769331,
+        0.006457411218434572,
+        -0.06648415327072144
+      ],
+      "impulse_n_s": [
+        0.01847037486732006,
+        -0.012018284760415554,
+        0.2952432930469513
+      ],
+      "release_velocity_mps": [
+        0.3144296705722809,
+        -0.19384732842445374,
+        4.8542375564575195
+      ],
+      "model_cue": "CATCH",
+      "model_confidence": 0.993986964225769,
+      "time_s": 28.98333333333233
+    },
+    {
+      "event": "physical_contact_grasp",
+      "transfer": 10,
+      "arm": 5,
+      "finger": "right",
+      "force_n": 2.831705331802368,
+      "contact_bodies": [
+        "/World/Arm_05/panda_rightfinger",
+        "/World/RelayBall"
+      ],
+      "flight_time_s": 0.95,
+      "time_s": 29.933333333332275
+    },
+    {
+      "event": "throw_fallback",
+      "transfer": 11,
+      "reason": "MoE cue was not THROW",
+      "time_s": 30.84999999999889
+    },
+    {
+      "event": "release_impulse",
+      "transfer": 11,
+      "source_arm": 5,
+      "receiver_arm": 6,
+      "release_position_m": [
+        0.0075493184849619865,
+        -0.6970787048339844,
+        0.6199160218238831
+      ],
+      "target_velocity_mps": [
+        0.32507792115211487,
+        0.17539376020431519,
+        4.854239463806152
+      ],
+      "velocity_before_impulse_mps": [
+        -0.002293309662491083,
+        0.008882821537554264,
+        -0.06650126725435257
+      ],
+      "impulse_n_s": [
+        0.01964227482676506,
+        0.009990655817091465,
+        0.295244425535202
+      ],
+      "release_velocity_mps": [
+        0.32507792115211487,
+        0.17539376020431519,
+        4.854239463806152
+      ],
+      "model_cue": "CATCH",
+      "model_confidence": 0.9923990964889526,
+      "time_s": 31.8416666666655
+    },
+    {
+      "event": "physical_contact_grasp",
+      "transfer": 11,
+      "arm": 6,
+      "finger": "right",
+      "force_n": 2.837348699569702,
+      "contact_bodies": [
+        "/World/Arm_06/panda_rightfinger",
+        "/World/RelayBall"
+      ],
+      "flight_time_s": 0.95,
+      "time_s": 32.79166666666545
+    },
+    {
+      "event": "throw_fallback",
+      "transfer": 12,
+      "reason": "MoE cue was not THROW",
+      "time_s": 33.708333333332064
+    },
+    {
+      "event": "release_impulse",
+      "transfer": 12,
+      "source_arm": 6,
+      "receiver_arm": 1,
+      "release_position_m": [
+        0.6074520349502563,
+        -0.341995507478714,
+        0.6198959350585938
+      ],
+      "target_velocity_mps": [
+        0.010651600547134876,
+        0.3692261278629303,
+        4.854238510131836
+      ],
+      "velocity_before_impulse_mps": [
+        -0.008795531466603279,
+        0.0024698288179934025,
+        -0.06649180501699448
+      ],
+      "impulse_n_s": [
+        0.0011668279767036438,
+        0.02200537733733654,
+        0.2952437996864319
+      ],
+      "release_velocity_mps": [
+        0.010651600547134876,
+        0.3692261278629303,
+        4.854238510131836
+      ],
+      "model_cue": "CATCH",
+      "model_confidence": 0.9933904409408569,
+      "time_s": 34.699999999998674
+    },
+    {
+      "event": "physical_contact_grasp",
+      "transfer": 12,
+      "arm": 1,
+      "finger": "right",
+      "force_n": 2.8339500427246094,
+      "contact_bodies": [
+        "/World/Arm_01/panda_rightfinger",
+        "/World/RelayBall"
+      ],
+      "flight_time_s": 0.95,
+      "time_s": 35.64999999999862
+    },
+    {
+      "event": "throw_fallback",
+      "transfer": 13,
+      "reason": "MoE cue was not THROW",
+      "time_s": 36.566666666665235
+    },
+    {
+      "event": "release_impulse",
+      "transfer": 13,
+      "source_arm": 1,
+      "receiver_arm": 2,
+      "release_position_m": [
+        0.5999155044555664,
+        0.35506221652030945,
+        0.6199028491973877
+      ],
+      "target_velocity_mps": [
+        -0.3144296705722809,
+        0.1938473880290985,
+        4.8542375564575195
+      ],
+      "velocity_before_impulse_mps": [
+        -0.006503612268716097,
+        -0.0063764788210392,
+        -0.06648684293031693
+      ],
+      "impulse_n_s": [
+        -0.01847556233406067,
+        0.012013431638479233,
+        0.29524344205856323
+      ],
+      "release_velocity_mps": [
+        -0.3144296705722809,
+        0.1938473880290985,
+        4.8542375564575195
+      ],
+      "model_cue": "CATCH",
+      "model_confidence": 0.9932936429977417,
+      "time_s": 37.558333333331845
+    },
+    {
+      "event": "physical_contact_grasp",
+      "transfer": 13,
+      "arm": 2,
+      "finger": "right",
+      "force_n": 2.829310417175293,
+      "contact_bodies": [
+        "/World/Arm_02/panda_rightfinger",
+        "/World/RelayBall"
+      ],
+      "flight_time_s": 0.95,
+      "time_s": 38.50833333333179
+    },
+    {
+      "event": "throw_fallback",
+      "transfer": 14,
+      "reason": "MoE cue was not THROW",
+      "time_s": 39.424999999998406
+    },
+    {
+      "event": "release_impulse",
+      "transfer": 14,
+      "source_arm": 2,
+      "receiver_arm": 3,
+      "release_position_m": [
+        -0.007547770626842976,
+        0.6970624327659607,
+        0.6198911666870117
+      ],
+      "target_velocity_mps": [
+        -0.32507792115211487,
+        -0.17539376020431519,
+        4.854239463806152
+      ],
+      "velocity_before_impulse_mps": [
+        0.002240175846964121,
+        -0.008817111141979694,
+        -0.06647089123725891
+      ],
+      "impulse_n_s": [
+        -0.019639085978269577,
+        -0.009994599036872387,
+        0.29524263739585876
+      ],
+      "release_velocity_mps": [
+        -0.32507792115211487,
+        -0.17539376020431519,
+        4.854239463806152
+      ],
+      "model_cue": "CATCH",
+      "model_confidence": 0.9944519400596619,
+      "time_s": 40.416666666665016
+    },
+    {
+      "event": "physical_contact_grasp",
+      "transfer": 14,
+      "arm": 3,
+      "finger": "right",
+      "force_n": 2.838064670562744,
+      "contact_bodies": [
+        "/World/Arm_03/panda_rightfinger",
+        "/World/RelayBall"
+      ],
+      "flight_time_s": 0.95,
+      "time_s": 41.36666666666496
+    },
+    {
+      "event": "throw_fallback",
+      "transfer": 15,
+      "reason": "MoE cue was not THROW",
+      "time_s": 42.283333333331576
+    },
+    {
+      "event": "release_impulse",
+      "transfer": 15,
+      "source_arm": 3,
+      "receiver_arm": 4,
+      "release_position_m": [
+        -0.6074634790420532,
+        0.34200042486190796,
+        0.6199043393135071
+      ],
+      "target_velocity_mps": [
+        -0.010651600547134876,
+        -0.3692261278629303,
+        4.854238510131836
+      ],
+      "velocity_before_impulse_mps": [
+        0.00881057046353817,
+        -0.0024913300294429064,
+        -0.06648735702037811
+      ],
+      "impulse_n_s": [
+        -0.0011677303118631244,
+        -0.022004088386893272,
+        0.2952435314655304
+      ],
+      "release_velocity_mps": [
+        -0.010651600547134876,
+        -0.3692261278629303,
+        4.854238510131836
+      ],
+      "model_cue": "CATCH",
+      "model_confidence": 0.9947558641433716,
+      "time_s": 43.27499999999819
+    },
+    {
+      "event": "physical_contact_grasp",
+      "transfer": 15,
+      "arm": 4,
+      "finger": "right",
+      "force_n": 2.8336894512176514,
+      "contact_bodies": [
+        "/World/Arm_04/panda_rightfinger",
+        "/World/RelayBall"
+      ],
+      "flight_time_s": 0.95,
+      "time_s": 44.22499999999813
+    },
+    {
+      "event": "throw_fallback",
+      "transfer": 16,
+      "reason": "MoE cue was not THROW",
+      "time_s": 45.14166666666475
+    },
+    {
+      "event": "release_impulse",
+      "transfer": 16,
+      "source_arm": 4,
+      "receiver_arm": 5,
+      "release_position_m": [
+        -0.5999077558517456,
+        -0.35506096482276917,
+        0.6199034452438354
+      ],
+      "target_velocity_mps": [
+        0.3144296705722809,
+        -0.19384732842445374,
+        4.8542375564575195
+      ],
+      "velocity_before_impulse_mps": [
+        0.0065003386698663235,
+        0.006328624207526445,
+        -0.06647428125143051
+      ],
+      "impulse_n_s": [
+        0.018475759774446487,
+        -0.012010556645691395,
+        0.2952427268028259
+      ],
+      "release_velocity_mps": [
+        0.3144296705722809,
+        -0.19384732842445374,
+        4.8542375564575195
+      ],
+      "model_cue": "CATCH",
+      "model_confidence": 0.9940536618232727,
+      "time_s": 46.13333333333136
+    },
+    {
+      "event": "physical_contact_grasp",
+      "transfer": 16,
+      "arm": 5,
+      "finger": "right",
+      "force_n": 2.8286445140838623,
+      "contact_bodies": [
+        "/World/Arm_05/panda_rightfinger",
+        "/World/RelayBall"
+      ],
+      "flight_time_s": 0.95,
+      "time_s": 47.0833333333313
+    },
+    {
+      "event": "throw_fallback",
+      "transfer": 17,
+      "reason": "MoE cue was not THROW",
+      "time_s": 47.99999999999792
+    },
+    {
+      "event": "release_impulse",
+      "transfer": 17,
+      "source_arm": 5,
+      "receiver_arm": 6,
+      "release_position_m": [
+        0.007549116387963295,
+        -0.6970586776733398,
+        0.6198837161064148
+      ],
+      "target_velocity_mps": [
+        0.32507792115211487,
+        0.17539376020431519,
+        4.854239463806152
+      ],
+      "velocity_before_impulse_mps": [
+        -0.0022312006913125515,
+        0.008796746842563152,
+        -0.06646984070539474
+      ],
+      "impulse_n_s": [
+        0.01963854767382145,
+        0.009995820000767708,
+        0.2952425479888916
+      ],
+      "release_velocity_mps": [
+        0.32507792115211487,
+        0.17539376020431519,
+        4.854239463806152
+      ],
+      "model_cue": "CATCH",
+      "model_confidence": 0.9926628470420837,
+      "time_s": 48.99166666666453
+    },
+    {
+      "event": "physical_contact_grasp",
+      "transfer": 17,
+      "arm": 6,
+      "finger": "right",
+      "force_n": 2.8527870178222656,
+      "contact_bodies": [
+        "/World/Arm_06/panda_rightfinger",
+        "/World/RelayBall"
+      ],
+      "flight_time_s": 0.95,
+      "time_s": 49.941666666664474
+    },
+    {
+      "event": "throw_fallback",
+      "transfer": 18,
+      "reason": "MoE cue was not THROW",
+      "time_s": 50.85833333333109
+    },
+    {
+      "event": "release_impulse",
+      "transfer": 18,
+      "source_arm": 6,
+      "receiver_arm": 1,
+      "release_position_m": [
+        0.6075026988983154,
+        -0.3420291244983673,
+        0.619951605796814
+      ],
+      "target_velocity_mps": [
+        0.010651600547134876,
+        0.3692261278629303,
+        4.854238510131836
+      ],
+      "velocity_before_impulse_mps": [
+        -0.009034829214215279,
+        0.00260752160102129,
+        -0.06652557849884033
+      ],
+      "impulse_n_s": [
+        0.0011811858275905252,
+        0.0219971165060997,
+        0.29524582624435425
+      ],
+      "release_velocity_mps": [
+        0.010651600547134876,
+        0.3692261278629303,
+        4.854238510131836
+      ],
+      "model_cue": "CATCH",
+      "model_confidence": 0.994587242603302,
+      "time_s": 51.8499999999977
+    },
+    {
+      "event": "physical_contact_grasp",
+      "transfer": 18,
+      "arm": 1,
+      "finger": "right",
+      "force_n": 2.852374792098999,
+      "contact_bodies": [
+        "/World/Arm_01/panda_rightfinger",
+        "/World/RelayBall"
+      ],
+      "flight_time_s": 0.95,
+      "time_s": 52.799999999997645
+    }
+  ]
+}

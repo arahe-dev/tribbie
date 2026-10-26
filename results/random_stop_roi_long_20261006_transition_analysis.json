@@ -1,0 +1,2076 @@
+{
+  "benchmark": "randomized reactive emergency stops",
+  "run_tag": "random_stop_roi_long_20261006",
+  "seed": 1129349374,
+  "seed_source": "fresh_os_random_seed",
+  "episodes": 5,
+  "events_per_episode": 20,
+  "scheduled_paired_event_count": 100,
+  "events_visible_to_both_policies": 82,
+  "events_visible_to_neither_policy": 15,
+  "events_visible_to_only_one_policy": 3,
+  "policies": {
+    "moe16": {
+      "policy": "moe16",
+      "scheduled_events": 100,
+      "camera_visible_events": 84,
+      "cue_visibility_rate": 0.84,
+      "already_stopped_before_first_visible_cue": 1,
+      "new_stop_transitions_after_visible_cue": 72,
+      "safe_reactive_stops_within_250ms_from_cue": 63,
+      "safe_reactive_stop_rate_given_visible_cue": 0.75,
+      "safe_reactive_stops_within_250ms_from_scheduled_event_onset": 50,
+      "safe_reactive_stop_rate_from_scheduled_onset_over_all_events": 0.5,
+      "cue_to_stop_transition_median_sim_s": 0.0,
+      "cue_to_stop_transition_p95_sim_s": 0.23334,
+      "onset_to_first_visible_observation_median_sim_s": 0.18333,
+      "onset_to_first_visible_observation_p95_sim_s": 0.2,
+      "false_stop_predictions": 165,
+      "false_stop_time_sim_s": 6.2881,
+      "raw_stop_output_rate": 0.1908,
+      "decision_count": 12759,
+      "median_inference_round_trip_ms": 4.8703,
+      "p95_inference_round_trip_ms": 5.298089999999998,
+      "events": {
+        "ep01_event_001": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.16667,
+          "collision_proxy_hit": false
+        },
+        "ep01_event_002": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.26667,
+          "onset_to_stop_transition_sim_s": 0.45,
+          "collision_proxy_hit": false
+        },
+        "ep01_event_003": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.18334,
+          "collision_proxy_hit": false
+        },
+        "ep01_event_004": {
+          "cue_visible": false,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": true
+        },
+        "ep01_event_005": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": true
+        },
+        "ep01_event_006": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.3,
+          "onset_to_stop_transition_sim_s": 0.48334,
+          "collision_proxy_hit": false
+        },
+        "ep01_event_007": {
+          "cue_visible": false,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": true
+        },
+        "ep01_event_008": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.16666,
+          "collision_proxy_hit": false
+        },
+        "ep01_event_009": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": false
+        },
+        "ep01_event_010": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.16667,
+          "collision_proxy_hit": false
+        },
+        "ep01_event_011": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.18333,
+          "collision_proxy_hit": false
+        },
+        "ep01_event_012": {
+          "cue_visible": false,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": false
+        },
+        "ep01_event_013": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01666,
+          "onset_to_stop_transition_sim_s": 0.18333,
+          "collision_proxy_hit": false
+        },
+        "ep01_event_014": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.25,
+          "onset_to_stop_transition_sim_s": 0.46667,
+          "collision_proxy_hit": false
+        },
+        "ep01_event_015": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": true
+        },
+        "ep01_event_016": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.08333,
+          "onset_to_stop_transition_sim_s": 0.28333,
+          "collision_proxy_hit": false
+        },
+        "ep01_event_017": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": false
+        },
+        "ep01_event_018": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.05,
+          "onset_to_stop_transition_sim_s": 0.25,
+          "collision_proxy_hit": false
+        },
+        "ep01_event_019": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01667,
+          "onset_to_stop_transition_sim_s": 0.2,
+          "collision_proxy_hit": false
+        },
+        "ep01_event_020": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.2,
+          "collision_proxy_hit": false
+        },
+        "ep02_event_001": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01667,
+          "onset_to_stop_transition_sim_s": 0.18333,
+          "collision_proxy_hit": false
+        },
+        "ep02_event_002": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.2,
+          "collision_proxy_hit": false
+        },
+        "ep02_event_003": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.2,
+          "collision_proxy_hit": false
+        },
+        "ep02_event_004": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.18333,
+          "collision_proxy_hit": true
+        },
+        "ep02_event_005": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.05,
+          "onset_to_stop_transition_sim_s": 0.21667,
+          "collision_proxy_hit": false
+        },
+        "ep02_event_006": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.18333,
+          "collision_proxy_hit": true
+        },
+        "ep02_event_007": {
+          "cue_visible": false,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": true
+        },
+        "ep02_event_008": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01666,
+          "onset_to_stop_transition_sim_s": 0.2,
+          "collision_proxy_hit": false
+        },
+        "ep02_event_009": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.2,
+          "collision_proxy_hit": false
+        },
+        "ep02_event_010": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.15,
+          "onset_to_stop_transition_sim_s": 0.35,
+          "collision_proxy_hit": false
+        },
+        "ep02_event_011": {
+          "cue_visible": false,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": false
+        },
+        "ep02_event_012": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.18333,
+          "collision_proxy_hit": false
+        },
+        "ep02_event_013": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.08333,
+          "onset_to_stop_transition_sim_s": 0.26667,
+          "collision_proxy_hit": false
+        },
+        "ep02_event_014": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.2,
+          "collision_proxy_hit": true
+        },
+        "ep02_event_015": {
+          "cue_visible": false,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": false
+        },
+        "ep02_event_016": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.2,
+          "onset_to_stop_transition_sim_s": 0.43333,
+          "collision_proxy_hit": false
+        },
+        "ep02_event_017": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01667,
+          "onset_to_stop_transition_sim_s": 0.2,
+          "collision_proxy_hit": false
+        },
+        "ep02_event_018": {
+          "cue_visible": false,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": true
+        },
+        "ep02_event_019": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.23333,
+          "onset_to_stop_transition_sim_s": 0.41667,
+          "collision_proxy_hit": false
+        },
+        "ep02_event_020": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.2,
+          "collision_proxy_hit": false
+        },
+        "ep03_event_001": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": false
+        },
+        "ep03_event_002": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": true
+        },
+        "ep03_event_003": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.18333,
+          "collision_proxy_hit": false
+        },
+        "ep03_event_004": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.18334,
+          "collision_proxy_hit": false
+        },
+        "ep03_event_005": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": false
+        },
+        "ep03_event_006": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.16666,
+          "collision_proxy_hit": true
+        },
+        "ep03_event_007": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01666,
+          "onset_to_stop_transition_sim_s": 0.18333,
+          "collision_proxy_hit": false
+        },
+        "ep03_event_008": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.18333,
+          "collision_proxy_hit": false
+        },
+        "ep03_event_009": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.18333,
+          "collision_proxy_hit": true
+        },
+        "ep03_event_010": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.18333,
+          "collision_proxy_hit": false
+        },
+        "ep03_event_011": {
+          "cue_visible": false,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": true
+        },
+        "ep03_event_012": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01667,
+          "onset_to_stop_transition_sim_s": 0.2,
+          "collision_proxy_hit": false
+        },
+        "ep03_event_013": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.08333,
+          "onset_to_stop_transition_sim_s": 0.25,
+          "collision_proxy_hit": false
+        },
+        "ep03_event_014": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.18333,
+          "collision_proxy_hit": false
+        },
+        "ep03_event_015": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.2,
+          "onset_to_stop_transition_sim_s": 0.36667,
+          "collision_proxy_hit": false
+        },
+        "ep03_event_016": {
+          "cue_visible": false,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": true
+        },
+        "ep03_event_017": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.2,
+          "collision_proxy_hit": false
+        },
+        "ep03_event_018": {
+          "cue_visible": false,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": true
+        },
+        "ep03_event_019": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.2,
+          "collision_proxy_hit": false
+        },
+        "ep03_event_020": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.23334,
+          "onset_to_stop_transition_sim_s": 0.41667,
+          "collision_proxy_hit": false
+        },
+        "ep04_event_001": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.08334,
+          "onset_to_stop_transition_sim_s": 0.25,
+          "collision_proxy_hit": false
+        },
+        "ep04_event_002": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.16667,
+          "collision_proxy_hit": false
+        },
+        "ep04_event_003": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.15,
+          "onset_to_stop_transition_sim_s": 0.38333,
+          "collision_proxy_hit": false
+        },
+        "ep04_event_004": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.2,
+          "collision_proxy_hit": false
+        },
+        "ep04_event_005": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.2,
+          "collision_proxy_hit": false
+        },
+        "ep04_event_006": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01667,
+          "onset_to_stop_transition_sim_s": 0.18333,
+          "collision_proxy_hit": false
+        },
+        "ep04_event_007": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": false
+        },
+        "ep04_event_008": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.2,
+          "onset_to_stop_transition_sim_s": 0.38333,
+          "collision_proxy_hit": false
+        },
+        "ep04_event_009": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.18333,
+          "collision_proxy_hit": false
+        },
+        "ep04_event_010": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.2,
+          "collision_proxy_hit": false
+        },
+        "ep04_event_011": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.18333,
+          "collision_proxy_hit": true
+        },
+        "ep04_event_012": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.16666,
+          "collision_proxy_hit": false
+        },
+        "ep04_event_013": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": true
+        },
+        "ep04_event_014": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.16667,
+          "collision_proxy_hit": false
+        },
+        "ep04_event_015": {
+          "cue_visible": false,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": true
+        },
+        "ep04_event_016": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.16666,
+          "collision_proxy_hit": false
+        },
+        "ep04_event_017": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.18333,
+          "collision_proxy_hit": false
+        },
+        "ep04_event_018": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.18334,
+          "collision_proxy_hit": false
+        },
+        "ep04_event_019": {
+          "cue_visible": false,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": true
+        },
+        "ep04_event_020": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": false
+        },
+        "ep05_event_001": {
+          "cue_visible": false,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": true
+        },
+        "ep05_event_002": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01667,
+          "onset_to_stop_transition_sim_s": 0.2,
+          "collision_proxy_hit": false
+        },
+        "ep05_event_003": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01667,
+          "onset_to_stop_transition_sim_s": 0.2,
+          "collision_proxy_hit": false
+        },
+        "ep05_event_004": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.16666,
+          "collision_proxy_hit": true
+        },
+        "ep05_event_005": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": true,
+          "cue_to_stop_transition_sim_s": 0.2,
+          "onset_to_stop_transition_sim_s": 0.41667,
+          "collision_proxy_hit": false
+        },
+        "ep05_event_006": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.16666,
+          "collision_proxy_hit": false
+        },
+        "ep05_event_007": {
+          "cue_visible": false,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": true
+        },
+        "ep05_event_008": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01667,
+          "onset_to_stop_transition_sim_s": 0.18334,
+          "collision_proxy_hit": false
+        },
+        "ep05_event_009": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.23333,
+          "onset_to_stop_transition_sim_s": 0.41667,
+          "collision_proxy_hit": false
+        },
+        "ep05_event_010": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.18333,
+          "collision_proxy_hit": false
+        },
+        "ep05_event_011": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01666,
+          "onset_to_stop_transition_sim_s": 0.18333,
+          "collision_proxy_hit": false
+        },
+        "ep05_event_012": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01667,
+          "onset_to_stop_transition_sim_s": 0.18334,
+          "collision_proxy_hit": false
+        },
+        "ep05_event_013": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": true
+        },
+        "ep05_event_014": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.2,
+          "collision_proxy_hit": false
+        },
+        "ep05_event_015": {
+          "cue_visible": false,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": true
+        },
+        "ep05_event_016": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.2,
+          "collision_proxy_hit": false
+        },
+        "ep05_event_017": {
+          "cue_visible": false,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": false
+        },
+        "ep05_event_018": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": true,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.0,
+          "onset_to_stop_transition_sim_s": 0.18333,
+          "collision_proxy_hit": false
+        },
+        "ep05_event_019": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.23334,
+          "onset_to_stop_transition_sim_s": 0.4,
+          "collision_proxy_hit": false
+        },
+        "ep05_event_020": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": false
+        }
+      }
+    },
+    "pca16": {
+      "policy": "pca16",
+      "scheduled_events": 100,
+      "camera_visible_events": 83,
+      "cue_visibility_rate": 0.83,
+      "already_stopped_before_first_visible_cue": 0,
+      "new_stop_transitions_after_visible_cue": 81,
+      "safe_reactive_stops_within_250ms_from_cue": 81,
+      "safe_reactive_stop_rate_given_visible_cue": 0.9759,
+      "safe_reactive_stops_within_250ms_from_scheduled_event_onset": 0,
+      "safe_reactive_stop_rate_from_scheduled_onset_over_all_events": 0.0,
+      "cue_to_stop_transition_median_sim_s": 0.03333,
+      "cue_to_stop_transition_p95_sim_s": 0.08334,
+      "onset_to_first_visible_observation_median_sim_s": 0.26667,
+      "onset_to_first_visible_observation_p95_sim_s": 0.3,
+      "false_stop_predictions": 2401,
+      "false_stop_time_sim_s": 138.6243,
+      "raw_stop_output_rate": 0.452,
+      "decision_count": 8436,
+      "median_inference_round_trip_ms": 24.30865,
+      "p95_inference_round_trip_ms": 25.96685,
+      "events": {
+        "ep01_event_001": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.03333,
+          "onset_to_stop_transition_sim_s": 0.3,
+          "collision_proxy_hit": false
+        },
+        "ep01_event_002": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.13334,
+          "onset_to_stop_transition_sim_s": 0.41667,
+          "collision_proxy_hit": false
+        },
+        "ep01_event_003": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.03333,
+          "onset_to_stop_transition_sim_s": 0.3,
+          "collision_proxy_hit": false
+        },
+        "ep01_event_004": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": false
+        },
+        "ep01_event_005": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01667,
+          "onset_to_stop_transition_sim_s": 0.26667,
+          "collision_proxy_hit": false
+        },
+        "ep01_event_006": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.08333,
+          "onset_to_stop_transition_sim_s": 0.35,
+          "collision_proxy_hit": false
+        },
+        "ep01_event_007": {
+          "cue_visible": false,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": false
+        },
+        "ep01_event_008": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.08333,
+          "onset_to_stop_transition_sim_s": 0.36666,
+          "collision_proxy_hit": false
+        },
+        "ep01_event_009": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.03334,
+          "onset_to_stop_transition_sim_s": 0.26667,
+          "collision_proxy_hit": false
+        },
+        "ep01_event_010": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.03333,
+          "onset_to_stop_transition_sim_s": 0.26667,
+          "collision_proxy_hit": false
+        },
+        "ep01_event_011": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.03333,
+          "onset_to_stop_transition_sim_s": 0.3,
+          "collision_proxy_hit": false
+        },
+        "ep01_event_012": {
+          "cue_visible": false,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": false
+        },
+        "ep01_event_013": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01667,
+          "onset_to_stop_transition_sim_s": 0.31667,
+          "collision_proxy_hit": false
+        },
+        "ep01_event_014": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.08333,
+          "onset_to_stop_transition_sim_s": 0.4,
+          "collision_proxy_hit": false
+        },
+        "ep01_event_015": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01667,
+          "onset_to_stop_transition_sim_s": 0.31667,
+          "collision_proxy_hit": false
+        },
+        "ep01_event_016": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01666,
+          "onset_to_stop_transition_sim_s": 0.28333,
+          "collision_proxy_hit": false
+        },
+        "ep01_event_017": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.03333,
+          "onset_to_stop_transition_sim_s": 0.3,
+          "collision_proxy_hit": false
+        },
+        "ep01_event_018": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01667,
+          "onset_to_stop_transition_sim_s": 0.26667,
+          "collision_proxy_hit": false
+        },
+        "ep01_event_019": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01667,
+          "onset_to_stop_transition_sim_s": 0.28333,
+          "collision_proxy_hit": false
+        },
+        "ep01_event_020": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.08334,
+          "onset_to_stop_transition_sim_s": 0.35,
+          "collision_proxy_hit": false
+        },
+        "ep02_event_001": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01667,
+          "onset_to_stop_transition_sim_s": 0.3,
+          "collision_proxy_hit": false
+        },
+        "ep02_event_002": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.03333,
+          "onset_to_stop_transition_sim_s": 0.3,
+          "collision_proxy_hit": false
+        },
+        "ep02_event_003": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.03334,
+          "onset_to_stop_transition_sim_s": 0.28334,
+          "collision_proxy_hit": false
+        },
+        "ep02_event_004": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01667,
+          "onset_to_stop_transition_sim_s": 0.3,
+          "collision_proxy_hit": false
+        },
+        "ep02_event_005": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.08333,
+          "onset_to_stop_transition_sim_s": 0.33333,
+          "collision_proxy_hit": false
+        },
+        "ep02_event_006": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": false
+        },
+        "ep02_event_007": {
+          "cue_visible": false,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": false
+        },
+        "ep02_event_008": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.03334,
+          "onset_to_stop_transition_sim_s": 0.28334,
+          "collision_proxy_hit": false
+        },
+        "ep02_event_009": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.03334,
+          "onset_to_stop_transition_sim_s": 0.28334,
+          "collision_proxy_hit": false
+        },
+        "ep02_event_010": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.08333,
+          "onset_to_stop_transition_sim_s": 0.35,
+          "collision_proxy_hit": false
+        },
+        "ep02_event_011": {
+          "cue_visible": false,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": false
+        },
+        "ep02_event_012": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.03334,
+          "onset_to_stop_transition_sim_s": 0.3,
+          "collision_proxy_hit": false
+        },
+        "ep02_event_013": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.08333,
+          "onset_to_stop_transition_sim_s": 0.35,
+          "collision_proxy_hit": false
+        },
+        "ep02_event_014": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.03333,
+          "onset_to_stop_transition_sim_s": 0.28333,
+          "collision_proxy_hit": false
+        },
+        "ep02_event_015": {
+          "cue_visible": false,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": false
+        },
+        "ep02_event_016": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.08333,
+          "onset_to_stop_transition_sim_s": 0.43333,
+          "collision_proxy_hit": false
+        },
+        "ep02_event_017": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.03333,
+          "onset_to_stop_transition_sim_s": 0.3,
+          "collision_proxy_hit": false
+        },
+        "ep02_event_018": {
+          "cue_visible": false,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": false
+        },
+        "ep02_event_019": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.08334,
+          "onset_to_stop_transition_sim_s": 0.43334,
+          "collision_proxy_hit": false
+        },
+        "ep02_event_020": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01667,
+          "onset_to_stop_transition_sim_s": 0.26667,
+          "collision_proxy_hit": false
+        },
+        "ep03_event_001": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01667,
+          "onset_to_stop_transition_sim_s": 0.26667,
+          "collision_proxy_hit": false
+        },
+        "ep03_event_002": {
+          "cue_visible": false,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": false
+        },
+        "ep03_event_003": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.03333,
+          "onset_to_stop_transition_sim_s": 0.28333,
+          "collision_proxy_hit": false
+        },
+        "ep03_event_004": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.08333,
+          "onset_to_stop_transition_sim_s": 0.35,
+          "collision_proxy_hit": false
+        },
+        "ep03_event_005": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01666,
+          "onset_to_stop_transition_sim_s": 0.28333,
+          "collision_proxy_hit": false
+        },
+        "ep03_event_006": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01666,
+          "onset_to_stop_transition_sim_s": 0.26666,
+          "collision_proxy_hit": false
+        },
+        "ep03_event_007": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01667,
+          "onset_to_stop_transition_sim_s": 0.31667,
+          "collision_proxy_hit": false
+        },
+        "ep03_event_008": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.03334,
+          "onset_to_stop_transition_sim_s": 0.3,
+          "collision_proxy_hit": false
+        },
+        "ep03_event_009": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.03333,
+          "onset_to_stop_transition_sim_s": 0.31666,
+          "collision_proxy_hit": false
+        },
+        "ep03_event_010": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.03333,
+          "onset_to_stop_transition_sim_s": 0.31666,
+          "collision_proxy_hit": false
+        },
+        "ep03_event_011": {
+          "cue_visible": false,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": false
+        },
+        "ep03_event_012": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01667,
+          "onset_to_stop_transition_sim_s": 0.26667,
+          "collision_proxy_hit": false
+        },
+        "ep03_event_013": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01667,
+          "onset_to_stop_transition_sim_s": 0.28334,
+          "collision_proxy_hit": false
+        },
+        "ep03_event_014": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01667,
+          "onset_to_stop_transition_sim_s": 0.3,
+          "collision_proxy_hit": false
+        },
+        "ep03_event_015": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.08333,
+          "onset_to_stop_transition_sim_s": 0.33333,
+          "collision_proxy_hit": false
+        },
+        "ep03_event_016": {
+          "cue_visible": false,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": false
+        },
+        "ep03_event_017": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.08334,
+          "onset_to_stop_transition_sim_s": 0.33334,
+          "collision_proxy_hit": false
+        },
+        "ep03_event_018": {
+          "cue_visible": false,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": false
+        },
+        "ep03_event_019": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.03333,
+          "onset_to_stop_transition_sim_s": 0.28333,
+          "collision_proxy_hit": false
+        },
+        "ep03_event_020": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.06667,
+          "onset_to_stop_transition_sim_s": 0.31667,
+          "collision_proxy_hit": false
+        },
+        "ep04_event_001": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01667,
+          "onset_to_stop_transition_sim_s": 0.3,
+          "collision_proxy_hit": false
+        },
+        "ep04_event_002": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01667,
+          "onset_to_stop_transition_sim_s": 0.26667,
+          "collision_proxy_hit": false
+        },
+        "ep04_event_003": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.03333,
+          "onset_to_stop_transition_sim_s": 0.33333,
+          "collision_proxy_hit": false
+        },
+        "ep04_event_004": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01667,
+          "onset_to_stop_transition_sim_s": 0.3,
+          "collision_proxy_hit": false
+        },
+        "ep04_event_005": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.03334,
+          "onset_to_stop_transition_sim_s": 0.31667,
+          "collision_proxy_hit": false
+        },
+        "ep04_event_006": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01667,
+          "onset_to_stop_transition_sim_s": 0.28333,
+          "collision_proxy_hit": false
+        },
+        "ep04_event_007": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.13333,
+          "onset_to_stop_transition_sim_s": 0.4,
+          "collision_proxy_hit": false
+        },
+        "ep04_event_008": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01667,
+          "onset_to_stop_transition_sim_s": 0.26667,
+          "collision_proxy_hit": false
+        },
+        "ep04_event_009": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01667,
+          "onset_to_stop_transition_sim_s": 0.3,
+          "collision_proxy_hit": false
+        },
+        "ep04_event_010": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01666,
+          "onset_to_stop_transition_sim_s": 0.3,
+          "collision_proxy_hit": false
+        },
+        "ep04_event_011": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01667,
+          "onset_to_stop_transition_sim_s": 0.3,
+          "collision_proxy_hit": false
+        },
+        "ep04_event_012": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01666,
+          "onset_to_stop_transition_sim_s": 0.26666,
+          "collision_proxy_hit": false
+        },
+        "ep04_event_013": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.03333,
+          "onset_to_stop_transition_sim_s": 0.3,
+          "collision_proxy_hit": false
+        },
+        "ep04_event_014": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01667,
+          "onset_to_stop_transition_sim_s": 0.26667,
+          "collision_proxy_hit": false
+        },
+        "ep04_event_015": {
+          "cue_visible": false,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": false
+        },
+        "ep04_event_016": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01667,
+          "onset_to_stop_transition_sim_s": 0.28333,
+          "collision_proxy_hit": false
+        },
+        "ep04_event_017": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01667,
+          "onset_to_stop_transition_sim_s": 0.3,
+          "collision_proxy_hit": false
+        },
+        "ep04_event_018": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01667,
+          "onset_to_stop_transition_sim_s": 0.28334,
+          "collision_proxy_hit": false
+        },
+        "ep04_event_019": {
+          "cue_visible": false,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": false
+        },
+        "ep04_event_020": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01667,
+          "onset_to_stop_transition_sim_s": 0.31667,
+          "collision_proxy_hit": false
+        },
+        "ep05_event_001": {
+          "cue_visible": false,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": false
+        },
+        "ep05_event_002": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01667,
+          "onset_to_stop_transition_sim_s": 0.3,
+          "collision_proxy_hit": false
+        },
+        "ep05_event_003": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.08334,
+          "onset_to_stop_transition_sim_s": 0.35,
+          "collision_proxy_hit": false
+        },
+        "ep05_event_004": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.08334,
+          "onset_to_stop_transition_sim_s": 0.35,
+          "collision_proxy_hit": false
+        },
+        "ep05_event_005": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.08334,
+          "onset_to_stop_transition_sim_s": 0.33334,
+          "collision_proxy_hit": false
+        },
+        "ep05_event_006": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.03333,
+          "onset_to_stop_transition_sim_s": 0.31666,
+          "collision_proxy_hit": false
+        },
+        "ep05_event_007": {
+          "cue_visible": false,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": false
+        },
+        "ep05_event_008": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01666,
+          "onset_to_stop_transition_sim_s": 0.3,
+          "collision_proxy_hit": false
+        },
+        "ep05_event_009": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.13333,
+          "onset_to_stop_transition_sim_s": 0.41667,
+          "collision_proxy_hit": false
+        },
+        "ep05_event_010": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.03333,
+          "onset_to_stop_transition_sim_s": 0.28333,
+          "collision_proxy_hit": false
+        },
+        "ep05_event_011": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.03333,
+          "onset_to_stop_transition_sim_s": 0.3,
+          "collision_proxy_hit": false
+        },
+        "ep05_event_012": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.08334,
+          "onset_to_stop_transition_sim_s": 0.33334,
+          "collision_proxy_hit": false
+        },
+        "ep05_event_013": {
+          "cue_visible": false,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": false
+        },
+        "ep05_event_014": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01667,
+          "onset_to_stop_transition_sim_s": 0.28333,
+          "collision_proxy_hit": false
+        },
+        "ep05_event_015": {
+          "cue_visible": false,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": false
+        },
+        "ep05_event_016": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01667,
+          "onset_to_stop_transition_sim_s": 0.28334,
+          "collision_proxy_hit": false
+        },
+        "ep05_event_017": {
+          "cue_visible": false,
+          "stop_transition_after_visible_cue": false,
+          "safe_stop_from_visible_cue": false,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": null,
+          "onset_to_stop_transition_sim_s": null,
+          "collision_proxy_hit": false
+        },
+        "ep05_event_018": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.01666,
+          "onset_to_stop_transition_sim_s": 0.28333,
+          "collision_proxy_hit": false
+        },
+        "ep05_event_019": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.08334,
+          "onset_to_stop_transition_sim_s": 0.35,
+          "collision_proxy_hit": false
+        },
+        "ep05_event_020": {
+          "cue_visible": true,
+          "stop_transition_after_visible_cue": true,
+          "safe_stop_from_visible_cue": true,
+          "safe_stop_from_event_onset": false,
+          "already_stopped_before_visible_cue": false,
+          "cue_to_stop_transition_sim_s": 0.03333,
+          "onset_to_stop_transition_sim_s": 0.28333,
+          "collision_proxy_hit": false
+        }
+      }
+    }
+  },
+  "paired_reactive_safe_stops_on_events_visible_to_both": {
+    "paired_event_count": 82,
+    "moe16_only_successes": 0,
+    "pca16_only_successes": 18,
+    "both_success": 63,
+    "both_failure": 1
+  },
+  "interpretation_limits": [
+    "This is a single-seed simulator comparison; the seed is recorded for replay and hidden from both policies.",
+    "Scheduled cues were missing from both RGB streams in some events; visibility rates are reported and invisible events receive no reaction credit.",
+    "PCA-16 has substantial false-stop behavior, so cue-conditional reaction alone does not imply useful task performance.",
+    "The collision metric is a 0.30 m center-distance proxy in simulation, not a physical collision or safety certification.",
+    "The rendered red-range cue may appear dark red or near-black in the current RTX material path."
+  ]
+}

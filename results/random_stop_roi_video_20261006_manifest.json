@@ -1,0 +1,298 @@
+{
+  "benchmark": "randomized reactive emergency stops",
+  "seed": 1129349374,
+  "seed_source": "user_supplied_replay_seed",
+  "episodes": [
+    {
+      "episode_id": "ep01",
+      "seed": 1129349374,
+      "initial_yaw_rad": -0.016479174205164343,
+      "dome_intensity": 1518.4,
+      "events": [
+        {
+          "event_id": "ep01_event_001",
+          "episode_id": "ep01",
+          "index": 1,
+          "scheduled_onset_sim_s": 1.4187,
+          "duration_s": 2.3954,
+          "distance_m": 1.1754,
+          "bearing_rad": 0.01073,
+          "target_color_rgb": [
+            0.9772986490325443,
+            0.127635318302035,
+            0.05433433426504724
+          ]
+        },
+        {
+          "event_id": "ep01_event_002",
+          "episode_id": "ep01",
+          "index": 2,
+          "scheduled_onset_sim_s": 5.9463,
+          "duration_s": 2.0243,
+          "distance_m": 1.4012,
+          "bearing_rad": 0.02926,
+          "target_color_rgb": [
+            0.9329178746801198,
+            0.08170464020980504,
+            0.06298658998097326
+          ]
+        },
+        {
+          "event_id": "ep01_event_003",
+          "episode_id": "ep01",
+          "index": 3,
+          "scheduled_onset_sim_s": 10.6824,
+          "duration_s": 2.4574,
+          "distance_m": 1.2767,
+          "bearing_rad": -0.09562,
+          "target_color_rgb": [
+            0.9377085889108703,
+            0.10589801376449648,
+            0.06949319950942293
+          ]
+        },
+        {
+          "event_id": "ep01_event_004",
+          "episode_id": "ep01",
+          "index": 4,
+          "scheduled_onset_sim_s": 16.648,
+          "duration_s": 2.6473,
+          "distance_m": 1.1266,
+          "bearing_rad": 0.00646,
+          "target_color_rgb": [
+            0.9954102340248057,
+            0.12198327387400143,
+            0.0709926308240649
+          ]
+        },
+        {
+          "event_id": "ep01_event_005",
+          "episode_id": "ep01",
+          "index": 5,
+          "scheduled_onset_sim_s": 22.4883,
+          "duration_s": 2.3333,
+          "distance_m": 1.1604,
+          "bearing_rad": 0.10013,
+          "target_color_rgb": [
+            0.9363244929891287,
+            0.0853111045453099,
+            0.06613184954716464
+          ]
+        },
+        {
+          "event_id": "ep01_event_006",
+          "episode_id": "ep01",
+          "index": 6,
+          "scheduled_onset_sim_s": 28.6197,
+          "duration_s": 2.6713,
+          "distance_m": 1.4198,
+          "bearing_rad": -0.02939,
+          "target_color_rgb": [
+            0.9548142608389176,
+            0.11707752882663369,
+            0.044611798293523665
+          ]
+        },
+        {
+          "event_id": "ep01_event_007",
+          "episode_id": "ep01",
+          "index": 7,
+          "scheduled_onset_sim_s": 33.461,
+          "duration_s": 2.6351,
+          "distance_m": 1.1225,
+          "bearing_rad": 0.00414,
+          "target_color_rgb": [
+            0.9471709207248452,
+            0.10515652285814442,
+            0.049876514987717106
+          ]
+        },
+        {
+          "event_id": "ep01_event_008",
+          "episode_id": "ep01",
+          "index": 8,
+          "scheduled_onset_sim_s": 38.4569,
+          "duration_s": 2.2076,
+          "distance_m": 1.3593,
+          "bearing_rad": 0.00421,
+          "target_color_rgb": [
+            0.9760044346508469,
+            0.11502385073582921,
+            0.04100075250718361
+          ]
+        },
+        {
+          "event_id": "ep01_event_009",
+          "episode_id": "ep01",
+          "index": 9,
+          "scheduled_onset_sim_s": 43.4947,
+          "duration_s": 2.666,
+          "distance_m": 1.3553,
+          "bearing_rad": 0.13504,
+          "target_color_rgb": [
+            0.9452954616599495,
+            0.0889118952622381,
+            0.056609447638616445
+          ]
+        },
+        {
+          "event_id": "ep01_event_010",
+          "episode_id": "ep01",
+          "index": 10,
+          "scheduled_onset_sim_s": 48.3787,
+          "duration_s": 2.053,
+          "distance_m": 1.1341,
+          "bearing_rad": -0.0423,
+          "target_color_rgb": [
+            0.9826015178196337,
+            0.09286879887840552,
+            0.05500740877580489
+          ]
+        },
+        {
+          "event_id": "ep01_event_011",
+          "episode_id": "ep01",
+          "index": 11,
+          "scheduled_onset_sim_s": 52.747,
+          "duration_s": 2.2094,
+          "distance_m": 1.245,
+          "bearing_rad": -0.09829,
+          "target_color_rgb": [
+            0.9437392364357333,
+            0.10906235574685587,
+            0.0691001295274124
+          ]
+        },
+        {
+          "event_id": "ep01_event_012",
+          "episode_id": "ep01",
+          "index": 12,
+          "scheduled_onset_sim_s": 58.5963,
+          "duration_s": 2.048,
+          "distance_m": 1.0884,
+          "bearing_rad": 0.09138,
+          "target_color_rgb": [
+            0.9801426298244209,
+            0.12099930053682119,
+            0.0673521157521677
+          ]
+        },
+        {
+          "event_id": "ep01_event_013",
+          "episode_id": "ep01",
+          "index": 13,
+          "scheduled_onset_sim_s": 63.5443,
+          "duration_s": 1.9993,
+          "distance_m": 1.1596,
+          "bearing_rad": 0.08945,
+          "target_color_rgb": [
+            0.938417751423027,
+            0.08825662518013433,
+            0.06449666555550185
+          ]
+        },
+        {
+          "event_id": "ep01_event_014",
+          "episode_id": "ep01",
+          "index": 14,
+          "scheduled_onset_sim_s": 67.3471,
+          "duration_s": 1.9727,
+          "distance_m": 1.4044,
+          "bearing_rad": 0.0239,
+          "target_color_rgb": [
+            0.9794848901310792,
+            0.1258771648482019,
+            0.06997856571629792
+          ]
+        },
+        {
+          "event_id": "ep01_event_015",
+          "episode_id": "ep01",
+          "index": 15,
+          "scheduled_onset_sim_s": 72.6952,
+          "duration_s": 2.6913,
+          "distance_m": 1.1967,
+          "bearing_rad": 0.10948,
+          "target_color_rgb": [
+            0.9880998633175596,
+            0.11611051987488316,
+            0.04603922795552401
+          ]
+        },
+        {
+          "event_id": "ep01_event_016",
+          "episode_id": "ep01",
+          "index": 16,
+          "scheduled_onset_sim_s": 77.9836,
+          "duration_s": 1.9371,
+          "distance_m": 1.3218,
+          "bearing_rad": -0.02549,
+          "target_color_rgb": [
+            0.9807979307088623,
+            0.10090044706153903,
+            0.07100883619699724
+          ]
+        },
+        {
+          "event_id": "ep01_event_017",
+          "episode_id": "ep01",
+          "index": 17,
+          "scheduled_onset_sim_s": 82.7744,
+          "duration_s": 2.2275,
+          "distance_m": 1.2708,
+          "bearing_rad": 0.12051,
+          "target_color_rgb": [
+            0.9880354292184146,
+            0.11996334739747112,
+            0.06345196510432213
+          ]
+        },
+        {
+          "event_id": "ep01_event_018",
+          "episode_id": "ep01",
+          "index": 18,
+          "scheduled_onset_sim_s": 88.4856,
+          "duration_s": 1.9602,
+          "distance_m": 1.32,
+          "bearing_rad": 0.06059,
+          "target_color_rgb": [
+            0.9582331006713327,
+            0.1131494182927599,
+            0.044669188112636884
+          ]
+        },
+        {
+          "event_id": "ep01_event_019",
+          "episode_id": "ep01",
+          "index": 19,
+          "scheduled_onset_sim_s": 92.3611,
+          "duration_s": 2.4117,
+          "distance_m": 1.1907,
+          "bearing_rad": -0.09779,
+          "target_color_rgb": [
+            0.9688614162966461,
+            0.12046252016731696,
+            0.04908349595567404
+          ]
+        },
+        {
+          "event_id": "ep01_event_020",
+          "episode_id": "ep01",
+          "index": 20,
+          "scheduled_onset_sim_s": 97.3156,
+          "duration_s": 2.6576,
+          "distance_m": 1.2634,
+          "bearing_rad": 0.041,
+          "target_color_rgb": [
+            0.9334909726667717,
+            0.10269736628712217,
+            0.07430029435971541
+          ]
+        }
+      ]
+    }
+  ],
+  "policy_observation": "RGB camera only; event timing/pose schedule withheld from worker",
+  "simulator_randomization": "event onset, duration, inter-event gap, distance, bearing, red cue hue, and per-episode lighting/yaw; the run seed is recorded for replay but is not sent to either policy",
+  "paired_comparison": "same episode seeds and event schedule for both policies"
+}

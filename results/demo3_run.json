@@ -1,0 +1,112 @@
+{
+  "instruction": "Put the blue ball in the teal bin and the red cube in the magenta bin.",
+  "new_instruction": null,
+  "change_after": 0,
+  "objects": {
+    "red cube": "table",
+    "blue ball": "table",
+    "green puck": "table"
+  },
+  "deliveries": [
+    {
+      "color": "blue",
+      "shape": "ball",
+      "bin": "teal",
+      "slot": 2,
+      "t_start": 0.87,
+      "planner_s": 6.4,
+      "t_end": 10.73,
+      "controller_report": "its phase head reported 'fail'",
+      "physx_location": "table",
+      "correct_bin": false
+    },
+    {
+      "color": "blue",
+      "shape": "ball",
+      "bin": "teal",
+      "slot": 2,
+      "t_start": 11.53,
+      "planner_s": 6.05,
+      "t_end": 13.6,
+      "controller_report": "its phase head reported 'fail'",
+      "physx_location": "table",
+      "correct_bin": false
+    },
+    {
+      "color": "red",
+      "shape": "cube",
+      "bin": "magenta",
+      "slot": 0,
+      "t_start": 14.4,
+      "planner_s": 6.32,
+      "t_end": 64.4,
+      "controller_report": "timed out after 50 s",
+      "physx_location": "table",
+      "correct_bin": false
+    },
+    {
+      "color": "red",
+      "shape": "cube",
+      "bin": "magenta",
+      "slot": 0,
+      "t_start": 65.13,
+      "planner_s": 6.5,
+      "t_end": 115.2,
+      "controller_report": "timed out after 50 s",
+      "physx_location": "table",
+      "correct_bin": false
+    }
+  ],
+  "planner_calls": 5,
+  "planner_wall_s": [
+    6.4,
+    6.05,
+    6.32,
+    6.5,
+    6.7
+  ],
+  "planner_decisions": [
+    {
+      "observation": "Table camera is washed out, but the overview shows red, blue and green objects on the pick table; all three bins look empty.",
+      "previous_result": "none",
+      "done": false,
+      "object_color": "blue",
+      "bin": "teal",
+      "say": "Delivering the blue ball to the teal bin first."
+    },
+    {
+      "observation": "The table camera image is washed out, but the overview still shows red, blue and green objects on the pick table, and all three bins look empty.",
+      "previous_result": "failed",
+      "done": false,
+      "object_color": "blue",
+      "bin": "teal",
+      "say": "Blue delivery failed; retrying blue ball to the teal bin."
+    },
+    {
+      "observation": "The table camera is washed out, but the overview still shows red, blue and green objects on the table, and all three bins look empty.",
+      "previous_result": "failed",
+      "done": false,
+      "object_color": "red",
+      "bin": "magenta",
+      "say": "Blue failed twice; delivering the red cube to magenta, then retrying blue."
+    },
+    {
+      "observation": "Red cube, blue ball and green ball are all still on the pick table; the teal, magenta and gold bins all look empty.",
+      "previous_result": "failed",
+      "done": false,
+      "object_color": "red",
+      "bin": "magenta",
+      "say": "Red cube is still on the table, trying the magenta bin again."
+    },
+    {
+      "observation": "The table camera shows only a blank grey frame; in the overview the red, blue and other small objects are still on the pick table, and all three bins look empty.",
+      "previous_result": "failed",
+      "done": true,
+      "object_color": "none",
+      "bin": "none",
+      "say": "Both objects failed twice and remain on the table; stopping here."
+    }
+  ],
+  "sim_seconds": 119.0,
+  "checkpoint": "models/course_fixed_s3.pt"
+}

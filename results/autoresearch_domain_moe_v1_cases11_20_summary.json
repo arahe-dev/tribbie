@@ -1,0 +1,32 @@
+{
+  "episodes": 10,
+  "successes": 2,
+  "failures": 8,
+  "success_percent": 20.0,
+  "label_source": "model predictions only for control; simulator pose used only for evaluation",
+  "collision_metric": "geometry proxy: any robot-target center distance below 0.30 m",
+  "control_hz_nominal": 6.666666666666667,
+  "smoothing_window": 3,
+  "policy": "moe16",
+  "case_manifest": "data/robustness_challenge_v1.json",
+  "case_ids": [
+    "challenge_v1_011",
+    "challenge_v1_012",
+    "challenge_v1_013",
+    "challenge_v1_014",
+    "challenge_v1_015",
+    "challenge_v1_016",
+    "challenge_v1_017",
+    "challenge_v1_018",
+    "challenge_v1_019",
+    "challenge_v1_020"
+  ],
+  "stop_confirmation_count": 2,
+  "success_distance_band_m": [
+    1.2,
+    1.65
+  ],
+  "success_bearing_tolerance_rad": 0.18,
+  "seed": 62024,
+  "dataset_version": "visible-stop-v2"
+}

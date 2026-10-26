@@ -1,0 +1,397 @@
+[
+  {
+    "episode": 0,
+    "seed": 610000,
+    "mode": "student",
+    "deliveries_ok": 0,
+    "deliveries": 2,
+    "outcome": {
+      "red": "floor",
+      "blue": "gold"
+    },
+    "intended": {
+      "red": "magenta",
+      "blue": "teal"
+    },
+    "skills": [
+      {
+        "skill": "pick(red)",
+        "seconds": 3.0,
+        "result": "done"
+      },
+      {
+        "skill": "face(east)",
+        "seconds": 2.27,
+        "result": "ok"
+      },
+      {
+        "skill": "goto(magenta)",
+        "seconds": 30.0,
+        "result": "timeout"
+      },
+      {
+        "skill": "drop()",
+        "seconds": 12.0,
+        "result": "timeout"
+      },
+      {
+        "skill": "face(west)",
+        "seconds": 4.0,
+        "result": "ok"
+      },
+      {
+        "skill": "goto(table)",
+        "seconds": 11.2,
+        "result": "done"
+      },
+      {
+        "skill": "face(north)",
+        "seconds": 2.27,
+        "result": "ok"
+      },
+      {
+        "skill": "pick(blue)",
+        "seconds": 2.73,
+        "result": "done"
+      },
+      {
+        "skill": "face(east)",
+        "seconds": 2.27,
+        "result": "ok"
+      },
+      {
+        "skill": "goto(teal)",
+        "seconds": 30.07,
+        "result": "timeout"
+      },
+      {
+        "skill": "drop()",
+        "seconds": 12.07,
+        "result": "timeout"
+      }
+    ],
+    "sim_seconds": 111.9,
+    "wall_seconds": 109.6,
+    "flat_retries": 1798,
+    "policy_ms_mean": 21.680665237647556
+  },
+  {
+    "episode": 1,
+    "seed": 610001,
+    "mode": "student",
+    "deliveries_ok": 0,
+    "deliveries": 2,
+    "outcome": {
+      "red": "table",
+      "blue": "table"
+    },
+    "intended": {
+      "red": "magenta",
+      "blue": "magenta"
+    },
+    "skills": [
+      {
+        "skill": "pick(red)",
+        "seconds": 20.07,
+        "result": "timeout"
+      },
+      {
+        "skill": "face(east)",
+        "seconds": 2.27,
+        "result": "ok"
+      },
+      {
+        "skill": "goto(magenta)",
+        "seconds": 14.2,
+        "result": "done"
+      },
+      {
+        "skill": "drop()",
+        "seconds": 0.6,
+        "result": "done"
+      },
+      {
+        "skill": "face(west)",
+        "seconds": 4.0,
+        "result": "ok"
+      },
+      {
+        "skill": "goto(table)",
+        "seconds": 30.0,
+        "result": "timeout"
+      },
+      {
+        "skill": "face(north)",
+        "seconds": 2.27,
+        "result": "ok"
+      },
+      {
+        "skill": "pick(blue)",
+        "seconds": 20.07,
+        "result": "timeout"
+      },
+      {
+        "skill": "face(east)",
+        "seconds": 2.27,
+        "result": "ok"
+      },
+      {
+        "skill": "goto(magenta)",
+        "seconds": 13.53,
+        "result": "done"
+      },
+      {
+        "skill": "drop()",
+        "seconds": 0.53,
+        "result": "done"
+      }
+    ],
+    "sim_seconds": 109.8,
+    "wall_seconds": 121.7,
+    "flat_retries": 3926,
+    "policy_ms_mean": 26.175209428442436
+  },
+  {
+    "episode": 2,
+    "seed": 610002,
+    "mode": "student",
+    "deliveries_ok": 1,
+    "deliveries": 2,
+    "outcome": {
+      "blue": "teal",
+      "green": "table"
+    },
+    "intended": {
+      "blue": "teal",
+      "green": "magenta"
+    },
+    "skills": [
+      {
+        "skill": "face(west)",
+        "seconds": 3.87,
+        "result": "ok"
+      },
+      {
+        "skill": "goto(table)",
+        "seconds": 10.47,
+        "result": "done"
+      },
+      {
+        "skill": "face(north)",
+        "seconds": 2.27,
+        "result": "ok"
+      },
+      {
+        "skill": "pick(blue)",
+        "seconds": 3.4,
+        "result": "done"
+      },
+      {
+        "skill": "face(east)",
+        "seconds": 2.27,
+        "result": "ok"
+      },
+      {
+        "skill": "goto(teal)",
+        "seconds": 30.0,
+        "result": "timeout"
+      },
+      {
+        "skill": "drop()",
+        "seconds": 12.0,
+        "result": "timeout"
+      },
+      {
+        "skill": "face(west)",
+        "seconds": 4.0,
+        "result": "ok"
+      },
+      {
+        "skill": "goto(table)",
+        "seconds": 30.07,
+        "result": "timeout"
+      },
+      {
+        "skill": "face(north)",
+        "seconds": 6.07,
+        "result": "ok"
+      },
+      {
+        "skill": "pick(green)",
+        "seconds": 20.07,
+        "result": "timeout"
+      },
+      {
+        "skill": "face(east)",
+        "seconds": 6.07,
+        "result": "ok"
+      },
+      {
+        "skill": "goto(magenta)",
+        "seconds": 30.07,
+        "result": "timeout"
+      },
+      {
+        "skill": "drop()",
+        "seconds": 12.07,
+        "result": "timeout"
+      }
+    ],
+    "sim_seconds": 172.7,
+    "wall_seconds": 299.9,
+    "flat_retries": 11477,
+    "policy_ms_mean": 37.52514176452314
+  },
+  {
+    "episode": 3,
+    "seed": 610003,
+    "mode": "student",
+    "deliveries_ok": 0,
+    "deliveries": 2,
+    "outcome": {
+      "green": "floor",
+      "blue": "table"
+    },
+    "intended": {
+      "green": "magenta",
+      "blue": "gold"
+    },
+    "skills": [
+      {
+        "skill": "pick(green)",
+        "seconds": 5.73,
+        "result": "done"
+      },
+      {
+        "skill": "face(east)",
+        "seconds": 2.27,
+        "result": "ok"
+      },
+      {
+        "skill": "goto(magenta)",
+        "seconds": 30.0,
+        "result": "timeout"
+      },
+      {
+        "skill": "drop()",
+        "seconds": 12.0,
+        "result": "timeout"
+      },
+      {
+        "skill": "face(west)",
+        "seconds": 6.0,
+        "result": "ok"
+      },
+      {
+        "skill": "goto(table)",
+        "seconds": 30.07,
+        "result": "timeout"
+      },
+      {
+        "skill": "face(north)",
+        "seconds": 2.27,
+        "result": "ok"
+      },
+      {
+        "skill": "pick(blue)",
+        "seconds": 20.07,
+        "result": "timeout"
+      },
+      {
+        "skill": "face(east)",
+        "seconds": 2.2,
+        "result": "ok"
+      },
+      {
+        "skill": "goto(gold)",
+        "seconds": 30.07,
+        "result": "timeout"
+      },
+      {
+        "skill": "drop()",
+        "seconds": 12.07,
+        "result": "timeout"
+      }
+    ],
+    "sim_seconds": 152.7,
+    "wall_seconds": 247.9,
+    "flat_retries": 17145,
+    "policy_ms_mean": 33.930165094511935
+  },
+  {
+    "episode": 4,
+    "seed": 610004,
+    "mode": "student",
+    "deliveries_ok": 0,
+    "deliveries": 2,
+    "outcome": {
+      "green": "magenta",
+      "red": "table"
+    },
+    "intended": {
+      "green": "teal",
+      "red": "magenta"
+    },
+    "skills": [
+      {
+        "skill": "pick(green)",
+        "seconds": 3.0,
+        "result": "done"
+      },
+      {
+        "skill": "face(east)",
+        "seconds": 2.27,
+        "result": "ok"
+      },
+      {
+        "skill": "goto(teal)",
+        "seconds": 11.13,
+        "result": "done"
+      },
+      {
+        "skill": "drop()",
+        "seconds": 2.33,
+        "result": "done"
+      },
+      {
+        "skill": "face(west)",
+        "seconds": 4.0,
+        "result": "ok"
+      },
+      {
+        "skill": "goto(table)",
+        "seconds": 30.0,
+        "result": "timeout"
+      },
+      {
+        "skill": "face(north)",
+        "seconds": 2.27,
+        "result": "ok"
+      },
+      {
+        "skill": "pick(red)",
+        "seconds": 20.07,
+        "result": "timeout"
+      },
+      {
+        "skill": "face(east)",
+        "seconds": 2.27,
+        "result": "ok"
+      },
+      {
+        "skill": "goto(magenta)",
+        "seconds": 30.07,
+        "result": "timeout"
+      },
+      {
+        "skill": "drop()",
+        "seconds": 12.07,
+        "result": "timeout"
+      }
+    ],
+    "sim_seconds": 119.5,
+    "wall_seconds": 135.3,
+    "flat_retries": 19380,
+    "policy_ms_mean": 27.309655644780918
+  }
+]

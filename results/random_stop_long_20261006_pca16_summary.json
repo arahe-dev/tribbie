@@ -1,0 +1,18 @@
+{
+  "policy": "pca16",
+  "episodes": 5,
+  "randomized_events": 100,
+  "event_responses": 100,
+  "immediate_responses_250ms": 89,
+  "immediate_response_rate": 0.89,
+  "safe_stop_successes": 89,
+  "safe_stop_success_rate": 0.89,
+  "collision_proxy_hits": 0,
+  "median_reaction_sim_s": 0.06667,
+  "p95_reaction_sim_s": 0.6024999999999998,
+  "false_stop_predictions": 4256,
+  "false_stop_time_s": 245.75,
+  "decisions": 8570,
+  "median_request_latency_ms": 24.1646,
+  "p95_request_latency_ms": 25.702849999999998
+}

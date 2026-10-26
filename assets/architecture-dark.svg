@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="356" viewBox="0 0 720 356" role="img" aria-labelledby="archd-title archd-desc">
+  <title id="archd-title">Tribbie architecture</title>
+  <desc id="archd-desc">An operator instruction goes to Claude Opus, which calls 16-D latent skills, which drive fixed controllers. A scripted teacher with true poses is used only to train the skills.</desc>
+  <rect width="720" height="356" fill="#0d1117"/>
+  <defs><marker id="archd-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#9aa4b2"/></marker></defs>
+  <g font-family="ui-sans-serif, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <rect x="250" y="16" width="220" height="40" rx="9" fill="#161b22" stroke="#f0f3f6" stroke-width="1.6"/>
+    <text x="360" y="41" text-anchor="middle" font-size="15" font-weight="650" fill="#f0f3f6">Operator instruction</text>
+    <rect x="150" y="80" width="420" height="74" rx="12" fill="none" stroke="#f0f3f6" stroke-width="2"/>
+    <text x="360" y="104" text-anchor="middle" font-size="15" font-weight="700" fill="#f0f3f6">Claude Opus  ·  operator</text>
+    <text x="360" y="125" text-anchor="middle" font-size="13" font-weight="400" fill="#c6cdd5">reads cameras · writes pick / face / goto / drop · verifies · retries</text>
+    <text x="360" y="144" text-anchor="middle" font-size="12" font-weight="400" fill="#9aa4b2">~10 s per call</text>
+    <rect x="150" y="180" width="420" height="92" rx="12" fill="none" stroke="#f0f3f6" stroke-width="2"/>
+    <text x="360" y="204" text-anchor="middle" font-size="15" font-weight="700" fill="#f0f3f6">16-D latent skills  ·  student</text>
+    <text x="360" y="225" text-anchor="middle" font-size="13" font-weight="400" fill="#c6cdd5">two small RGB cameras → keypoints → z ∈ ℝ¹⁶ → 4 gated experts</text>
+    <text x="360" y="244" text-anchor="middle" font-size="13" font-weight="400" fill="#c6cdd5">→ gripper velocity · grip · phase</text>
+    <text x="360" y="263" text-anchor="middle" font-size="12" font-weight="400" fill="#9aa4b2">15 Hz · 1.5 ms per decision · 255k parameters</text>
+    <rect x="150" y="298" width="420" height="40" rx="9" fill="#161b22" stroke="#f0f3f6" stroke-width="1.6"/>
+    <text x="360" y="323" text-anchor="middle" font-size="14" font-weight="650" fill="#f0f3f6">Fixed controllers · IK · heading · path planner</text>
+    <line x1="360" y1="56" x2="360" y2="78" stroke="#9aa4b2" stroke-width="1.6" marker-end="url(#archd-arrow)"/>
+    <line x1="360" y1="154" x2="360" y2="178" stroke="#9aa4b2" stroke-width="1.6" marker-end="url(#archd-arrow)"/>
+    <line x1="360" y1="272" x2="360" y2="296" stroke="#9aa4b2" stroke-width="1.6" marker-end="url(#archd-arrow)"/>
+    <rect x="600" y="180" width="104" height="92" rx="9" fill="none" stroke="#f0f3f6" stroke-width="1.6" stroke-dasharray="5 4"/>
+    <text x="652" y="210" text-anchor="middle" font-size="14" font-weight="650" fill="#f0f3f6">Teacher</text>
+    <text x="652" y="230" text-anchor="middle" font-size="12" font-weight="400" fill="#9aa4b2">scripted,</text>
+    <text x="652" y="246" text-anchor="middle" font-size="12" font-weight="400" fill="#9aa4b2">true poses</text>
+    <text x="652" y="262" text-anchor="middle" font-size="12" font-weight="400" fill="#9aa4b2">training only</text>
+    <line x1="600" y1="226" x2="572" y2="226" stroke="#9aa4b2" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#archd-arrow)"/>
+    <text x="18" y="117" text-anchor="start" font-size="12" font-weight="400" fill="#9aa4b2">slow</text>
+    <text x="18" y="230" text-anchor="start" font-size="12" font-weight="400" fill="#9aa4b2">fast</text>
+  </g>
+</svg>

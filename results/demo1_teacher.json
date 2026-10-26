@@ -1,0 +1,110 @@
+[
+  {
+    "episode": 0,
+    "seed": 12000,
+    "mode": "expert",
+    "sim_seconds": 60.0,
+    "wall_seconds": 278.7,
+    "objects": [
+      "cube",
+      "ball",
+      "puck",
+      "capsule"
+    ],
+    "colors": {
+      "0": "purple",
+      "2": "orange",
+      "4": "green",
+      "5": "yellow"
+    },
+    "transfers": 12,
+    "drops": 0,
+    "ik_failures": 0,
+    "phase_hist": {
+      "home": 2812,
+      "approach": 717,
+      "descend": 264,
+      "close": 21,
+      "lift": 306,
+      "carry": 897,
+      "wait": 0,
+      "place": 239,
+      "release": 12,
+      "retreat": 132
+    },
+    "transfer_log": [
+      {
+        "object": "puck",
+        "from": 3,
+        "to": 4,
+        "t": 12.0
+      },
+      {
+        "object": "capsule",
+        "from": 2,
+        "to": 3,
+        "t": 19.27
+      },
+      {
+        "object": "cube",
+        "from": 1,
+        "to": 2,
+        "t": 26.4
+      },
+      {
+        "object": "puck",
+        "from": 4,
+        "to": 5,
+        "t": 27.0
+      },
+      {
+        "object": "ball",
+        "from": 0,
+        "to": 1,
+        "t": 33.67
+      },
+      {
+        "object": "capsule",
+        "from": 3,
+        "to": 4,
+        "t": 34.73
+      },
+      {
+        "object": "puck",
+        "from": 5,
+        "to": 0,
+        "t": 41.93
+      },
+      {
+        "object": "cube",
+        "from": 2,
+        "to": 3,
+        "t": 42.2
+      },
+      {
+        "object": "ball",
+        "from": 1,
+        "to": 2,
+        "t": 49.33
+      },
+      {
+        "object": "capsule",
+        "from": 4,
+        "to": 5,
+        "t": 50.13
+      },
+      {
+        "object": "puck",
+        "from": 0,
+        "to": 1,
+        "t": 57.0
+      },
+      {
+        "object": "cube",
+        "from": 3,
+        "to": 4,
+        "t": 57.53
+      }
+    ]
+  }
+]

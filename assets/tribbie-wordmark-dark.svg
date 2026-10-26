@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="72" viewBox="0 0 440 72" role="img" aria-labelledby="twm-title twm-desc">
+  <title id="twm-title">Tribbie wordmark</title>
+  <desc id="twm-desc">Tribbie: latent control</desc>
+  <rect width="440" height="72" fill="#0d1117"/>
+  <defs><marker id="twm-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#9aa4b2"/></marker></defs>
+  <g font-family="ui-sans-serif, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <g transform="translate(28,0)">
+      <circle cx="34" cy="28" r="9" fill="none" stroke="#f0f3f6" stroke-width="2.5"/>
+      <circle cx="52" cy="28" r="9" fill="none" stroke="#f0f3f6" stroke-width="2.5"/>
+      <circle cx="43" cy="44" r="9" fill="none" stroke="#f0f3f6" stroke-width="2.5"/>
+      <text x="74" y="46" font-size="28" font-weight="650" letter-spacing="-0.5" fill="#f0f3f6">Tribbie<tspan font-weight="400" fill="#9aa4b2"> · latent control</tspan></text>
+    </g>
+  </g>
+</svg>

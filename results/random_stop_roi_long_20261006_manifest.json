@@ -1,0 +1,1450 @@
+{
+  "benchmark": "randomized reactive emergency stops",
+  "seed": 1129349374,
+  "seed_source": "fresh_os_random_seed",
+  "episodes": [
+    {
+      "episode_id": "ep01",
+      "seed": 1129349374,
+      "initial_yaw_rad": -0.016479174205164343,
+      "dome_intensity": 1518.4,
+      "events": [
+        {
+          "event_id": "ep01_event_001",
+          "episode_id": "ep01",
+          "index": 1,
+          "scheduled_onset_sim_s": 1.4187,
+          "duration_s": 2.3954,
+          "distance_m": 1.1754,
+          "bearing_rad": 0.01073,
+          "target_color_rgb": [
+            0.9772986490325443,
+            0.127635318302035,
+            0.05433433426504724
+          ]
+        },
+        {
+          "event_id": "ep01_event_002",
+          "episode_id": "ep01",
+          "index": 2,
+          "scheduled_onset_sim_s": 5.9463,
+          "duration_s": 2.0243,
+          "distance_m": 1.4012,
+          "bearing_rad": 0.02926,
+          "target_color_rgb": [
+            0.9329178746801198,
+            0.08170464020980504,
+            0.06298658998097326
+          ]
+        },
+        {
+          "event_id": "ep01_event_003",
+          "episode_id": "ep01",
+          "index": 3,
+          "scheduled_onset_sim_s": 10.6824,
+          "duration_s": 2.4574,
+          "distance_m": 1.2767,
+          "bearing_rad": -0.09562,
+          "target_color_rgb": [
+            0.9377085889108703,
+            0.10589801376449648,
+            0.06949319950942293
+          ]
+        },
+        {
+          "event_id": "ep01_event_004",
+          "episode_id": "ep01",
+          "index": 4,
+          "scheduled_onset_sim_s": 16.648,
+          "duration_s": 2.6473,
+          "distance_m": 1.1266,
+          "bearing_rad": 0.00646,
+          "target_color_rgb": [
+            0.9954102340248057,
+            0.12198327387400143,
+            0.0709926308240649
+          ]
+        },
+        {
+          "event_id": "ep01_event_005",
+          "episode_id": "ep01",
+          "index": 5,
+          "scheduled_onset_sim_s": 22.4883,
+          "duration_s": 2.3333,
+          "distance_m": 1.1604,
+          "bearing_rad": 0.10013,
+          "target_color_rgb": [
+            0.9363244929891287,
+            0.0853111045453099,
+            0.06613184954716464
+          ]
+        },
+        {
+          "event_id": "ep01_event_006",
+          "episode_id": "ep01",
+          "index": 6,
+          "scheduled_onset_sim_s": 28.6197,
+          "duration_s": 2.6713,
+          "distance_m": 1.4198,
+          "bearing_rad": -0.02939,
+          "target_color_rgb": [
+            0.9548142608389176,
+            0.11707752882663369,
+            0.044611798293523665
+          ]
+        },
+        {
+          "event_id": "ep01_event_007",
+          "episode_id": "ep01",
+          "index": 7,
+          "scheduled_onset_sim_s": 33.461,
+          "duration_s": 2.6351,
+          "distance_m": 1.1225,
+          "bearing_rad": 0.00414,
+          "target_color_rgb": [
+            0.9471709207248452,
+            0.10515652285814442,
+            0.049876514987717106
+          ]
+        },
+        {
+          "event_id": "ep01_event_008",
+          "episode_id": "ep01",
+          "index": 8,
+          "scheduled_onset_sim_s": 38.4569,
+          "duration_s": 2.2076,
+          "distance_m": 1.3593,
+          "bearing_rad": 0.00421,
+          "target_color_rgb": [
+            0.9760044346508469,
+            0.11502385073582921,
+            0.04100075250718361
+          ]
+        },
+        {
+          "event_id": "ep01_event_009",
+          "episode_id": "ep01",
+          "index": 9,
+          "scheduled_onset_sim_s": 43.4947,
+          "duration_s": 2.666,
+          "distance_m": 1.3553,
+          "bearing_rad": 0.13504,
+          "target_color_rgb": [
+            0.9452954616599495,
+            0.0889118952622381,
+            0.056609447638616445
+          ]
+        },
+        {
+          "event_id": "ep01_event_010",
+          "episode_id": "ep01",
+          "index": 10,
+          "scheduled_onset_sim_s": 48.3787,
+          "duration_s": 2.053,
+          "distance_m": 1.1341,
+          "bearing_rad": -0.0423,
+          "target_color_rgb": [
+            0.9826015178196337,
+            0.09286879887840552,
+            0.05500740877580489
+          ]
+        },
+        {
+          "event_id": "ep01_event_011",
+          "episode_id": "ep01",
+          "index": 11,
+          "scheduled_onset_sim_s": 52.747,
+          "duration_s": 2.2094,
+          "distance_m": 1.245,
+          "bearing_rad": -0.09829,
+          "target_color_rgb": [
+            0.9437392364357333,
+            0.10906235574685587,
+            0.0691001295274124
+          ]
+        },
+        {
+          "event_id": "ep01_event_012",
+          "episode_id": "ep01",
+          "index": 12,
+          "scheduled_onset_sim_s": 58.5963,
+          "duration_s": 2.048,
+          "distance_m": 1.0884,
+          "bearing_rad": 0.09138,
+          "target_color_rgb": [
+            0.9801426298244209,
+            0.12099930053682119,
+            0.0673521157521677
+          ]
+        },
+        {
+          "event_id": "ep01_event_013",
+          "episode_id": "ep01",
+          "index": 13,
+          "scheduled_onset_sim_s": 63.5443,
+          "duration_s": 1.9993,
+          "distance_m": 1.1596,
+          "bearing_rad": 0.08945,
+          "target_color_rgb": [
+            0.938417751423027,
+            0.08825662518013433,
+            0.06449666555550185
+          ]
+        },
+        {
+          "event_id": "ep01_event_014",
+          "episode_id": "ep01",
+          "index": 14,
+          "scheduled_onset_sim_s": 67.3471,
+          "duration_s": 1.9727,
+          "distance_m": 1.4044,
+          "bearing_rad": 0.0239,
+          "target_color_rgb": [
+            0.9794848901310792,
+            0.1258771648482019,
+            0.06997856571629792
+          ]
+        },
+        {
+          "event_id": "ep01_event_015",
+          "episode_id": "ep01",
+          "index": 15,
+          "scheduled_onset_sim_s": 72.6952,
+          "duration_s": 2.6913,
+          "distance_m": 1.1967,
+          "bearing_rad": 0.10948,
+          "target_color_rgb": [
+            0.9880998633175596,
+            0.11611051987488316,
+            0.04603922795552401
+          ]
+        },
+        {
+          "event_id": "ep01_event_016",
+          "episode_id": "ep01",
+          "index": 16,
+          "scheduled_onset_sim_s": 77.9836,
+          "duration_s": 1.9371,
+          "distance_m": 1.3218,
+          "bearing_rad": -0.02549,
+          "target_color_rgb": [
+            0.9807979307088623,
+            0.10090044706153903,
+            0.07100883619699724
+          ]
+        },
+        {
+          "event_id": "ep01_event_017",
+          "episode_id": "ep01",
+          "index": 17,
+          "scheduled_onset_sim_s": 82.7744,
+          "duration_s": 2.2275,
+          "distance_m": 1.2708,
+          "bearing_rad": 0.12051,
+          "target_color_rgb": [
+            0.9880354292184146,
+            0.11996334739747112,
+            0.06345196510432213
+          ]
+        },
+        {
+          "event_id": "ep01_event_018",
+          "episode_id": "ep01",
+          "index": 18,
+          "scheduled_onset_sim_s": 88.4856,
+          "duration_s": 1.9602,
+          "distance_m": 1.32,
+          "bearing_rad": 0.06059,
+          "target_color_rgb": [
+            0.9582331006713327,
+            0.1131494182927599,
+            0.044669188112636884
+          ]
+        },
+        {
+          "event_id": "ep01_event_019",
+          "episode_id": "ep01",
+          "index": 19,
+          "scheduled_onset_sim_s": 92.3611,
+          "duration_s": 2.4117,
+          "distance_m": 1.1907,
+          "bearing_rad": -0.09779,
+          "target_color_rgb": [
+            0.9688614162966461,
+            0.12046252016731696,
+            0.04908349595567404
+          ]
+        },
+        {
+          "event_id": "ep01_event_020",
+          "episode_id": "ep01",
+          "index": 20,
+          "scheduled_onset_sim_s": 97.3156,
+          "duration_s": 2.6576,
+          "distance_m": 1.2634,
+          "bearing_rad": 0.041,
+          "target_color_rgb": [
+            0.9334909726667717,
+            0.10269736628712217,
+            0.07430029435971541
+          ]
+        }
+      ]
+    },
+    {
+      "episode_id": "ep02",
+      "seed": 1129350383,
+      "initial_yaw_rad": 0.05217130769312503,
+      "dome_intensity": 1493.4,
+      "events": [
+        {
+          "event_id": "ep02_event_001",
+          "episode_id": "ep02",
+          "index": 1,
+          "scheduled_onset_sim_s": 1.6013,
+          "duration_s": 2.6977,
+          "distance_m": 1.2728,
+          "bearing_rad": -0.11282,
+          "target_color_rgb": [
+            0.9561038175093151,
+            0.1254422980375423,
+            0.04579788797699083
+          ]
+        },
+        {
+          "event_id": "ep02_event_002",
+          "episode_id": "ep02",
+          "index": 2,
+          "scheduled_onset_sim_s": 7.4209,
+          "duration_s": 2.6552,
+          "distance_m": 1.2487,
+          "bearing_rad": 0.02724,
+          "target_color_rgb": [
+            0.9424859658696242,
+            0.10625025885724863,
+            0.04526969516508277
+          ]
+        },
+        {
+          "event_id": "ep02_event_003",
+          "episode_id": "ep02",
+          "index": 3,
+          "scheduled_onset_sim_s": 13.2833,
+          "duration_s": 2.3699,
+          "distance_m": 1.4053,
+          "bearing_rad": -0.09235,
+          "target_color_rgb": [
+            0.9956087689186804,
+            0.12007838399480154,
+            0.056627887578207026
+          ]
+        },
+        {
+          "event_id": "ep02_event_004",
+          "episode_id": "ep02",
+          "index": 4,
+          "scheduled_onset_sim_s": 17.4114,
+          "duration_s": 2.6654,
+          "distance_m": 1.183,
+          "bearing_rad": -0.00077,
+          "target_color_rgb": [
+            0.9771423527923815,
+            0.12738525626875874,
+            0.06547197486570121
+          ]
+        },
+        {
+          "event_id": "ep02_event_005",
+          "episode_id": "ep02",
+          "index": 5,
+          "scheduled_onset_sim_s": 23.1836,
+          "duration_s": 2.0397,
+          "distance_m": 1.3156,
+          "bearing_rad": 0.02149,
+          "target_color_rgb": [
+            0.9666764774057843,
+            0.08577704988852355,
+            0.042806545580178976
+          ]
+        },
+        {
+          "event_id": "ep02_event_006",
+          "episode_id": "ep02",
+          "index": 6,
+          "scheduled_onset_sim_s": 28.6124,
+          "duration_s": 2.2633,
+          "distance_m": 1.1435,
+          "bearing_rad": -0.09721,
+          "target_color_rgb": [
+            0.9871925259994313,
+            0.09502959576508471,
+            0.05432570987406652
+          ]
+        },
+        {
+          "event_id": "ep02_event_007",
+          "episode_id": "ep02",
+          "index": 7,
+          "scheduled_onset_sim_s": 33.3955,
+          "duration_s": 2.295,
+          "distance_m": 1.1216,
+          "bearing_rad": 0.02373,
+          "target_color_rgb": [
+            0.9697728499472201,
+            0.10202507437390254,
+            0.0713892283831647
+          ]
+        },
+        {
+          "event_id": "ep02_event_008",
+          "episode_id": "ep02",
+          "index": 8,
+          "scheduled_onset_sim_s": 37.7187,
+          "duration_s": 1.8363,
+          "distance_m": 1.2439,
+          "bearing_rad": 0.05997,
+          "target_color_rgb": [
+            0.9997701392473642,
+            0.1075432644572513,
+            0.04902266949154279
+          ]
+        },
+        {
+          "event_id": "ep02_event_009",
+          "episode_id": "ep02",
+          "index": 9,
+          "scheduled_onset_sim_s": 41.2669,
+          "duration_s": 2.1458,
+          "distance_m": 1.1499,
+          "bearing_rad": -0.01854,
+          "target_color_rgb": [
+            0.9751064130538087,
+            0.08439962526740466,
+            0.045869220089853176
+          ]
+        },
+        {
+          "event_id": "ep02_event_010",
+          "episode_id": "ep02",
+          "index": 10,
+          "scheduled_onset_sim_s": 45.8195,
+          "duration_s": 1.8655,
+          "distance_m": 1.3695,
+          "bearing_rad": 0.04208,
+          "target_color_rgb": [
+            0.9910610717486766,
+            0.11202279255922148,
+            0.04342852492667382
+          ]
+        },
+        {
+          "event_id": "ep02_event_011",
+          "episode_id": "ep02",
+          "index": 11,
+          "scheduled_onset_sim_s": 50.2084,
+          "duration_s": 1.9378,
+          "distance_m": 1.11,
+          "bearing_rad": -0.10068,
+          "target_color_rgb": [
+            0.9732858556101986,
+            0.10992753444802629,
+            0.06331875094338348
+          ]
+        },
+        {
+          "event_id": "ep02_event_012",
+          "episode_id": "ep02",
+          "index": 12,
+          "scheduled_onset_sim_s": 55.403,
+          "duration_s": 2.2033,
+          "distance_m": 1.2424,
+          "bearing_rad": 0.01066,
+          "target_color_rgb": [
+            0.95865074249802,
+            0.09399572837656654,
+            0.061245164098015656
+          ]
+        },
+        {
+          "event_id": "ep02_event_013",
+          "episode_id": "ep02",
+          "index": 13,
+          "scheduled_onset_sim_s": 60.8288,
+          "duration_s": 1.8237,
+          "distance_m": 1.3418,
+          "bearing_rad": 0.02814,
+          "target_color_rgb": [
+            0.9535615038285631,
+            0.09094167257129594,
+            0.06855047838929369
+          ]
+        },
+        {
+          "event_id": "ep02_event_014",
+          "episode_id": "ep02",
+          "index": 14,
+          "scheduled_onset_sim_s": 65.7428,
+          "duration_s": 2.3847,
+          "distance_m": 1.1674,
+          "bearing_rad": 0.05793,
+          "target_color_rgb": [
+            0.9349652417815919,
+            0.10207707145361904,
+            0.05348871566305069
+          ]
+        },
+        {
+          "event_id": "ep02_event_015",
+          "episode_id": "ep02",
+          "index": 15,
+          "scheduled_onset_sim_s": 71.3282,
+          "duration_s": 1.8398,
+          "distance_m": 1.1055,
+          "bearing_rad": 0.05342,
+          "target_color_rgb": [
+            0.959421238952804,
+            0.11462860301717731,
+            0.07120693496076562
+          ]
+        },
+        {
+          "event_id": "ep02_event_016",
+          "episode_id": "ep02",
+          "index": 16,
+          "scheduled_onset_sim_s": 75.5987,
+          "duration_s": 2.5729,
+          "distance_m": 1.4068,
+          "bearing_rad": 0.02084,
+          "target_color_rgb": [
+            0.9528975856654639,
+            0.10346506448225176,
+            0.04842857575866633
+          ]
+        },
+        {
+          "event_id": "ep02_event_017",
+          "episode_id": "ep02",
+          "index": 17,
+          "scheduled_onset_sim_s": 79.9903,
+          "duration_s": 1.8016,
+          "distance_m": 1.3318,
+          "bearing_rad": -0.06361,
+          "target_color_rgb": [
+            0.940191558899822,
+            0.10798209749078533,
+            0.05833604726759391
+          ]
+        },
+        {
+          "event_id": "ep02_event_018",
+          "episode_id": "ep02",
+          "index": 18,
+          "scheduled_onset_sim_s": 83.7525,
+          "duration_s": 2.3738,
+          "distance_m": 1.1027,
+          "bearing_rad": 0.1322,
+          "target_color_rgb": [
+            0.9484926000621192,
+            0.0855340928483961,
+            0.06267295310518244
+          ]
+        },
+        {
+          "event_id": "ep02_event_019",
+          "episode_id": "ep02",
+          "index": 19,
+          "scheduled_onset_sim_s": 88.6333,
+          "duration_s": 2.2136,
+          "distance_m": 1.4069,
+          "bearing_rad": 0.01161,
+          "target_color_rgb": [
+            0.9386693666684935,
+            0.11435023710081171,
+            0.06997557782815195
+          ]
+        },
+        {
+          "event_id": "ep02_event_020",
+          "episode_id": "ep02",
+          "index": 20,
+          "scheduled_onset_sim_s": 93.9169,
+          "duration_s": 2.0782,
+          "distance_m": 1.2306,
+          "bearing_rad": -0.12494,
+          "target_color_rgb": [
+            0.9603145240744938,
+            0.12951582369151632,
+            0.07472578461290982
+          ]
+        }
+      ]
+    },
+    {
+      "episode_id": "ep03",
+      "seed": 1129351392,
+      "initial_yaw_rad": -0.06916849440318285,
+      "dome_intensity": 1575.0,
+      "events": [
+        {
+          "event_id": "ep03_event_001",
+          "episode_id": "ep03",
+          "index": 1,
+          "scheduled_onset_sim_s": 1.9283,
+          "duration_s": 1.9064,
+          "distance_m": 1.1706,
+          "bearing_rad": 0.1001,
+          "target_color_rgb": [
+            0.9964312374886473,
+            0.1256439434341966,
+            0.06610268357174955
+          ]
+        },
+        {
+          "event_id": "ep03_event_002",
+          "episode_id": "ep03",
+          "index": 2,
+          "scheduled_onset_sim_s": 7.0702,
+          "duration_s": 2.1779,
+          "distance_m": 1.1372,
+          "bearing_rad": 0.06465,
+          "target_color_rgb": [
+            0.9588049347567603,
+            0.12358211361400395,
+            0.04915464912440473
+          ]
+        },
+        {
+          "event_id": "ep03_event_003",
+          "episode_id": "ep03",
+          "index": 3,
+          "scheduled_onset_sim_s": 11.5424,
+          "duration_s": 2.4933,
+          "distance_m": 1.3634,
+          "bearing_rad": -0.12256,
+          "target_color_rgb": [
+            0.9673237995688214,
+            0.09777903832429277,
+            0.05156175611325025
+          ]
+        },
+        {
+          "event_id": "ep03_event_004",
+          "episode_id": "ep03",
+          "index": 4,
+          "scheduled_onset_sim_s": 17.4212,
+          "duration_s": 2.3322,
+          "distance_m": 1.1793,
+          "bearing_rad": -0.05582,
+          "target_color_rgb": [
+            0.9853722517421664,
+            0.08386285885130143,
+            0.048558450972997075
+          ]
+        },
+        {
+          "event_id": "ep03_event_005",
+          "episode_id": "ep03",
+          "index": 5,
+          "scheduled_onset_sim_s": 22.0466,
+          "duration_s": 1.903,
+          "distance_m": 1.1337,
+          "bearing_rad": -0.09276,
+          "target_color_rgb": [
+            0.9349561586802687,
+            0.08726055765782036,
+            0.05925066967503184
+          ]
+        },
+        {
+          "event_id": "ep03_event_006",
+          "episode_id": "ep03",
+          "index": 6,
+          "scheduled_onset_sim_s": 26.4019,
+          "duration_s": 2.6051,
+          "distance_m": 1.1481,
+          "bearing_rad": -0.06367,
+          "target_color_rgb": [
+            0.997248293865295,
+            0.08691763560032556,
+            0.04831921517538559
+          ]
+        },
+        {
+          "event_id": "ep03_event_007",
+          "episode_id": "ep03",
+          "index": 7,
+          "scheduled_onset_sim_s": 31.1347,
+          "duration_s": 2.0491,
+          "distance_m": 1.2647,
+          "bearing_rad": -0.06063,
+          "target_color_rgb": [
+            0.9708957653483017,
+            0.11885300726251576,
+            0.05804029627806951
+          ]
+        },
+        {
+          "event_id": "ep03_event_008",
+          "episode_id": "ep03",
+          "index": 8,
+          "scheduled_onset_sim_s": 35.7124,
+          "duration_s": 2.1778,
+          "distance_m": 1.1461,
+          "bearing_rad": -0.08595,
+          "target_color_rgb": [
+            0.9432571156515357,
+            0.10210051034415225,
+            0.06826463255485149
+          ]
+        },
+        {
+          "event_id": "ep03_event_009",
+          "episode_id": "ep03",
+          "index": 9,
+          "scheduled_onset_sim_s": 40.2502,
+          "duration_s": 2.5625,
+          "distance_m": 1.1403,
+          "bearing_rad": 0.06829,
+          "target_color_rgb": [
+            0.9594010570018519,
+            0.10198272321319862,
+            0.05897471309930017
+          ]
+        },
+        {
+          "event_id": "ep03_event_010",
+          "episode_id": "ep03",
+          "index": 10,
+          "scheduled_onset_sim_s": 45.5634,
+          "duration_s": 2.112,
+          "distance_m": 1.1762,
+          "bearing_rad": -0.13089,
+          "target_color_rgb": [
+            0.9555126241435137,
+            0.11344568867361415,
+            0.06537040401277511
+          ]
+        },
+        {
+          "event_id": "ep03_event_011",
+          "episode_id": "ep03",
+          "index": 11,
+          "scheduled_onset_sim_s": 50.3479,
+          "duration_s": 2.3768,
+          "distance_m": 1.1163,
+          "bearing_rad": -0.07835,
+          "target_color_rgb": [
+            0.9995345708982244,
+            0.09989033464611567,
+            0.07495865324025278
+          ]
+        },
+        {
+          "event_id": "ep03_event_012",
+          "episode_id": "ep03",
+          "index": 12,
+          "scheduled_onset_sim_s": 55.586,
+          "duration_s": 2.2988,
+          "distance_m": 1.2239,
+          "bearing_rad": 0.0226,
+          "target_color_rgb": [
+            0.9387286944404019,
+            0.11742830294434806,
+            0.042540499415177103
+          ]
+        },
+        {
+          "event_id": "ep03_event_013",
+          "episode_id": "ep03",
+          "index": 13,
+          "scheduled_onset_sim_s": 60.2805,
+          "duration_s": 2.4733,
+          "distance_m": 1.3386,
+          "bearing_rad": 0.02202,
+          "target_color_rgb": [
+            0.9538699472347452,
+            0.09144950923348566,
+            0.040559187170828626
+          ]
+        },
+        {
+          "event_id": "ep03_event_014",
+          "episode_id": "ep03",
+          "index": 14,
+          "scheduled_onset_sim_s": 65.1593,
+          "duration_s": 2.5585,
+          "distance_m": 1.322,
+          "bearing_rad": -0.05572,
+          "target_color_rgb": [
+            0.9335718775877234,
+            0.09150068858535432,
+            0.06084745449142023
+          ]
+        },
+        {
+          "event_id": "ep03_event_015",
+          "episode_id": "ep03",
+          "index": 15,
+          "scheduled_onset_sim_s": 71.2368,
+          "duration_s": 2.4419,
+          "distance_m": 1.4163,
+          "bearing_rad": 0.09235,
+          "target_color_rgb": [
+            0.9408072664612098,
+            0.08302852106419012,
+            0.06109202800406945
+          ]
+        },
+        {
+          "event_id": "ep03_event_016",
+          "episode_id": "ep03",
+          "index": 16,
+          "scheduled_onset_sim_s": 77.1634,
+          "duration_s": 2.5073,
+          "distance_m": 1.0986,
+          "bearing_rad": 0.03661,
+          "target_color_rgb": [
+            0.9966198415089106,
+            0.12350278452423072,
+            0.05870678559128506
+          ]
+        },
+        {
+          "event_id": "ep03_event_017",
+          "episode_id": "ep03",
+          "index": 17,
+          "scheduled_onset_sim_s": 81.4702,
+          "duration_s": 1.8994,
+          "distance_m": 1.3601,
+          "bearing_rad": -0.03937,
+          "target_color_rgb": [
+            0.9910958019176745,
+            0.10233492279273156,
+            0.04221111845680252
+          ]
+        },
+        {
+          "event_id": "ep03_event_018",
+          "episode_id": "ep03",
+          "index": 18,
+          "scheduled_onset_sim_s": 87.0007,
+          "duration_s": 2.0639,
+          "distance_m": 1.095,
+          "bearing_rad": -0.06872,
+          "target_color_rgb": [
+            0.9776363546243689,
+            0.11877231755211055,
+            0.05138701719035514
+          ]
+        },
+        {
+          "event_id": "ep03_event_019",
+          "episode_id": "ep03",
+          "index": 19,
+          "scheduled_onset_sim_s": 92.001,
+          "duration_s": 1.8907,
+          "distance_m": 1.2307,
+          "bearing_rad": -0.02789,
+          "target_color_rgb": [
+            0.9920721496285742,
+            0.1126635693846289,
+            0.041415885081842296
+          ]
+        },
+        {
+          "event_id": "ep03_event_020",
+          "episode_id": "ep03",
+          "index": 20,
+          "scheduled_onset_sim_s": 95.698,
+          "duration_s": 2.2934,
+          "distance_m": 1.3688,
+          "bearing_rad": 0.07299,
+          "target_color_rgb": [
+            0.9337413244953324,
+            0.10846742848279685,
+            0.05842711057451607
+          ]
+        }
+      ]
+    },
+    {
+      "episode_id": "ep04",
+      "seed": 1129352401,
+      "initial_yaw_rad": -0.046763149514622265,
+      "dome_intensity": 1549.9,
+      "events": [
+        {
+          "event_id": "ep04_event_001",
+          "episode_id": "ep04",
+          "index": 1,
+          "scheduled_onset_sim_s": 1.3165,
+          "duration_s": 1.8532,
+          "distance_m": 1.3235,
+          "bearing_rad": 0.04052,
+          "target_color_rgb": [
+            0.9755856457841953,
+            0.12576660756281477,
+            0.06975714568582847
+          ]
+        },
+        {
+          "event_id": "ep04_event_002",
+          "episode_id": "ep04",
+          "index": 2,
+          "scheduled_onset_sim_s": 5.7683,
+          "duration_s": 1.9201,
+          "distance_m": 1.2365,
+          "bearing_rad": -0.11692,
+          "target_color_rgb": [
+            0.9991107819689999,
+            0.08096029036888157,
+            0.06275862290074764
+          ]
+        },
+        {
+          "event_id": "ep04_event_003",
+          "episode_id": "ep04",
+          "index": 3,
+          "scheduled_onset_sim_s": 11.1436,
+          "duration_s": 2.1049,
+          "distance_m": 1.4074,
+          "bearing_rad": -0.01827,
+          "target_color_rgb": [
+            0.9806054308572468,
+            0.08224660983798221,
+            0.04329570873711183
+          ]
+        },
+        {
+          "event_id": "ep04_event_004",
+          "episode_id": "ep04",
+          "index": 4,
+          "scheduled_onset_sim_s": 16.3057,
+          "duration_s": 2.5602,
+          "distance_m": 1.2459,
+          "bearing_rad": -0.00203,
+          "target_color_rgb": [
+            0.9310395634112049,
+            0.1261630521952794,
+            0.055783184454490334
+          ]
+        },
+        {
+          "event_id": "ep04_event_005",
+          "episode_id": "ep04",
+          "index": 5,
+          "scheduled_onset_sim_s": 21.5387,
+          "duration_s": 1.8789,
+          "distance_m": 1.2443,
+          "bearing_rad": -0.0085,
+          "target_color_rgb": [
+            0.955116157334767,
+            0.12469719232000642,
+            0.04868568856327617
+          ]
+        },
+        {
+          "event_id": "ep04_event_006",
+          "episode_id": "ep04",
+          "index": 6,
+          "scheduled_onset_sim_s": 25.302,
+          "duration_s": 1.9207,
+          "distance_m": 1.1891,
+          "bearing_rad": 0.0709,
+          "target_color_rgb": [
+            0.9383790930733982,
+            0.12775073480704066,
+            0.04154740279929792
+          ]
+        },
+        {
+          "event_id": "ep04_event_007",
+          "episode_id": "ep04",
+          "index": 7,
+          "scheduled_onset_sim_s": 29.2974,
+          "duration_s": 1.9386,
+          "distance_m": 1.3988,
+          "bearing_rad": 0.12744,
+          "target_color_rgb": [
+            0.983658866239216,
+            0.11729079694597055,
+            0.07298216029523044
+          ]
+        },
+        {
+          "event_id": "ep04_event_008",
+          "episode_id": "ep04",
+          "index": 8,
+          "scheduled_onset_sim_s": 34.3879,
+          "duration_s": 2.3871,
+          "distance_m": 1.3881,
+          "bearing_rad": -0.00283,
+          "target_color_rgb": [
+            0.996254481482175,
+            0.10189441953549486,
+            0.04896752837037656
+          ]
+        },
+        {
+          "event_id": "ep04_event_009",
+          "episode_id": "ep04",
+          "index": 9,
+          "scheduled_onset_sim_s": 39.6517,
+          "duration_s": 2.0847,
+          "distance_m": 1.2867,
+          "bearing_rad": -0.11622,
+          "target_color_rgb": [
+            0.9303683002933791,
+            0.12360149758108285,
+            0.04942813321718126
+          ]
+        },
+        {
+          "event_id": "ep04_event_010",
+          "episode_id": "ep04",
+          "index": 10,
+          "scheduled_onset_sim_s": 45.5243,
+          "duration_s": 2.4764,
+          "distance_m": 1.2378,
+          "bearing_rad": -0.08409,
+          "target_color_rgb": [
+            0.9926008150984604,
+            0.10345741098162703,
+            0.046119073155532396
+          ]
+        },
+        {
+          "event_id": "ep04_event_011",
+          "episode_id": "ep04",
+          "index": 11,
+          "scheduled_onset_sim_s": 49.8644,
+          "duration_s": 2.5811,
+          "distance_m": 1.2021,
+          "bearing_rad": -0.10589,
+          "target_color_rgb": [
+            0.9738167694501003,
+            0.12677514137417562,
+            0.06267771361556684
+          ]
+        },
+        {
+          "event_id": "ep04_event_012",
+          "episode_id": "ep04",
+          "index": 12,
+          "scheduled_onset_sim_s": 55.9143,
+          "duration_s": 2.2693,
+          "distance_m": 1.1884,
+          "bearing_rad": -0.06387,
+          "target_color_rgb": [
+            0.9799888938348273,
+            0.09617238190033174,
+            0.04040316425965767
+          ]
+        },
+        {
+          "event_id": "ep04_event_013",
+          "episode_id": "ep04",
+          "index": 13,
+          "scheduled_onset_sim_s": 60.781,
+          "duration_s": 2.4465,
+          "distance_m": 1.1453,
+          "bearing_rad": 0.0934,
+          "target_color_rgb": [
+            0.9818255160969048,
+            0.10379326229636593,
+            0.048435484100880916
+          ]
+        },
+        {
+          "event_id": "ep04_event_014",
+          "episode_id": "ep04",
+          "index": 14,
+          "scheduled_onset_sim_s": 66.6283,
+          "duration_s": 1.9455,
+          "distance_m": 1.3384,
+          "bearing_rad": -0.09449,
+          "target_color_rgb": [
+            0.9854403927689475,
+            0.12496047631097351,
+            0.047916948424277434
+          ]
+        },
+        {
+          "event_id": "ep04_event_015",
+          "episode_id": "ep04",
+          "index": 15,
+          "scheduled_onset_sim_s": 71.4456,
+          "duration_s": 2.2494,
+          "distance_m": 1.0844,
+          "bearing_rad": 0.01447,
+          "target_color_rgb": [
+            0.9798329495331476,
+            0.08019959012919683,
+            0.04223465702170438
+          ]
+        },
+        {
+          "event_id": "ep04_event_016",
+          "episode_id": "ep04",
+          "index": 16,
+          "scheduled_onset_sim_s": 76.0654,
+          "duration_s": 2.0124,
+          "distance_m": 1.1698,
+          "bearing_rad": -0.12999,
+          "target_color_rgb": [
+            0.9853086051980866,
+            0.11860492708279975,
+            0.06838289269821395
+          ]
+        },
+        {
+          "event_id": "ep04_event_017",
+          "episode_id": "ep04",
+          "index": 17,
+          "scheduled_onset_sim_s": 79.7881,
+          "duration_s": 1.801,
+          "distance_m": 1.2283,
+          "bearing_rad": -0.10487,
+          "target_color_rgb": [
+            0.9626384894421178,
+            0.09309745507947095,
+            0.06581112651135455
+          ]
+        },
+        {
+          "event_id": "ep04_event_018",
+          "episode_id": "ep04",
+          "index": 18,
+          "scheduled_onset_sim_s": 84.7189,
+          "duration_s": 2.3418,
+          "distance_m": 1.2022,
+          "bearing_rad": -0.03904,
+          "target_color_rgb": [
+            0.9357839859277886,
+            0.10209293760263038,
+            0.06756024043972908
+          ]
+        },
+        {
+          "event_id": "ep04_event_019",
+          "episode_id": "ep04",
+          "index": 19,
+          "scheduled_onset_sim_s": 90.7133,
+          "duration_s": 2.5656,
+          "distance_m": 1.0805,
+          "bearing_rad": -0.07328,
+          "target_color_rgb": [
+            0.9392430288040476,
+            0.11456699762614475,
+            0.07467528313119155
+          ]
+        },
+        {
+          "event_id": "ep04_event_020",
+          "episode_id": "ep04",
+          "index": 20,
+          "scheduled_onset_sim_s": 95.9475,
+          "duration_s": 2.2042,
+          "distance_m": 1.2929,
+          "bearing_rad": 0.13235,
+          "target_color_rgb": [
+            0.9753817892424486,
+            0.08697106342889564,
+            0.06796852264191669
+          ]
+        }
+      ]
+    },
+    {
+      "episode_id": "ep05",
+      "seed": 1129353410,
+      "initial_yaw_rad": -0.05352132158193665,
+      "dome_intensity": 1571.8,
+      "events": [
+        {
+          "event_id": "ep05_event_001",
+          "episode_id": "ep05",
+          "index": 1,
+          "scheduled_onset_sim_s": 1.0171,
+          "duration_s": 2.5724,
+          "distance_m": 1.1161,
+          "bearing_rad": 0.04601,
+          "target_color_rgb": [
+            0.9666374723918871,
+            0.0930342408566769,
+            0.06393561865248427
+          ]
+        },
+        {
+          "event_id": "ep05_event_002",
+          "episode_id": "ep05",
+          "index": 2,
+          "scheduled_onset_sim_s": 5.5975,
+          "duration_s": 1.8025,
+          "distance_m": 1.3541,
+          "bearing_rad": -0.11789,
+          "target_color_rgb": [
+            0.9558348481323592,
+            0.10554585181853844,
+            0.04501377087132638
+          ]
+        },
+        {
+          "event_id": "ep05_event_003",
+          "episode_id": "ep05",
+          "index": 3,
+          "scheduled_onset_sim_s": 10.2047,
+          "duration_s": 2.679,
+          "distance_m": 1.2306,
+          "bearing_rad": -0.09569,
+          "target_color_rgb": [
+            0.9394776090827178,
+            0.12382231461049578,
+            0.07310297099081575
+          ]
+        },
+        {
+          "event_id": "ep05_event_004",
+          "episode_id": "ep05",
+          "index": 4,
+          "scheduled_onset_sim_s": 15.4634,
+          "duration_s": 2.5389,
+          "distance_m": 1.1778,
+          "bearing_rad": -0.10215,
+          "target_color_rgb": [
+            0.9580341126754017,
+            0.12370853581744351,
+            0.05086196615598439
+          ]
+        },
+        {
+          "event_id": "ep05_event_005",
+          "episode_id": "ep05",
+          "index": 5,
+          "scheduled_onset_sim_s": 21.2827,
+          "duration_s": 2.6379,
+          "distance_m": 1.3843,
+          "bearing_rad": -0.01706,
+          "target_color_rgb": [
+            0.9471886557450359,
+            0.08645445521578358,
+            0.04009583560485866
+          ]
+        },
+        {
+          "event_id": "ep05_event_006",
+          "episode_id": "ep05",
+          "index": 6,
+          "scheduled_onset_sim_s": 26.7101,
+          "duration_s": 2.0948,
+          "distance_m": 1.2212,
+          "bearing_rad": 0.0659,
+          "target_color_rgb": [
+            0.9643056969311752,
+            0.09340996689163708,
+            0.04350602600373384
+          ]
+        },
+        {
+          "event_id": "ep05_event_007",
+          "episode_id": "ep05",
+          "index": 7,
+          "scheduled_onset_sim_s": 31.2131,
+          "duration_s": 2.5921,
+          "distance_m": 1.1074,
+          "bearing_rad": -0.12553,
+          "target_color_rgb": [
+            0.9976575240707312,
+            0.09724782443663105,
+            0.0734906781089243
+          ]
+        },
+        {
+          "event_id": "ep05_event_008",
+          "episode_id": "ep05",
+          "index": 8,
+          "scheduled_onset_sim_s": 35.6175,
+          "duration_s": 1.972,
+          "distance_m": 1.3978,
+          "bearing_rad": 0.08242,
+          "target_color_rgb": [
+            0.9829211540350209,
+            0.08902874521214113,
+            0.049033411453475034
+          ]
+        },
+        {
+          "event_id": "ep05_event_009",
+          "episode_id": "ep05",
+          "index": 9,
+          "scheduled_onset_sim_s": 41.1682,
+          "duration_s": 2.0139,
+          "distance_m": 1.4106,
+          "bearing_rad": -0.00199,
+          "target_color_rgb": [
+            0.9730180865802788,
+            0.1206004782527039,
+            0.05827181272459693
+          ]
+        },
+        {
+          "event_id": "ep05_event_010",
+          "episode_id": "ep05",
+          "index": 10,
+          "scheduled_onset_sim_s": 45.8626,
+          "duration_s": 1.9734,
+          "distance_m": 1.2989,
+          "bearing_rad": -0.1381,
+          "target_color_rgb": [
+            0.993688696824818,
+            0.10433806818635898,
+            0.04339372798807418
+          ]
+        },
+        {
+          "event_id": "ep05_event_011",
+          "episode_id": "ep05",
+          "index": 11,
+          "scheduled_onset_sim_s": 50.8405,
+          "duration_s": 2.0996,
+          "distance_m": 1.1952,
+          "bearing_rad": -0.06021,
+          "target_color_rgb": [
+            0.9624122823614091,
+            0.12111462429991202,
+            0.058931318053865304
+          ]
+        },
+        {
+          "event_id": "ep05_event_012",
+          "episode_id": "ep05",
+          "index": 12,
+          "scheduled_onset_sim_s": 54.7785,
+          "duration_s": 1.8625,
+          "distance_m": 1.3332,
+          "bearing_rad": -0.05205,
+          "target_color_rgb": [
+            0.9953334579261182,
+            0.11195242169479153,
+            0.07022597684066356
+          ]
+        },
+        {
+          "event_id": "ep05_event_013",
+          "episode_id": "ep05",
+          "index": 13,
+          "scheduled_onset_sim_s": 59.1141,
+          "duration_s": 2.2715,
+          "distance_m": 1.1164,
+          "bearing_rad": 0.00318,
+          "target_color_rgb": [
+            0.9497310241960017,
+            0.08734979372461045,
+            0.051190011133947944
+          ]
+        },
+        {
+          "event_id": "ep05_event_014",
+          "episode_id": "ep05",
+          "index": 14,
+          "scheduled_onset_sim_s": 64.1629,
+          "duration_s": 2.0468,
+          "distance_m": 1.3271,
+          "bearing_rad": -0.10682,
+          "target_color_rgb": [
+            0.946210658951366,
+            0.08708376673589137,
+            0.06146433915881975
+          ]
+        },
+        {
+          "event_id": "ep05_event_015",
+          "episode_id": "ep05",
+          "index": 15,
+          "scheduled_onset_sim_s": 69.5031,
+          "duration_s": 2.277,
+          "distance_m": 1.0997,
+          "bearing_rad": 0.00686,
+          "target_color_rgb": [
+            0.9497924328993568,
+            0.08493237759675537,
+            0.05407502978214747
+          ]
+        },
+        {
+          "event_id": "ep05_event_016",
+          "episode_id": "ep05",
+          "index": 16,
+          "scheduled_onset_sim_s": 74.5296,
+          "duration_s": 1.8902,
+          "distance_m": 1.1986,
+          "bearing_rad": -0.11517,
+          "target_color_rgb": [
+            0.9735483975416597,
+            0.09204709094347462,
+            0.05395964710112675
+          ]
+        },
+        {
+          "event_id": "ep05_event_017",
+          "episode_id": "ep05",
+          "index": 17,
+          "scheduled_onset_sim_s": 79.5545,
+          "duration_s": 1.891,
+          "distance_m": 1.0902,
+          "bearing_rad": 0.1352,
+          "target_color_rgb": [
+            0.9483442853824962,
+            0.09714447142243766,
+            0.05302938540347562
+          ]
+        },
+        {
+          "event_id": "ep05_event_018",
+          "episode_id": "ep05",
+          "index": 18,
+          "scheduled_onset_sim_s": 83.3339,
+          "duration_s": 2.4705,
+          "distance_m": 1.2116,
+          "bearing_rad": 0.00164,
+          "target_color_rgb": [
+            0.9653717635847417,
+            0.128204935894729,
+            0.045873166762873174
+          ]
+        },
+        {
+          "event_id": "ep05_event_019",
+          "episode_id": "ep05",
+          "index": 19,
+          "scheduled_onset_sim_s": 88.0639,
+          "duration_s": 2.3625,
+          "distance_m": 1.3545,
+          "bearing_rad": 0.0825,
+          "target_color_rgb": [
+            0.9703801428803827,
+            0.12557417833590778,
+            0.06907494641561322
+          ]
+        },
+        {
+          "event_id": "ep05_event_020",
+          "episode_id": "ep05",
+          "index": 20,
+          "scheduled_onset_sim_s": 92.6899,
+          "duration_s": 2.0875,
+          "distance_m": 1.1295,
+          "bearing_rad": 0.11903,
+          "target_color_rgb": [
+            0.9450485681958473,
+            0.10930732525049289,
+            0.04427135866493447
+          ]
+        }
+      ]
+    }
+  ],
+  "policy_observation": "RGB camera only; event timing/pose schedule withheld from worker",
+  "simulator_randomization": "event onset, duration, inter-event gap, distance, bearing, and per-episode lighting/yaw; the run seed is recorded for replay but is not sent to either policy",
+  "paired_comparison": "same episode seeds and event schedule for both policies"
+}

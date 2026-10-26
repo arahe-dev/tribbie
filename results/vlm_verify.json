@@ -1,0 +1,894 @@
+{
+  "summary": {
+    "table+bins+overview": {
+      "accuracy": 0.8333333333333334,
+      "objects": 72,
+      "per_true_location": {
+        "gold": "10/17",
+        "table": "31/31",
+        "teal": "4/6",
+        "floor": "10/10",
+        "magenta": "5/8"
+      },
+      "mean_seconds": 30.19
+    },
+    "overview": {
+      "accuracy": 0.5277777777777778,
+      "objects": 72,
+      "per_true_location": {
+        "gold": "0/17",
+        "table": "26/31",
+        "teal": "2/6",
+        "floor": "10/10",
+        "magenta": "0/8"
+      },
+      "mean_seconds": 30.675
+    }
+  },
+  "calls": [
+    {
+      "state": 0,
+      "views": [
+        "table",
+        "bins",
+        "overview"
+      ],
+      "truth": {
+        "red": "gold",
+        "blue": "table",
+        "green": "table"
+      },
+      "answer": {
+        "red": "gold",
+        "blue": "table",
+        "green": "table"
+      },
+      "seconds": 13.38
+    },
+    {
+      "state": 0,
+      "views": [
+        "overview"
+      ],
+      "truth": {
+        "red": "gold",
+        "blue": "table",
+        "green": "table"
+      },
+      "answer": {
+        "red": "table",
+        "blue": "table",
+        "green": "table"
+      },
+      "seconds": 15.0
+    },
+    {
+      "state": 1,
+      "views": [
+        "table",
+        "bins",
+        "overview"
+      ],
+      "truth": {
+        "red": "table",
+        "blue": "gold",
+        "green": "table"
+      },
+      "answer": {
+        "red": "table",
+        "blue": "not_visible",
+        "green": "table"
+      },
+      "seconds": 17.14
+    },
+    {
+      "state": 1,
+      "views": [
+        "overview"
+      ],
+      "truth": {
+        "red": "table",
+        "blue": "gold",
+        "green": "table"
+      },
+      "answer": {
+        "red": "table",
+        "blue": "not_visible",
+        "green": "table"
+      },
+      "seconds": 19.19
+    },
+    {
+      "state": 2,
+      "views": [
+        "table",
+        "bins",
+        "overview"
+      ],
+      "truth": {
+        "red": "table",
+        "blue": "table",
+        "green": "gold"
+      },
+      "answer": {
+        "red": "table",
+        "blue": "table",
+        "green": "not_visible"
+      },
+      "seconds": 25.48
+    },
+    {
+      "state": 2,
+      "views": [
+        "overview"
+      ],
+      "truth": {
+        "red": "table",
+        "blue": "table",
+        "green": "gold"
+      },
+      "answer": {
+        "red": "table",
+        "blue": "table",
+        "green": "not_visible"
+      },
+      "seconds": 29.37
+    },
+    {
+      "state": 3,
+      "views": [
+        "table",
+        "bins",
+        "overview"
+      ],
+      "truth": {
+        "red": "gold",
+        "blue": "table",
+        "green": "table"
+      },
+      "answer": {
+        "red": "gold",
+        "blue": "table",
+        "green": "table"
+      },
+      "seconds": 29.7
+    },
+    {
+      "state": 3,
+      "views": [
+        "overview"
+      ],
+      "truth": {
+        "red": "gold",
+        "blue": "table",
+        "green": "table"
+      },
+      "answer": {
+        "red": "not_visible",
+        "blue": "table",
+        "green": "table"
+      },
+      "seconds": 29.47
+    },
+    {
+      "state": 4,
+      "views": [
+        "table",
+        "bins",
+        "overview"
+      ],
+      "truth": {
+        "red": "table",
+        "blue": "teal",
+        "green": "table"
+      },
+      "answer": {
+        "red": "table",
+        "blue": "teal",
+        "green": "table"
+      },
+      "seconds": 18.78
+    },
+    {
+      "state": 4,
+      "views": [
+        "overview"
+      ],
+      "truth": {
+        "red": "table",
+        "blue": "teal",
+        "green": "table"
+      },
+      "answer": {
+        "red": "table",
+        "blue": "not_visible",
+        "green": "table"
+      },
+      "seconds": 30.48
+    },
+    {
+      "state": 5,
+      "views": [
+        "table",
+        "bins",
+        "overview"
+      ],
+      "truth": {
+        "red": "floor",
+        "blue": "table",
+        "green": "floor"
+      },
+      "answer": {
+        "red": "floor",
+        "blue": "table",
+        "green": "floor"
+      },
+      "seconds": 29.18
+    },
+    {
+      "state": 5,
+      "views": [
+        "overview"
+      ],
+      "truth": {
+        "red": "floor",
+        "blue": "table",
+        "green": "floor"
+      },
+      "answer": {
+        "red": "floor",
+        "blue": "table",
+        "green": "floor"
+      },
+      "seconds": 35.12
+    },
+    {
+      "state": 6,
+      "views": [
+        "table",
+        "bins",
+        "overview"
+      ],
+      "truth": {
+        "red": "gold",
+        "blue": "gold",
+        "green": "floor"
+      },
+      "answer": {
+        "red": "not_visible",
+        "blue": "not_visible",
+        "green": "floor"
+      },
+      "seconds": 29.42
+    },
+    {
+      "state": 6,
+      "views": [
+        "overview"
+      ],
+      "truth": {
+        "red": "gold",
+        "blue": "gold",
+        "green": "floor"
+      },
+      "answer": {
+        "red": "not_visible",
+        "blue": "not_visible",
+        "green": "floor"
+      },
+      "seconds": 29.97
+    },
+    {
+      "state": 7,
+      "views": [
+        "table",
+        "bins",
+        "overview"
+      ],
+      "truth": {
+        "red": "teal",
+        "blue": "gold",
+        "green": "table"
+      },
+      "answer": {
+        "red": "teal",
+        "blue": "gold",
+        "green": "table"
+      },
+      "seconds": 29.8
+    },
+    {
+      "state": 7,
+      "views": [
+        "overview"
+      ],
+      "truth": {
+        "red": "teal",
+        "blue": "gold",
+        "green": "table"
+      },
+      "answer": {
+        "red": "teal",
+        "blue": "not_visible",
+        "green": "table"
+      },
+      "seconds": 32.55
+    },
+    {
+      "state": 8,
+      "views": [
+        "table",
+        "bins",
+        "overview"
+      ],
+      "truth": {
+        "red": "floor",
+        "blue": "table",
+        "green": "teal"
+      },
+      "answer": {
+        "red": "floor",
+        "blue": "table",
+        "green": "not_visible"
+      },
+      "seconds": 31.16
+    },
+    {
+      "state": 8,
+      "views": [
+        "overview"
+      ],
+      "truth": {
+        "red": "floor",
+        "blue": "table",
+        "green": "teal"
+      },
+      "answer": {
+        "red": "floor",
+        "blue": "table",
+        "green": "not_visible"
+      },
+      "seconds": 29.17
+    },
+    {
+      "state": 9,
+      "views": [
+        "table",
+        "bins",
+        "overview"
+      ],
+      "truth": {
+        "red": "table",
+        "blue": "gold",
+        "green": "table"
+      },
+      "answer": {
+        "red": "table",
+        "blue": "gold",
+        "green": "table"
+      },
+      "seconds": 37.27
+    },
+    {
+      "state": 9,
+      "views": [
+        "overview"
+      ],
+      "truth": {
+        "red": "table",
+        "blue": "gold",
+        "green": "table"
+      },
+      "answer": {
+        "red": "not_visible",
+        "blue": "not_visible",
+        "green": "not_visible"
+      },
+      "seconds": 32.06
+    },
+    {
+      "state": 10,
+      "views": [
+        "table",
+        "bins",
+        "overview"
+      ],
+      "truth": {
+        "red": "table",
+        "blue": "floor",
+        "green": "floor"
+      },
+      "answer": {
+        "red": "table",
+        "blue": "floor",
+        "green": "floor"
+      },
+      "seconds": 32.17
+    },
+    {
+      "state": 10,
+      "views": [
+        "overview"
+      ],
+      "truth": {
+        "red": "table",
+        "blue": "floor",
+        "green": "floor"
+      },
+      "answer": {
+        "red": "not_visible",
+        "blue": "floor",
+        "green": "floor"
+      },
+      "seconds": 35.95
+    },
+    {
+      "state": 11,
+      "views": [
+        "table",
+        "bins",
+        "overview"
+      ],
+      "truth": {
+        "red": "teal",
+        "blue": "floor",
+        "green": "magenta"
+      },
+      "answer": {
+        "red": "teal",
+        "blue": "floor",
+        "green": "magenta"
+      },
+      "seconds": 34.21
+    },
+    {
+      "state": 11,
+      "views": [
+        "overview"
+      ],
+      "truth": {
+        "red": "teal",
+        "blue": "floor",
+        "green": "magenta"
+      },
+      "answer": {
+        "red": "teal",
+        "blue": "floor",
+        "green": "not_visible"
+      },
+      "seconds": 32.38
+    },
+    {
+      "state": 12,
+      "views": [
+        "table",
+        "bins",
+        "overview"
+      ],
+      "truth": {
+        "red": "magenta",
+        "blue": "floor",
+        "green": "table"
+      },
+      "answer": {
+        "red": "magenta",
+        "blue": "floor",
+        "green": "table"
+      },
+      "seconds": 32.33
+    },
+    {
+      "state": 12,
+      "views": [
+        "overview"
+      ],
+      "truth": {
+        "red": "magenta",
+        "blue": "floor",
+        "green": "table"
+      },
+      "answer": {
+        "red": "not_visible",
+        "blue": "floor",
+        "green": "table"
+      },
+      "seconds": 26.47
+    },
+    {
+      "state": 13,
+      "views": [
+        "table",
+        "bins",
+        "overview"
+      ],
+      "truth": {
+        "red": "magenta",
+        "blue": "floor",
+        "green": "gold"
+      },
+      "answer": {
+        "red": "magenta",
+        "blue": "floor",
+        "green": "gold"
+      },
+      "seconds": 34.37
+    },
+    {
+      "state": 13,
+      "views": [
+        "overview"
+      ],
+      "truth": {
+        "red": "magenta",
+        "blue": "floor",
+        "green": "gold"
+      },
+      "answer": {
+        "red": "not_visible",
+        "blue": "floor",
+        "green": "not_visible"
+      },
+      "seconds": 34.15
+    },
+    {
+      "state": 14,
+      "views": [
+        "table",
+        "bins",
+        "overview"
+      ],
+      "truth": {
+        "red": "magenta",
+        "blue": "table",
+        "green": "table"
+      },
+      "answer": {
+        "red": "not_visible",
+        "blue": "table",
+        "green": "table"
+      },
+      "seconds": 37.47
+    },
+    {
+      "state": 14,
+      "views": [
+        "overview"
+      ],
+      "truth": {
+        "red": "magenta",
+        "blue": "table",
+        "green": "table"
+      },
+      "answer": {
+        "red": "not_visible",
+        "blue": "table",
+        "green": "table"
+      },
+      "seconds": 29.17
+    },
+    {
+      "state": 15,
+      "views": [
+        "table",
+        "bins",
+        "overview"
+      ],
+      "truth": {
+        "red": "gold",
+        "blue": "floor",
+        "green": "magenta"
+      },
+      "answer": {
+        "red": "gold",
+        "blue": "floor",
+        "green": "not_visible"
+      },
+      "seconds": 31.87
+    },
+    {
+      "state": 15,
+      "views": [
+        "overview"
+      ],
+      "truth": {
+        "red": "gold",
+        "blue": "floor",
+        "green": "magenta"
+      },
+      "answer": {
+        "red": "not_visible",
+        "blue": "floor",
+        "green": "not_visible"
+      },
+      "seconds": 31.57
+    },
+    {
+      "state": 16,
+      "views": [
+        "table",
+        "bins",
+        "overview"
+      ],
+      "truth": {
+        "red": "gold",
+        "blue": "magenta",
+        "green": "table"
+      },
+      "answer": {
+        "red": "gold",
+        "blue": "magenta",
+        "green": "table"
+      },
+      "seconds": 35.73
+    },
+    {
+      "state": 16,
+      "views": [
+        "overview"
+      ],
+      "truth": {
+        "red": "gold",
+        "blue": "magenta",
+        "green": "table"
+      },
+      "answer": {
+        "red": "not_visible",
+        "blue": "not_visible",
+        "green": "table"
+      },
+      "seconds": 33.11
+    },
+    {
+      "state": 17,
+      "views": [
+        "table",
+        "bins",
+        "overview"
+      ],
+      "truth": {
+        "red": "table",
+        "blue": "table",
+        "green": "table"
+      },
+      "answer": {
+        "red": "table",
+        "blue": "table",
+        "green": "table"
+      },
+      "seconds": 29.27
+    },
+    {
+      "state": 17,
+      "views": [
+        "overview"
+      ],
+      "truth": {
+        "red": "table",
+        "blue": "table",
+        "green": "table"
+      },
+      "answer": {
+        "red": "table",
+        "blue": "table",
+        "green": "table"
+      },
+      "seconds": 38.68
+    },
+    {
+      "state": 18,
+      "views": [
+        "table",
+        "bins",
+        "overview"
+      ],
+      "truth": {
+        "red": "gold",
+        "blue": "table",
+        "green": "magenta"
+      },
+      "answer": {
+        "red": "gold",
+        "blue": "table",
+        "green": "magenta"
+      },
+      "seconds": 34.7
+    },
+    {
+      "state": 18,
+      "views": [
+        "overview"
+      ],
+      "truth": {
+        "red": "gold",
+        "blue": "table",
+        "green": "magenta"
+      },
+      "answer": {
+        "red": "not_visible",
+        "blue": "table",
+        "green": "not_visible"
+      },
+      "seconds": 37.47
+    },
+    {
+      "state": 19,
+      "views": [
+        "table",
+        "bins",
+        "overview"
+      ],
+      "truth": {
+        "red": "table",
+        "blue": "gold",
+        "green": "magenta"
+      },
+      "answer": {
+        "red": "table",
+        "blue": "not_visible",
+        "green": "not_visible"
+      },
+      "seconds": 31.69
+    },
+    {
+      "state": 19,
+      "views": [
+        "overview"
+      ],
+      "truth": {
+        "red": "table",
+        "blue": "gold",
+        "green": "magenta"
+      },
+      "answer": {
+        "red": "table",
+        "blue": "not_visible",
+        "green": "not_visible"
+      },
+      "seconds": 27.58
+    },
+    {
+      "state": 20,
+      "views": [
+        "table",
+        "bins",
+        "overview"
+      ],
+      "truth": {
+        "red": "table",
+        "blue": "table",
+        "green": "gold"
+      },
+      "answer": {
+        "red": "table",
+        "blue": "table",
+        "green": "not_visible"
+      },
+      "seconds": 36.24
+    },
+    {
+      "state": 20,
+      "views": [
+        "overview"
+      ],
+      "truth": {
+        "red": "table",
+        "blue": "table",
+        "green": "gold"
+      },
+      "answer": {
+        "red": "not_visible",
+        "blue": "not_visible",
+        "green": "not_visible"
+      },
+      "seconds": 34.07
+    },
+    {
+      "state": 21,
+      "views": [
+        "table",
+        "bins",
+        "overview"
+      ],
+      "truth": {
+        "red": "teal",
+        "blue": "gold",
+        "green": "teal"
+      },
+      "answer": {
+        "red": "teal",
+        "blue": "gold",
+        "green": "not_visible"
+      },
+      "seconds": 33.81
+    },
+    {
+      "state": 21,
+      "views": [
+        "overview"
+      ],
+      "truth": {
+        "red": "teal",
+        "blue": "gold",
+        "green": "teal"
+      },
+      "answer": {
+        "red": "not_visible",
+        "blue": "not_visible",
+        "green": "not_visible"
+      },
+      "seconds": 32.27
+    },
+    {
+      "state": 22,
+      "views": [
+        "table",
+        "bins",
+        "overview"
+      ],
+      "truth": {
+        "red": "table",
+        "blue": "table",
+        "green": "table"
+      },
+      "answer": {
+        "red": "table",
+        "blue": "table",
+        "green": "table"
+      },
+      "seconds": 27.81
+    },
+    {
+      "state": 22,
+      "views": [
+        "overview"
+      ],
+      "truth": {
+        "red": "table",
+        "blue": "table",
+        "green": "table"
+      },
+      "answer": {
+        "red": "table",
+        "blue": "table",
+        "green": "table"
+      },
+      "seconds": 30.08
+    },
+    {
+      "state": 23,
+      "views": [
+        "table",
+        "bins",
+        "overview"
+      ],
+      "truth": {
+        "red": "table",
+        "blue": "gold",
+        "green": "gold"
+      },
+      "answer": {
+        "red": "table",
+        "blue": "gold",
+        "green": "table"
+      },
+      "seconds": 31.58
+    },
+    {
+      "state": 23,
+      "views": [
+        "overview"
+      ],
+      "truth": {
+        "red": "table",
+        "blue": "gold",
+        "green": "gold"
+      },
+      "answer": {
+        "red": "table",
+        "blue": "not_visible",
+        "green": "not_visible"
+      },
+      "seconds": 30.87
+    }
+  ]
+}

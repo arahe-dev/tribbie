@@ -1,0 +1,62 @@
+[
+  {
+    "mode": "skill",
+    "trial": 0,
+    "color": "blue",
+    "success": false,
+    "opus_calls": 2,
+    "seconds": 34.2,
+    "wall_seconds": 42.7,
+    "frames": 513
+  },
+  {
+    "mode": "skill",
+    "trial": 1,
+    "color": "red",
+    "success": true,
+    "opus_calls": 2,
+    "seconds": 17.3,
+    "wall_seconds": 16.3,
+    "frames": 260
+  },
+  {
+    "mode": "skill",
+    "trial": 2,
+    "color": "green",
+    "success": true,
+    "opus_calls": 2,
+    "seconds": 17.7,
+    "wall_seconds": 19.5,
+    "frames": 265
+  },
+  {
+    "mode": "skill",
+    "trial": 3,
+    "color": "blue",
+    "success": false,
+    "opus_calls": 3,
+    "seconds": 81.5,
+    "wall_seconds": 105.1,
+    "frames": 1222
+  },
+  {
+    "mode": "skill",
+    "trial": 4,
+    "color": "red",
+    "success": true,
+    "opus_calls": 2,
+    "seconds": 17.4,
+    "wall_seconds": 18.7,
+    "frames": 261
+  },
+  {
+    "mode": "skill",
+    "trial": 5,
+    "color": "green",
+    "success": true,
+    "opus_calls": 2,
+    "seconds": 20.7,
+    "wall_seconds": 22.0,
+    "frames": 311
+  }
+]
